@@ -685,22 +685,22 @@ if (DO_NEW_METHOD==false)// old method, not using BASELINE class:
           ELLIPS.b = ellips.b + currentheight;          //next height
           lp2xyz(line,temppixel,
                  ELLIPS,master,masterorbit,  // intersect with ellips+hei
-                 P,MAXITER,CRITERPOS);                  // P returned
+                 P,MAXITER,CRITERPOS);                  // P returned返回地面点位置P（3）步骤
 
           // ______ Compute S(x,y,z) ______ 
           xyz2t(s_tazi,s_trange,slave,slaveorbit,
                 P,MAXITER,CRITERTIM);
-          S = slaveorbit.getxyz(s_tazi);
+          S = slaveorbit.getxyz(s_tazi);//步骤（4） （5）
 
           // ====== The baseline parameters, derived from the positions (x,y,z) ======
           // ====== Compute Bhor Bver (assumed contant per line) ======
           // ______ theta is angle (M,M-P) ______
           const real8 B = M.dist(S);                    // abs. value
-          Bpar = P.dist(M) - P.dist(S); // sign ok
+          Bpar = P.dist(M) - P.dist(S); // sign ok 步骤（6）
 
 
           // ______ Bperp>0 if (MP>SP) then S is to the right of slant line
-          costheta = ((-(P.norm2()) + norm2M +          // cosine law
+          costheta = ((-(P.norm2()) + norm2M +          // cosine law余弦定理计算基线倾角
               sqr(master.pix2range(temppixel))) /
              (2*sqrt(norm2M)*master.pix2range(temppixel)));
           sintheta = sqrt(1-sqr(costheta));             // cos^2 + sin^2 = 1
@@ -726,7 +726,7 @@ inc_angle = baseline.get_theta_inc(line,temppixel,currentheight);//KKM
           const real8 m_tr   = master.pix2tr(temppixel);
           const real8 tempr1 = SOL*m_tr;
           currentheight      = (-master.wavelength*tempr1*sin(inc_angle)*tempphase)/
-                               (4.*PI*Bperp);//KKM added this
+                               (4.*PI*Bperp);//KKM added this 公式
 
 
           // ______ Check convergence ______
@@ -818,7 +818,7 @@ inc_angle = baseline.get_theta_inc(line,temppixel,currentheight);//KKM
 
           // ______ Geocode P(x,y,z) --> lat/lon/hei (h already known) ______
           real8 tmp_phi, tmp_lambda;
-          ellips.xyz2ell(P, tmp_phi, tmp_lambda);// WGS84 coordinates
+          ellips.xyz2ell(P, tmp_phi, tmp_lambda);// WGS84 coordinates 转到WGS84坐标系下
           PHI(i,j)    = rad2deg(tmp_phi);
           LAMBDA(i,j) = rad2deg(tmp_lambda);
           }                             // unwrapped ok

@@ -17,7 +17,7 @@
 ### Check if you agree with the options below (install_dir OK?)
 ### then simply type: "make install"
 SHELL = 	/bin/sh
-CC = 		gcc
+CC = 		gcc #建议修改gcc版本 cc=gcc-4.1
 #CFLAGS =	-O3
 #CFLAGS =        -m32         # for 64-bit systems, it requires compatibility lib32, no need for epr_api v2.2
 LFLAGS =	-lm

@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
     "files.associations": {
         "*.md": "markdown",
         "complex": "cpp"
     }
+=======
+    "C_Cpp.errorSquiggles": "disabled"
+>>>>>>> 0c0f8ed08fd5871381cac4c4e00e8330d9a64bf6
 }
