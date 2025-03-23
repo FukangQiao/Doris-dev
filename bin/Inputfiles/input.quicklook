@@ -1,0 +1,90 @@
+######################################################################################
+### This is a (full scene) quicklook processing.  To quickly see the ifg etc,      ###
+### use "run -ql (or equivalently run -s9)".                                       ###
+###  this will run -s1; run -s2; run -s9 (i.e, read files, process them            ###
+### Therefore, also edit step1,2 input (run -e1; run -e2) to set input filenames.  ###
+### You can set the DBOW crop there.   If master.res or slave.res already exist    ###
+### then these steps are skipped.                                                  ###
+###                                                                                ###
+### Basically we read the data, then automated coregistration with lower quality,  ###
+### fast resampling to short output format, and form the interferogram, flatten it ###
+### and compute the coherence image, all heavily multilooked.                      ###
+### NO spektral filtering. Experimental...                                         ###
+###                                                                                ###
+### This takes about 6 minutes for a quarter scene.                                ###
+###                                                                                ###
+###%// BK 15-Sep-2003                                                              ###
+######################################################################################
+SCREEN        info                    // level of output to standard out
+BEEP          warning                 // level of beeping
+PREVIEW       on                      // SUNraster files with cpxfiddle
+MEMORY        200                     // MB
+OVERWRITE     ON                      // overwrite existing files
+BATCH         ON                      // non-interactive
+LISTINPUT     ON                      // copy this file to log
+ORB_INTERP    POLYFIT 3               // orbit interpolation method
+LOGFILE       quicklook.log              //
+M_RESFILE     master_QL.res           // after run -s1, run -s2 the files are 
+S_RESFILE     slave_QL.res            // copied to these
+I_RESFILE     ifg_QL.res              // names
+###
+###
+PROCESS       coarseorb               // no cards later
+PROCESS       coarsecorr              // based on correlation
+PROCESS       fine                    // fine coregistration
+PROCESS       coregpm                 // estimate coregistration param.
+PROCESS       resample                // slave
+PROCESS       interfero               //
+PROCESS       comprefpha              // estimate flatearth param.
+PROCESS       subtrrefpha             //
+PROCESS       coherence               //
+###
+###
+CC_METHOD       magfft                  // default
+CC_NWIN         21                      // number of windows
+CC_WINSIZE      256 256                 // size of large windows
+CC_INITOFF      orbit                   // use result of orbits
+###
+###
+FC_METHOD       magfft                  //
+FC_NWIN         501                     // number of windows
+FC_WINSIZE      64 64                   // size of small windows
+FC_ACC          8 8                     // search window, 2^n
+FC_INITOFF      coarsecorr              // use result of coarse
+FC_OSFACTOR     8                       // oversampling factor
+###
+###
+CPM_THRESHOLD   0.2                     //
+CPM_DEGREE      2                       //
+CPM_WEIGHT      quadratic               // none | linear | quadratic
+CPM_MAXITER     350                     // automated removal, max 20 iterations
+CPM_K_ALPHA     5.00                    // automated removal crit. value
+###
+###
+RS_METHOD       tri                     // linear interpolation
+RS_OUT_FILE     Outdata/slave.resampled_QL
+RS_OUT_FORMAT   ci2                     //
+RS_SHIFTAZI     off                     // doppler
+###
+###
+INT_METHOD      old                     // 
+INT_OUT_CINT    Outdata/master_slave.cint_QL // optional complex int.
+INT_MULTILOOK   10 2                    // 20 x 20 m
+###
+###
+FE_METHOD       porbits                 //
+FE_DEGREE       5                       //
+FE_NPOINTS      301                     //
+###
+###
+SRP_OUT_CINT    Outdata/master_slave.srp_QL  //
+SRP_MULTILOOK   3 3                     // total 60x60 m
+###
+###
+COH_METHOD      refphase_only                   // options: refphase_only or include_refdem
+COH_OUT_COH     Outdata/master_slave.coh_QL  // optional real
+COH_MULTILOOK   30 6                            //
+COH_WINSIZE     30 6                            //
+###
+STOP                                            // mandatory
+# vim: syntax=doris

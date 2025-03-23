@@ -21,8 +21,8 @@ CC = 		gcc
 #CFLAGS =	-O3
 #CFLAGS =        -m32         # for 64-bit systems, it requires compatibility lib32, no need for epr_api v2.2
 LFLAGS =	-lm
-INSTALL_DIR =	/home/gertmulder/bin/doris/doris_v5_wu_branch
-
+#INSTALL_DIR =	/home/gertmulder/bin/doris/doris_v5_wu_branch
+INSTALL_DIR =   /usr/local/bin
 
 
 #############################################################

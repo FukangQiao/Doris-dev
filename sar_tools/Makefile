@@ -142,19 +142,19 @@ clean:
 		@rm -f *.o *dummy* *.bak
 		@echo "* Removed junk."
 ### some reason under cygwin progs are not removed without ".exe"???
-CYGWIN_EXE = 	$(PROGS:=.exe)
-cleaner:	clean
-		@rm -f $(PROGS) $(CYGWIN_EXE) a.out
-		@echo "* Removed executables in source dir:  `pwd`."
-uninstall:	cleaner
-		dir=$(CB_INSTALL); \
-        	if test -d $$dir; then \
-		  cd $(CB_INSTALL); rm -f $(PROGS); \
-		  echo "* Removed executables in install dir: $(CB_INSTALL)."; fi;
-		dir=$(INSTALL_DIR); \
-        	if test -d $$dir; then \
-		  cd $(INSTALL_DIR); rm -f $(PROGS) $(CYGWIN_EXE); \
-		  echo "* Removed executables in install dir: $(INSTALL_DIR)."; fi;
+# CYGWIN_EXE = 	$(PROGS:=.exe)
+# cleaner:	clean
+# 		@rm -f $(PROGS) $(CYGWIN_EXE) a.out
+# 		@echo "* Removed executables in source dir:  `pwd`."
+# uninstall:	cleaner
+# 		dir=$(CB_INSTALL); \
+#         	if test -d $$dir; then \
+# 		  cd $(CB_INSTALL); rm -f $(PROGS); \
+# 		  echo "* Removed executables in install dir: $(CB_INSTALL)."; fi;
+# 		dir=$(INSTALL_DIR); \
+#         	if test -d $$dir; then \
+# 		  cd $(INSTALL_DIR); rm -f $(PROGS) $(CYGWIN_EXE); \
+# 		  echo "* Removed executables in install dir: $(INSTALL_DIR)."; fi;
 
 ### How to make object files ###
 .cc.o:		
