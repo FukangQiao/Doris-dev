@@ -265,9 +265,9 @@ void coarsecorrel(
   uint NwinNANrm         = coarsecorrinput.Nwin;         ///MA number of windows w/o -999
   const int32 initoffsetL = coarsecorrinput.initoffsetL;  // initila offset
   const int32 initoffsetP = coarsecorrinput.initoffsetP;  // initila offset
-  uint MasksizeL          = coarsecorrinput.MasksizeL;    // size of correlation window
-  uint MasksizeP          = coarsecorrinput.MasksizeP;    // size of correlation window
-  const uint AccL         = coarsecorrinput.AccL;         // accuracy of initial offset
+  uint MasksizeL          = coarsecorrinput.MasksizeL;    // size of correlation window窗口大小
+  uint MasksizeP          = coarsecorrinput.MasksizeP;    // size of correlation window窗口大小
+  const uint AccL         = coarsecorrinput.AccL;         // accuracy of initial offset搜索范围
   const uint AccP         = coarsecorrinput.AccP;         // accuracy of initial offset
   bool pointsrandom = true;
   if (specified(coarsecorrinput.ifpositions))   // filename specified
@@ -304,6 +304,7 @@ void coarsecorrel(
   //const uint p0   = uint(max(int32(minfo.currentwindow.pixlo),sp0)  + 0.5*MasksizeP + AccP + BORDER);
   //const uint pN   = uint(min(int32(minfo.currentwindow.pixhi),spN)  - 0.5*MasksizeP - AccP - BORDER);
   // [FvL]
+  //重叠区域
   const uint BORDER = 20;// slightly smaller
   const int l0   = uint(max(int32(minfo.currentwindow.linelo),sl0) + 0.5*MasksizeL + AccL + BORDER);
   const int lN   = uint(min(int32(minfo.currentwindow.linehi),slN) - 0.5*MasksizeL - AccL - BORDER);
@@ -318,6 +319,7 @@ void coarsecorrel(
   matrix<int> Centers;
   if (pointsrandom)                             // no filename specified
     {
+      //在重叠区随机生成Nwin个点
     Centers = distributepoints(real4(Nwin),overlap);
     }
 
@@ -453,7 +455,7 @@ void coarsecorrel(
     Scmpl  = sinfo.readdata(slavemask);
     Master = magnitude(Mcmpl);
     Mask   = magnitude(Scmpl);
-
+      //计算相关系数并返回最大值
     // ______Compute correlation matrix and find maximum______
     Correl = correlate(Master,Mask);
     uint L, P;
@@ -5384,7 +5386,7 @@ void resample(
   // ______ same axis required for shift azimuth spectrum as used ______
   // ______ for kernel to avoid phase shift (Raffaele Nutricato) ______
   matrix<real4>   *pntAxis[Ninterval];
-
+//选择插值核
   for (i=0; i<Ninterval; ++i)
     {
     pntKernelAz[i] = new matrix<complr4> (Npoints,1);
@@ -5468,21 +5470,21 @@ void resample(
   for (i=0; i<Ninterval; ++i)
     {
     for (int32 x=0; x<Npoints; ++x)
-      DEBUG << ((*pntAxis[i])(x,0)) << "      ";
+      DEBUG << ((*pntAxis[i])(x,0)) << "      ";//输出插值核的x坐标
     DEBUG.print();
     real4 sum_az = 0.0;
     real4 sum_rg = 0.0;
     for (int32 x=0; x<Npoints; ++x)
       {
-      DEBUG << real((*pntKernelAz[i])(x,0)) << " ";// complex kernel
+      DEBUG << real((*pntKernelAz[i])(x,0)) << " ";// complex kernel 输出方位向插值核权重
       sum_az += real((*pntKernelAz[i])(x,0));
       sum_rg += real((*pntKernelRg[i])(x,0));
       }
     DEBUG << "(sum=" << sum_az << ")";
     DEBUG.print();
     DEBUG.print("Normalizing kernel by dividing LUT elements by sum:");
-    (*pntKernelAz[i]) /= sum_az;
-    (*pntKernelRg[i]) /= sum_rg;
+    (*pntKernelAz[i]) /= sum_az;//归一化
+    (*pntKernelRg[i]) /= sum_rg;//归一化
     // ______ Only show azimuth kernel ______
     for (int32 x=0; x<Npoints; ++x)
       DEBUG << real((*pntKernelAz[i])(x,0)) << " ";// complex kernel; normalized
@@ -5609,11 +5611,11 @@ void resample(
   // ______ Buffersize output matrix ______
   const int32 Npointsxsize = Npoints*sizeofcr4; // size for memcpy (fill PART)
   const int32 npixels      = slave.currentwindow.pixels();
-  const real8 bytesperline = sizeofcr4 * npixels;
+  const real8 bytesperline = sizeofcr4 * npixels;// 每行像素所需字节数
   // ___ COMMENTED OUT, OLD WAY SHIFT DATA, now shiftkernel ___
   const real8 bigmatrices  = 2.5;                                             // BUFFER, RESULT & PART buffers
   //const int32 nlines       = int32((BUFFERMEMSIZE/bigmatrices)/bytesperline); // buffer nlines
-  const int32 nlines       = int32(ceil( (BUFFERMEMSIZE/bigmatrices)/bytesperline )); // buffer nlines [MA]
+  const int32 nlines       = int32(ceil( (BUFFERMEMSIZE/bigmatrices)/bytesperline )); // buffer nlines [MA] // 缓冲区行数
 
     DEBUG << "BUFFERMEMSIZE: " << BUFFERMEMSIZE << ")";
     DEBUG.print();
@@ -5804,7 +5806,7 @@ void resample(
       {
       linecnt++;
       }
-
+      //采用DEM辅助校正
     // ====== Read slave buffer if justwritten || firstblock ======
     if (newbufferrequired==true)
       {
@@ -5902,6 +5904,12 @@ void resample(
                              + Npoints;
         }
 
+        // 原始缓冲区范围： [1100, 1200]  <-- 基于 `firstline` 和 `lastline`
+        // 扩展后范围：   [1075, 1225]  <-- 扩展 25 行（`FORSURE`）
+        
+        // 扩展后调整：  [1100, 1225]  <-- 起始行小于 1000，调整到从影像的实际范围内
+        // 最终缓冲区范围：[1100, 1225]
+        
       //const int32 FORSURE = 25;         // extend buffer by 2*FORSURE start/end
       int32 FORSURE = 25;         // extend buffer by 2*FORSURE start/end
       if ( master.ovs_az > 1 && master.ovs_az < 32  ) // [MA] To avoid any extreme value in the result file.
@@ -5937,7 +5945,7 @@ void resample(
       BUFFER = slave.readdata(winslavefile);
       } // ___end: Read new slave buffer to resample outputbuffer
 
-
+    //=====对每个输出像素执行重采样插值计算，并根据多项式拟合或 DEM 辅助对几何位置进行精确校正======
     // ====== Actual resample all pixels this output line ======
     for (pixel=overlap.pixlo; pixel<=int32(overlap.pixhi); pixel++)
       {
