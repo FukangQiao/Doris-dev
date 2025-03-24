@@ -34,10 +34,10 @@ end
 qnumfigs = length(qch);
 if (qnumfigs==0)
   warning('No figure windows found, exiting.');
-  break;
+  return;
 elseif (qnumfigs>10)
   warning('Too many figure windows, exiting.');
-  break;
+  return;
 end
 
 %%% Prepare reshape display.

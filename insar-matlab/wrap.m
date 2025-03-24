@@ -10,7 +10,7 @@ function wrapped = wrap(imatrix);
 % $Revision: 1.6 $  $Date: 2001/09/28 14:24:34 $
 % Bert Kampes, 01-Mar-2000
 
-if (~isreal(imatrix)) helphelp; break; end;
+if (~isreal(imatrix)) helphelp; return; end;
 
 
 % old: slow?

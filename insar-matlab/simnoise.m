@@ -68,7 +68,7 @@ function [sdevphase] = localphasestdev(gam,N,figs);
 % RH 26-Oct-2000 15:45 : Added option for lookup table
 %// BK 27-Oct-2000:      Changed lookup nearest to cubic, used as local.
 %
-if nargin == 0, help phasestdev;break;end
+if nargin == 0, help phasestdev;return;end
 if nargin == 1, N=1; figs='y';end
 if nargin == 2,      figs='y';end
 if (prod(size(gam))<2) error('sorry only matrices'); end;
