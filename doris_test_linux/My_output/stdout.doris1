@@ -1,0 +1,572 @@
+DEBUG:    file: doris1.in does exist.
+INFO:     inputoptionsfile: "doris1.in"
+DEBUG:    ROUTINE: printcpu
+DEBUG:    ROUTINE: inittest
+DEBUG: file "ioroutines.c", line 128
+	# test somewhere also memory,diskspace.
+DEBUG:    ROUTINE: readinput
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: SCREEN
+DEBUG:    Read argument: debug
+INFO:     SCREEN: line 18: stdout:  error, warning, progress, info, debug.
+DEBUG:    Read keyword: MEMORY
+DEBUG:    Read argument: 50
+DEBUG:    Read keyword: OVERWRITE
+DEBUG:    Read argument: OFF
+DEBUG:    Read keyword: BATCH
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: LISTINPUT
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: m_readfiles
+INFO:     PROCESS: 	I will process step: 		M_READFILES
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: m_crop
+INFO:     PROCESS: 	I will process step: 		M_CROP
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: m_porbits
+INFO:     PROCESS: 	I will process step: 		M_PORBITS
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: s_readfiles
+INFO:     PROCESS: 	I will process step: 		S_READFILES
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: s_crop
+INFO:     PROCESS: 	I will process step: 		S_CROP
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: s_porbits
+INFO:     PROCESS: 	I will process step: 		S_PORBITS
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: LOGFILE
+DEBUG:    Read argument: log.out
+DEBUG:    Read keyword: M_RESFILE
+DEBUG:    Read argument: master.out
+DEBUG:    Read keyword: S_RESFILE
+DEBUG:    Read argument: slave.out
+DEBUG:    Read keyword: I_RESFILE
+DEBUG:    Read argument: interferogram.out
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: M_IN_VOL
+DEBUG:    Read argument: /cdrom/scene1/vdf_dat.001
+DEBUG:    Read keyword: M_IN_LEA
+DEBUG:    Read argument: /cdrom/scene1/lea_01.001
+DEBUG:    Read keyword: M_IN_DAT
+DEBUG:    Read argument: /cdrom/scene1/dat_01.001
+DEBUG:    Read keyword: M_IN_NULL
+DEBUG:    Read argument: dummy
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: S_IN_VOL
+DEBUG:    Read argument: /cdrom/scene1/vdf_dat.001
+DEBUG:    Read keyword: S_IN_LEA
+DEBUG:    Read argument: /cdrom/scene1/lea_01.001
+DEBUG:    Read keyword: S_IN_DAT
+DEBUG:    Read argument: /cdrom/scene1/dat_01.001
+DEBUG:    Read keyword: S_IN_NULL
+DEBUG:    Read argument: dummy
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: M_CROP_IN
+DEBUG:    Read argument: /cdrom/scene1/dat_01.001
+DEBUG:    Read keyword: M_CROP_OUT
+DEBUG:    Read argument: 1393.raw
+DEBUG:    Read keyword: M_DBOW
+DEBUG:    Read argument: 1
+DEBUG:    Read argument: 800
+DEBUG:    Read argument: 1
+DEBUG:    Read argument: 300
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: S_CROP_IN
+DEBUG:    Read argument: /cdrom/scene1/dat_01.001
+DEBUG:    Read keyword: S_CROP_OUT
+DEBUG:    Read argument: 21066.raw
+DEBUG:    Read keyword: S_DBOW
+DEBUG:    Read argument: 1
+DEBUG:    Read argument: 800
+DEBUG:    Read argument: 1
+DEBUG:    Read argument: 300
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: M_ORBDIR
+DEBUG:    Read argument: /home/fmr/d4/delftorbits/ers2
+DEBUG:    Read keyword: M_ORB_INTERVAL
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: M_ORB_EXTRATIME
+DEBUG:    Read argument: 5
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: S_ORBDIR
+DEBUG:    Read argument: /home/fmr/d4/delftorbits/ers1
+DEBUG:    Read keyword: S_ORB_INTERVAL
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: S_ORB_EXTRATIME
+DEBUG:    Read argument: 5
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: STOP
+DEBUG:    STOP card encountered at line 77.
+
+DEBUG:    ROUTINE: checkgeneral
+INFO:     MEMORY: 	50 MB is available to Doris.
+INFO:     M_RESFILE: 	resultfile of master: 		master.out
+INFO:     S_RESFILE: 	resultfile of slave: 		slave.out
+INFO:     I_RESFILE: 	out file for interferogram: 	interferogram.out
+INFO:     LOGFILE: 	out file for logging: 		log.out
+INFO:     DUMPBASELINE: evaluation of baseline parameters at grid with: 0 lines, 0 pixels: 
+INFO:     LISTINPUT:    Input file appended to logfile.
+INFO:     ELLIPSOID: 	WGS84.
+DEBUG:    ROUTINE: checkreadfiles
+INFO:     Input for step M_READFILES (master):
+INFO:     M_IN_VOL: volumefile of master: 	/cdrom/scene1/vdf_dat.001
+INFO:     M_IN_LEA: leaderfile of master: 	/cdrom/scene1/lea_01.001
+INFO:     M_IN_NULL: nullfile of master:  	dummy
+INFO:     M_IN_DAT: datfile of master:    	/cdrom/scene1/dat_01.001
+DEBUG:    ROUTINE: checkreadfiles
+INFO:     Input for step S_READFILES (slave):
+INFO:     S_IN_VOL: volumefile of slave:  	/cdrom/scene1/vdf_dat.001
+INFO:     S_IN_LEA: leaderfile of slave:  	/cdrom/scene1/lea_01.001
+INFO:     S_IN_NULL: nullfile of slave:   	dummy
+INFO:     S_IN_DAT: datfile of slave:     	/cdrom/scene1/dat_01.001
+DEBUG:    ROUTINE: checkcrop
+INFO:     M_IDCROP: identifier master write slc data to raster format: 	master step01
+INFO:     M_CROP_IN: slc data inputfile for master:   	/cdrom/scene1/dat_01.001
+INFO:     M_CROP_OUT: raw data outputfile for master: 	1393.raw
+INFO:     M_DBOW: Processing master line 1 to 800. pixel 1 to 300.
+DEBUG:    ROUTINE: checkcrop
+INFO:     S_IDCROP: identifier slave write slc data to raster format: 	slave step01
+INFO:     S_CROP_IN: slc data inputfile for slave:   	/cdrom/scene1/dat_01.001
+INFO:     S_CROP_OUT: raw data outputfile for slave: 	21066.raw
+INFO:     S_DBOW: Processing slave line 1 to 800. pixel 1 to 300.
+DEBUG:    ROUTINE: checkporbits
+INFO:     M_ORBDIR: Precise orbits master in: /home/fmr/d4/delftorbits/ers2
+INFO:     *_ORB_INTERVAL: 	1: 	seconds between ephemerides.
+INFO:     *_ORB_EXTRATIME: 	5: 	seconds before first and after last line.
+DEBUG:    ROUTINE: checkporbits
+INFO:     S_ORBDIR: Precise orbits slave in: /home/fmr/d4/delftorbits/ers1
+INFO:     *_ORB_INTERVAL: 	1: 	seconds between ephemerides.
+INFO:     *_ORB_EXTRATIME: 	5: 	seconds before first and after last line.
+DEBUG:    Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: log.out does not exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: master.out does not exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: slave.out does not exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG:    ROUTINE: checkprocessing
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    file: interferogram.out does not exist.
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    Time spent for initialization:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.02 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+
+PROGRESS: Start M_READFILES.
+
+DEBUG:    ROUTINE: readvolume
+DEBUG:    readvol: controle filename
+DEBUG:    record 1 of volume file.
+DEBUG:    record 2 of volume file.
+DEBUG:    record 3 of volume file.
+DEBUG:    record 4 of volume file.
+PROGRESS: readvolume finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: master.out has been updated by file: scratchresvol (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogvol (removed.)
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 26556
+Pr as word 5 after "(Check)Number" in file "master.out".
+DEBUG:    ROUTINE: readleader
+DEBUG:    record 1 of leader file.
+DEBUG:    record 2 of leader file.
+DEBUG:    record 3 of leader file.
+DEBUG:    record 4 of leader file.
+INFO:     Number of lines, pixels:               26555            4900            
+INFO:     Pulse repetition frequency (Hz):           1679.9020000
+INFO:     Pulse repetition frequency (computed): 1679.9519200361
+INFO:     Range sampling rate (Mhz):                   18.9624680
+INFO:     Range sampling rate (computed Mhz):    18.966298049568
+INFO:     UTC of first azimuth line:             27-JUL-1995 09:49:26.141
+INFO:     UTC of last azimuth line:              27-JUL-1995 09:49:41.948
+INFO:     Range time to first pixel (2way ms):          5.5458330
+INFO:     Range time to last pixel (2way ms):           5.8041860
+INFO:     First corner of image (lat,lon):             41.3110000       14.7820000
+INFO:     Second corner of image (lat,lon):            41.4970000       13.6200000
+INFO:     Third corner of image (lat,lon):             40.5670000       13.3630000
+INFO:     Fourth corner of image (lat,lon):            40.3820000       14.5070000
+INFO:     Weighting function designator azimuth: HAMMING                         
+INFO:     Weighting function designator range:   HAMMING                         
+PROGRESS: readleader finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: master.out has been updated by file: scratchreslea (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchloglea (removed.)
+DEBUG:    ROUTINE: readdat
+PROGRESS: End reading data file.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: master.out has been updated by file: scratchresdat (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogdat (removed.)
+PROGRESS: Finished M_READFILES.
+
+DEBUG:    Time spent for reading files master:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.04 sec)
+	Wallclock: 			     2 sec (total:    0 min   2 sec)
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: master.out
+DEBUG:    [32]: string: "Scene_centre_latitude:",      (derived) value: 40.948
+DEBUG:    [33]: string: "Scene_centre_longitude:",     (derived) value: 14.027
+DEBUG:    [34]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [35]: string: "First_pixel_azimuth_time",    (derived) value: 35366.1
+DEBUG:    [36]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [37]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [38]: string: "Xtrack_f_DC_constant",        (derived) value: 117.321
+DEBUG:    [39]: string: "Xtrack_f_DC_linear",          (derived) value: 72338
+DEBUG:    [40]: string: "Xtrack_f_DC_quadratic",       (derived) value: -4.55e+08
+DEBUG:    [41]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [42]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [43]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [58]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG:    [59]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26555 1 4900
+PROGRESS: Start M_CROP.
+
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 26556
+Pr as word 5 after "(Check)Number" in file "master.out".
+DEBUG:    ROUTINE: writeslc
+PROGRESS: Start conversion slc data.
+
+DEBUG:    record 1 of data file.
+DEBUG:    First complex element in datafile: (25,63); mag = 67.7791
+PROGRESS: writeslc: 0%
+
+PROGRESS: writeslc: 10%
+
+PROGRESS: writeslc: 20%
+
+PROGRESS: writeslc: 30%
+
+PROGRESS: writeslc: 40%
+
+PROGRESS: writeslc: 50%
+
+PROGRESS: writeslc: 60%
+
+PROGRESS: writeslc: 70%
+
+PROGRESS: writeslc: 80%
+
+PROGRESS: writeslc: 90%
+
+PROGRESS: 100% Writing raw format finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: master.out has been updated by file: scratchres2raw (removed.)
+PROGRESS: Finished M_CROP.
+
+DEBUG:    Time spent for writing raw format master:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.87 sec (total:    0 min 0.91 sec)
+	Wallclock: 			     8 sec (total:    0 min  10 sec)
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG:    string: "Data_output_file:",        value: 1393.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	1393.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+PROGRESS: Start M_PORBITS.
+
+DEBUG:    ROUTINE: getorb
+DEBUG:    getorb 950727094921,950727094947,1 /home/fmr/d4/delftorbits/ers2>scratchorbit
+PROGRESS: getorb: program finished ok.
+
+DEBUG:    ROUTINE: convertgetorbout
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: master.out has been updated by file: scratchdatapoints (removed.)
+DEBUG:    ROUTINE: removedatleader
+PROGRESS: Finished M_PORBITS.
+
+DEBUG:    Time spent for obtaining precise orbits master:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.09 sec (total:    0 min   1 sec)
+	Wallclock: 			     0 sec (total:    0 min  10 sec)
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+PROGRESS: Start S_READFILES.
+
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 1                as word 0 after "Volume_ID:" in file "master.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 0004094800014027 as word 0 after "Volume_identifier:" in file "master.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 19950727 9492574 as word 0 after "Volume_set_identifier:" in file "master.out".
+DEBUG:    ROUTINE: readvolume
+DEBUG:    readvol: controle filename
+DEBUG:    record 1 of volume file.
+DEBUG:    record 2 of volume file.
+DEBUG:    record 3 of volume file.
+DEBUG:    record 4 of volume file.
+PROGRESS: readvolume finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchresvol (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogvol (removed.)
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 26519
+Pr as word 5 after "(Check)Number" in file "slave.out".
+DEBUG:    ROUTINE: readleader
+DEBUG:    record 1 of leader file.
+DEBUG:    record 2 of leader file.
+DEBUG:    record 3 of leader file.
+DEBUG:    record 4 of leader file.
+INFO:     Number of lines, pixels:               26518            4900            
+INFO:     Pulse repetition frequency (Hz):           1679.9020000
+INFO:     Pulse repetition frequency (computed): 1679.9493189741
+INFO:     Range sampling rate (Mhz):                   18.9624680
+INFO:     Range sampling rate (computed Mhz):    18.966298049568
+INFO:     UTC of first azimuth line:             26-JUL-1995 09:49:23.394
+INFO:     UTC of last azimuth line:              26-JUL-1995 09:49:39.179
+INFO:     Range time to first pixel (2way ms):          5.5458330
+INFO:     Range time to last pixel (2way ms):           5.8041860
+INFO:     First corner of image (lat,lon):             41.3030000       14.7780000
+INFO:     Second corner of image (lat,lon):            41.4890000       13.6170000
+INFO:     Third corner of image (lat,lon):             40.5600000       13.3600000
+INFO:     Fourth corner of image (lat,lon):            40.3750000       14.5040000
+INFO:     Weighting function designator azimuth: HAMMING                         
+INFO:     Weighting function designator range:   HAMMING                         
+PROGRESS: readleader finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchreslea (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchloglea (removed.)
+DEBUG:    ROUTINE: readdat
+PROGRESS: End reading data file.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchresdat (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogdat (removed.)
+PROGRESS: Finished S_READFILES.
+
+DEBUG:    Time spent for reading files slave:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.04 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: slave.out
+DEBUG:    [38]: string: "Scene_centre_latitude:",      (derived) value: 40.94
+DEBUG:    [39]: string: "Scene_centre_longitude:",     (derived) value: 14.024
+DEBUG:    [40]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [41]: string: "First_pixel_azimuth_time",    (derived) value: 35363.4
+DEBUG:    [42]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [43]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [44]: string: "Xtrack_f_DC_constant",        (derived) value: 424.956
+DEBUG:    [45]: string: "Xtrack_f_DC_linear",          (derived) value: -13140
+DEBUG:    [46]: string: "Xtrack_f_DC_quadratic",       (derived) value: -5.18e+08
+DEBUG:    [47]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [48]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [49]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [64]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG:    [65]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26518 1 4900
+PROGRESS: Start S_CROP.
+
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 26519
+Pr as word 5 after "(Check)Number" in file "slave.out".
+DEBUG:    ROUTINE: writeslc
+PROGRESS: Start conversion slc data.
+
+DEBUG:    record 1 of data file.
+DEBUG:    First complex element in datafile: (-51,81); mag = 95.7183
+PROGRESS: writeslc: 0%
+
+PROGRESS: writeslc: 10%
+
+PROGRESS: writeslc: 20%
+
+PROGRESS: writeslc: 30%
+
+PROGRESS: writeslc: 40%
+
+PROGRESS: writeslc: 50%
+
+PROGRESS: writeslc: 60%
+
+PROGRESS: writeslc: 70%
+
+PROGRESS: writeslc: 80%
+
+PROGRESS: writeslc: 90%
+
+PROGRESS: 100% Writing raw format finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchres2raw (removed.)
+PROGRESS: Finished S_CROP.
+
+DEBUG:    Time spent for writing raw format slave:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.87 sec (total:    0 min 0.91 sec)
+	Wallclock: 			     6 sec (total:    0 min   6 sec)
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+PROGRESS: Start S_PORBITS.
+
+DEBUG:    ROUTINE: getorb
+DEBUG:    getorb 950726094918,950726094944,1 /home/fmr/d4/delftorbits/ers1>scratchorbit
+PROGRESS: getorb: program finished ok.
+
+DEBUG:    ROUTINE: convertgetorbout
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchdatapoints (removed.)
+DEBUG:    ROUTINE: removedatleader
+PROGRESS: Finished S_PORBITS.
+
+DEBUG:    Time spent for obtaining precise orbits slave:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.09 sec (total:    0 min   1 sec)
+	Wallclock: 			     1 sec (total:    0 min   7 sec)
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    orbit::compbaseline
+INFO:     Exiting compbaseline, no output requested with DUMPBASELINE card.
+DEBUG:    ROUTINE: updateprocesscontrol
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    Time spent for tidying up:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.01 sec (total:    0 min 1.01 sec)
+	Wallclock: 			     0 sec (total:    0 min   7 sec)
+
+
+Results are in file(s):
+   slave.out
+
+There were 0 WARNING(S).
+
+
+Normal termination.
+Thank you for using Doris.
+

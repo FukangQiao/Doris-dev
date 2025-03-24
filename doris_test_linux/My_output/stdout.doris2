@@ -1,0 +1,519 @@
+DEBUG:    file: doris2.in does exist.
+INFO:     inputoptionsfile: "doris2.in"
+DEBUG:    ROUTINE: printcpu
+DEBUG:    ROUTINE: inittest
+DEBUG: file "ioroutines.c", line 128
+	# test somewhere also memory,diskspace.
+DEBUG:    ROUTINE: readinput
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: SCREEN
+DEBUG:    Read argument: debug
+INFO:     SCREEN: line 18: stdout:  error, warning, progress, info, debug.
+DEBUG:    Read keyword: MEMORY
+DEBUG:    Read argument: 50
+DEBUG:    Read keyword: OVERWRITE
+DEBUG:    Read argument: OFF
+DEBUG:    Read keyword: BATCH
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: LISTINPUT
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: coarseorb
+INFO:     PROCESS: 	I will process step: 		COARSEORB
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: coarsecorr
+INFO:     PROCESS: 	I will process step: 		COARSECORR
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: fine
+INFO:     PROCESS: 	I will process step: 		FINE
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: LOGFILE
+DEBUG:    Read argument: log.out
+DEBUG:    Read keyword: M_RESFILE
+DEBUG:    Read argument: master.out
+DEBUG:    Read keyword: S_RESFILE
+DEBUG:    Read argument: slave.out
+DEBUG:    Read keyword: I_RESFILE
+DEBUG:    Read argument: interferogram.out
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: CC_METHOD
+DEBUG:    Read argument: magfft
+DEBUG:    Read keyword: CC_NWIN
+DEBUG:    Read argument: 5
+DEBUG:    Read keyword: CC_WINSIZE
+DEBUG:    Read argument: 256
+DEBUG:    Read argument: 128
+DEBUG:    Read keyword: CC_INITOFF
+DEBUG:    Read argument: orbit
+DEBUG:    Read argument: //
+INFO:     CC_INITOFF: 	Initial offsets from COARSEORB: 	interferogram.out
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: FC_METHOD
+DEBUG:    Read argument: magfft
+DEBUG:    Read keyword: FC_NWIN
+DEBUG:    Read argument: 51
+DEBUG:    Read keyword: FC_WINSIZE
+DEBUG:    Read argument: 32
+DEBUG:    Read argument: 32
+DEBUG:    Read keyword: FC_ACC
+DEBUG:    Read argument: 8
+DEBUG:    Read argument: 8
+DEBUG:    Read keyword: FC_INITOFF
+DEBUG:    Read argument: coarsecorr
+DEBUG:    Read argument: //
+INFO:     FC_INITOFF: 	Initial offset from COARSECORR: interferogram.out
+DEBUG:    Read keyword: FC_OSFACTOR
+DEBUG:    Read argument: 16
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: STOP
+DEBUG:    STOP card encountered at line 56.
+
+DEBUG:    ROUTINE: checkgeneral
+INFO:     MEMORY: 	50 MB is available to Doris.
+INFO:     M_RESFILE: 	resultfile of master: 		master.out
+INFO:     S_RESFILE: 	resultfile of slave: 		slave.out
+INFO:     I_RESFILE: 	out file for interferogram: 	interferogram.out
+INFO:     LOGFILE: 	out file for logging: 		log.out
+INFO:     DUMPBASELINE: evaluation of baseline parameters at grid with: 0 lines, 0 pixels: 
+INFO:     LISTINPUT:    Input file appended to logfile.
+INFO:     ELLIPSOID: 	WGS84.
+DEBUG:    ROUTINE: checkcoarsecorr
+INFO:     Method: MAGFFT is used for coarse correlation.
+INFO:     CC_NWIN: distributing 5 windows for coarse coregistration based on correlation.
+DEBUG:    ROUTINE: checkfine
+INFO:     Method: MAGFFT is used for fine correlation.
+INFO:     FC_NWIN: distributing 51 windows for fine coregistration.
+INFO:     FC_WINSIZE: (l,p) = (32, 32).
+INFO:     FC_OSFACTOR: 16. Oversampling factor for fine coregistration. is used.
+DEBUG:    Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: log.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: interferogram.out does not exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG:    ROUTINE: checkprocessing
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    Time spent for initialization:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.02 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: master.out
+DEBUG:    [32]: string: "Scene_centre_latitude:",      (derived) value: 40.948
+DEBUG:    [33]: string: "Scene_centre_longitude:",     (derived) value: 14.027
+DEBUG:    [34]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [35]: string: "First_pixel_azimuth_time",    (derived) value: 35366.1
+DEBUG:    [36]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [37]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [38]: string: "Xtrack_f_DC_constant",        (derived) value: 117.321
+DEBUG:    [39]: string: "Xtrack_f_DC_linear",          (derived) value: 72338
+DEBUG:    [40]: string: "Xtrack_f_DC_quadratic",       (derived) value: -4.55e+08
+DEBUG:    [41]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [42]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [43]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [47]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG:    [48]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26555 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG:    string: "Data_output_file:",        value: 1393.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	1393.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: slave.out
+DEBUG:    [38]: string: "Scene_centre_latitude:",      (derived) value: 40.94
+DEBUG:    [39]: string: "Scene_centre_longitude:",     (derived) value: 14.024
+DEBUG:    [40]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [41]: string: "First_pixel_azimuth_time",    (derived) value: 35363.4
+DEBUG:    [42]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [43]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [44]: string: "Xtrack_f_DC_constant",        (derived) value: 424.956
+DEBUG:    [45]: string: "Xtrack_f_DC_linear",          (derived) value: -13140
+DEBUG:    [46]: string: "Xtrack_f_DC_quadratic",       (derived) value: -5.18e+08
+DEBUG:    [47]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [48]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [49]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [53]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG:    [54]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26518 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    orbit::compbaseline
+INFO:     Exiting compbaseline, no output requested with DUMPBASELINE card.
+PROGRESS: Start COARSE_ORB.
+
+DEBUG:    ROUTINE: coarseporbit
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2lp
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+INFO:     Estimated translation (l,p): -236, -3
+PROGRESS: Coarse precise orbits coregistration finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogcoarse (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchrescoarse (removed.)
+PROGRESS: Finished COARSE_ORB.
+
+DEBUG:    Time spent for coarse coregistration with orbits:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.01 sec (total:    0 min 0.03 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -236
+Coarse_orbits_trans as word 0 after "Coarse_orbits_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_orbits_translation_pixels:" in file "interferogram.out".
+PROGRESS: Start COARSE_CORR.
+
+DEBUG:    ROUTINE: coarsecorrelfft
+DEBUG:    ROUTINE: distributepoints
+PROGRESS: COARSE_CORR: 0%
+
+DEBUG:    ROUTINE: corrfft
+DEBUG:    ROUTINE: corrfft
+DEBUG:    ROUTINE: corrfft
+DEBUG:    ROUTINE: corrfft
+DEBUG:    ROUTINE: corrfft
+DEBUG:    ROUTINE: getoffset
+WARNING:  getoffset: possibly wrong estimated offset: not consistent, small correlation or small number of windows. (check bottom of LOGFILE)
+INFO:     Individual estimated translations (#, l, p, corr, offl, offp):
+INFO:     Estimate (#, l, p, corr, offl, offp): 0 	375 	78 	0.585147 	-241 	-3 	
+INFO:     Estimate (#, l, p, corr, offl, offp): 1 	375 	190 	0.51504 	-241 	-3 	
+INFO:     Estimate (#, l, p, corr, offl, offp): 2 	519 	152 	0.569593 	-241 	-3 	
+INFO:     Estimate (#, l, p, corr, offl, offp): 3 	662 	115 	0.595064 	-241 	-3 	
+INFO:     Estimate (#, l, p, corr, offl, offp): 4 	662 	226 	0.510333 	-241 	-3 	
+INFO:     Estimated translation (l,p): -241, -3
+PROGRESS: Coarse coregistration based on correlation finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogcoarse2 (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchrescoarse2 (removed.)
+PROGRESS: Finished COARSE_CORR.
+
+DEBUG:    Time spent for coarse coregistration with correlation:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	 45.01 sec (total:    0 min 45.04 sec)
+	Wallclock: 			    46 sec (total:    0 min  46 sec)
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -241
+Coarse_correlation_ as word 0 after "Coarse_correlation_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_correlation_translation_pixels:" in file "interferogram.out".
+PROGRESS: Start FINE.
+
+DEBUG:    ROUTINE: finecoreg
+DEBUG:    ROUTINE: distributepoints
+PROGRESS: FINE: 0%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 9%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 19%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 29%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 39%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 49%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 58%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 68%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 78%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 88%
+
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+DEBUG:    coherencefft
+PROGRESS: FINE: 98%
+
+DEBUG:    coherencefft
+PROGRESS: Fine coregistration finished.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogfine (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchresfine (removed.)
+PROGRESS: Finished FINE.
+
+DEBUG:    Time spent for fine coregistration:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	 48.33 sec (total:    1 min 33.37 sec)
+	Wallclock: 			    54 sec (total:    1 min  40 sec)
+INFO:     With following command the estimated offset vectors can be plotted.
+INFO:     plotoffsets interferogram.out 1 800 1 300 0.4 &
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 16
+t as word 1 after "Oversampling" in file "interferogram.out".
+DEBUG:    ROUTINE: updateprocesscontrol
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    Time spent for tidying up:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    1 min 33.39 sec)
+	Wallclock: 			     0 sec (total:    1 min  40 sec)
+
+
+Results are in file(s):
+   interferogram.out
+
+There were 1 WARNING(S).
+
+
+Normal termination.
+Thank you for using Doris.
+

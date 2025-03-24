@@ -1,0 +1,117 @@
+file: README
+#%// BK 10-Aug-2000
+
+
+*** INTRODUCTION ***
+This directory contains test data for testing the Doris software.
+Test for big and small endian machines.
+Directory structure:
+ .|---My_output       results at my computer.
+  |
+  |---Your_work       working directory for testing.
+
+The processing steps (PROCESS cards):
+ 1 - M_READFILES - Obtain parameters from SLC files for master.
+ 2 - M_PORBITS   - Obtain ephemerides for master orbit.
+ 3 - M_CROP      - Make a cut out of the master SLC data file.
+ 4 - S_READFILES - Obtain parameters from SLC files for slave.
+ 5 - S_PORBITS   - Obtain ephemerides for slave orbit.
+ 6 - S_CROP      - Make a cut out of the slave SLC data file.
+
+Have already been done by me, since I cannot distribute the SLC data.
+See directory My_output, you might want to have a look at it before testing.
+The output is in the files:
+ "master.out"    - For parameters for the master image 1393, used by Doris;
+ "slave.out"     - For parameters for the slave image 21066, used by Doris;
+ "log.out"       - Log file with additional information, not used by Doris;
+ "stdout.doris1" - What is echoed to the screen during run.
+
+The input I used for these steps can be found in the file: "doris1.in".
+(This inputfile should not be run again.)
+In normal processing these steps have to be performed first, of course,
+resulting in files "master.out" and "slave.out" that look similar to what is here.
+
+NOTE that the data files:
+ 1393.raw  (800x300 pixels) and
+ 21066.raw (800x300 pixels)
+are stored in byte order for HP (big endian?), and the files:
+ 1393.raw.linux  (800x300 pixels) and
+ 21066.raw.linux (800x300 pixels)
+are stored in swapped byte order (X86 pc's, little endian?).
+
+The other steps (coregistration, resampling, interferogram generation)
+should be done by you, and the results compared to mine.
+The input files for these steps are in files "./My_output/doris[234].in".
+I used an executable doris2.6, compiled with all DEBUG defines,
+and not using external libraries.
+
+
+*** TESTING ***
+To test the Doris processor, and familiarize yourself with it,
+untar the archive, and run the processor with the input files.
+Then compare your output with the output in the My_output directory.
+Note that I might have removed some unimportant output from the stdout
+(to reduce the file sizes).
+Make sure you use the correct data files for your cpu (byte order).
+
+0. unzip, untar, etc. the testarchive:
+     gzip -d  doristest.tar.gz
+     tar -xvf doristest.tar
+
+1. Make sure the processor is in your path,
+   I will assume the executable is named "doris".
+
+2. goto working directory:
+   cd Your_work
+
+3. Now start actually running doris.
+   Run coregistration step based on orbits, correlation and fine
+   coregistration with a command like:
+     doris doris2.in > stdout.doris2
+   and compare your results with my results, e.g.:
+     diff ./stdout.doris2 ../My_output/stdout.doris2
+   
+   Based on the orbits, a translation of (-236,-3) is estimated
+   (see "./interferogram.out" created by these steps).
+   Based on correlation between master/slave this estimate is 
+   improved to (-241,-3).
+   Then for 51 positions, fine offset vectors are estimated.
+   If GMT is installed, and the SAR utilities of the Doris distribution,
+   the command:
+     plotoffsets interferogram.out 1 800 1 300 0.5
+   creates a plot with the offset vectors
+   (see ../My_output/offsets.eps).
+
+
+4. Run resampling step:
+     doris doris3.in > stdout.doris3
+   and compare your results with my results, e.g.:
+     diff ./stdout.doris3 ../My_output/stdout.doris3
+
+   The polynomial for allignment of the slave on the master is computed.
+   A file is created named: "21066.resampled"
+
+
+5. Run product generation step:
+     doris doris4.in > stdout.doris4
+   This creates files:
+    "cint.raw"      complex interferogram (111,294)
+    "cint.srp.raw"  reference phase subtracted (111,294)
+    "coh.raw"       real coherence image (112,294)
+   If GMT and the DEOS tools are installed, the commands:
+     cpx2ps -w 294 -fcr4 -qphase -Tphase_interferogram -S -o cint.eps     cint.raw
+     cpx2ps -w 294 -fcr4 -qphase -Tphase_min_refpha    -S -o cint.srp.eps cint.raw
+     cpx2ps -w 294 -fr4  -Tcoherence -S -o coh.eps coh.raw
+   will generate eps files. Compare them with ../My_output/*.eps
+   With matlab (using our insar toolbox) visualization can be done with, e.g.:
+matlab << EOFHD
+cint = freadbk('cint.raw',111,'cpxfloat32');
+imagesc(angle(cint));
+pra4('-depsc cint.eps');
+EOFHD
+
+
+6. Geocoding etc. later.
+   ...
+
+#EOF

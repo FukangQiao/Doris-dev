@@ -1,0 +1,318 @@
+=====================================================
+ INTERFEROGRAM RESULTFILE: interferogram.out
+
+Created by:             
+InSAR Processor:        Doris (Delft o-o Radar Interferometric Software)
+Version:                version  4.0.8 (04-09-2014)
+		     build 	Fri Jun 30 15:38:15 2017 (optimal)
+FFTW library:           used
+VECLIB library:         not used
+LAPACK library:         used
+Compiled at:            Mar 24 2020 14:16:00
+By GNU gcc:             9.3.9
+File creation at:       Mon Mar 24 21:42:23 2025
+
+ -------------------------------------------------------
+| Delft Institute of Earth Observation & Space Systems  |
+|          Delft University of Technology               |
+|              http://doris.tudelft.nl                  |
+|                                                       |
+| Author: (c) TUDelft - DEOS Radar Group                |
+ -------------------------------------------------------
+
+
+Start_process_control
+coarse_orbits:		1
+coarse_correl:		1
+fine_coreg:		1
+timing_error:		0
+dem_assist:		0
+comp_coregpm:		1
+interfero:		1
+coherence:		1
+comp_refphase:		1
+subtr_refphase:		1
+comp_refdem:		0
+subtr_refdem:		0
+filtphase:		0
+unwrap:			0
+est_orbits:		0
+slant2h:		0
+geocoding:		0
+dinsar:			0
+NOT_USED2:		0
+End_process_control
+
+
+*******************************************************************
+*_Start_coarse_orbits:
+*******************************************************************
+Some info for pixel: 400, 150 (not used):
+  Btemp:     [days]:          -1      	// Temporal baseline
+  Bperp      [m]:           36.3      	// Perpendicular baseline
+  Bpar       [m]:           23.5      	// Parallel baseline
+  Bh         [m]:           41.7      	// Horizontal baseline
+  Bv         [m]:          -11.5      	// Vertical baseline
+  B          [m]:           43.2      	// Baseline (distance between sensors)
+  alpha      [deg]:        -15.4      	// Baseline orientation
+  theta      [deg]:         17.4      	// look angle
+  inc_angle  [deg]:         19.6      	// incidence angle
+  orbitconv  [deg]:   0.000425042      	// angle between orbits
+  Height_amb [m]:         -217.7      	// height = h_amb*phase/2pi (approximately)
+  Control point master (line,pixel,hei) = (400, 150, 0)
+  Control point slave  (line,pixel,hei) = (163.92, 147.031, 0)
+Estimated translation slave w.r.t. master (slave-master):
+  Positive offsetL: slave image is to the bottom
+  Positive offsetP: slave image is to the right
+Coarse_orbits_translation_lines:  	-236
+Coarse_orbits_translation_pixels: 	-3
+*******************************************************************
+* End_coarse_orbits:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:42:23 2025
+
+
+*******************************************************************
+*_Start_coarse_correl:
+*******************************************************************
+Estimated translation slave w.r.t. master:
+Coarse_correlation_translation_lines: 	-242
+Coarse_correlation_translation_pixels: 	-3
+Slope_CoarseCorr_lines: 		0
+Initial_Offset_CoarseCorr_lines: 	-242
+Slope_CoarseCorr_pixels: 		0
+Initial_Offset_CoarseCorr_pixels: 	-3
+Number of correlation windows: 		5 of 5
+
+#     center(l,p)   coherence   offsetL   offsetP
+0 	385 	88 	0.487409 	-242 	-3
+1 	385 	184 	0.403238 	-242 	-3
+2 	519 	152 	0.431987 	-242 	-3
+3 	652 	120 	0.470043 	-242 	-3
+4 	652 	216 	0.393623 	-241 	-3
+
+*******************************************************************
+* End_coarse_correl:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:42:23 2025
+
+
+*******************************************************************
+*_Start_fine_coreg:
+*******************************************************************
+Initial offsets (l,p):             	-242, -3
+Window_size_L_for_correlation:     	32
+Window_size_P_for_correlation:     	32
+Max. offset that can be estimated: 	16
+Peak search ovs window (l,p):      	16 , 16
+Oversampling factor:               	16
+Number_of_correlation_windows:     	51
+Number 	posL 	posP 	offsetL offsetP	correlation
+   0   279    40  -241.06250    -3.12500    0.44768
+   1   279    85  -241.06250    -3.18750    0.39346
+   2   279   130  -241.25000    -3.12500    0.53015
+   3   279   175  -241.25000    -3.31250    0.51072
+   4   279   220  -241.18750    -3.25000    0.43291
+   5   333    40  -241.12500    -3.31250    0.37601
+   6   333    85  -241.12500    -3.25000    0.45887
+   7   333   130  -241.06250    -3.25000    0.52703
+   8   333   175  -241.12500    -3.18750    0.40906
+   9   333   220  -241.18750    -3.25000    0.47676
+  10   387    40  -241.18750    -3.31250    0.52936
+  11   387    85  -241.18750    -3.18750    0.53577
+  12   387   130  -241.06250    -3.18750    0.51740
+  13   387   175  -241.06250    -3.12500    0.50806
+  14   387   220  -241.06250    -3.31250    0.46553
+  15   441    40  -240.87500    -3.18750    0.41637
+  16   441    85  -241.12500    -3.18750    0.45630
+  17   441   130  -241.25000    -3.25000    0.58485
+  18   441   175  -241.12500    -3.25000    0.48924
+  19   441   220  -241.18750    -3.18750    0.48204
+  20   495    40  -241.06250    -3.25000    0.37008
+  21   495    85  -240.93750    -3.25000    0.39999
+  22   495   130  -241.18750    -3.25000    0.45332
+  23   495   175  -241.12500    -3.25000    0.53325
+  24   495   220  -241.00000    -3.18750    0.37834
+  25   495   264  -241.00000    -3.18750    0.51813
+  26   548    84  -241.06250    -3.18750    0.66579
+  27   548   129  -241.06250    -3.18750    0.54268
+  28   548   174  -241.06250    -3.18750    0.54778
+  29   548   219  -241.12500    -3.31250    0.46547
+  30   548   264  -241.00000    -3.25000    0.46833
+  31   602    84  -241.06250    -3.18750    0.67878
+  32   602   129  -241.12500    -3.18750    0.51209
+  33   602   174  -241.12500    -3.18750    0.58523
+  34   602   219  -241.12500    -3.18750    0.42595
+  35   602   264  -241.06250    -3.25000    0.44024
+  36   656    84  -241.12500    -3.18750    0.57421
+  37   656   129  -241.06250    -3.31250    0.53118
+  38   656   174  -241.18750    -3.25000    0.68237
+  39   656   219  -241.06250    -3.25000    0.50263
+  40   656   264  -241.06250    -3.31250    0.36966
+  41   710    84  -241.00000    -3.18750    0.45090
+  42   710   129  -240.93750    -3.18750    0.41276
+  43   710   174  -241.18750    -3.25000    0.58962
+  44   710   219  -241.18750    -3.25000    0.45630
+  45   710   264  -241.12500    -3.12500    0.48131
+  46   764    84  -241.12500    -3.31250    0.46911
+  47   764   129  -241.18750    -3.31250    0.32691
+  48   764   174  -241.00000    -3.31250    0.56819
+  49   764   219  -241.06250    -3.18750    0.43020
+  50   764   264  -241.25000    -3.31250    0.47097
+
+*******************************************************************
+* End_fine_coreg:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:42:23 2025
+
+
+   *====================================================================*
+   |                                                                    |
+       Following part is appended at: Mon Mar 24 21:46:07 2025
+                 Using Doris version  4.0.8 (04-09-2014)
+		     build 	Fri Jun 30 15:38:15 2017          
+   |                                                                    |
+   *--------------------------------------------------------------------*
+
+
+
+*******************************************************************
+*_Start_comp_coregpm:
+*******************************************************************
+Degree_cpm:	1
+Normalization_Lines:   	1.00000000e+00 2.65180000e+04
+Normalization_Pixels:  	1.00000000e+00 4.90000000e+03
+Estimated_coefficientsL:
+-2.37843066e+02 	0 0
+ 1.33075703e+00 	1 0
+ 3.80010210e-01 	0 1
+
+Estimated_coefficientsP:
+-4.24725100e+00 	0 0
+-5.74959220e-01 	1 0
+ 4.21534280e-02 	0 1
+
+Deltaline_slave00_poly:                    	2.41215345e+02
+Deltapixel_slave00_poly:                   	3.20258133e+00
+Deltaline_slave0N_poly:                    	2.41122532e+02
+Deltapixel_slave0N_poly:                   	3.19191609e+00
+Deltaline_slaveN0_poly:                    	2.41055006e+02
+Deltapixel_slaveN0_poly:                   	3.27179663e+00
+Deltaline_slaveNN_poly:                    	2.40962193e+02
+Deltapixel_slaveNN_poly:                   	3.26113139e+00
+*******************************************************************
+* End_comp_coregpm:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:46:07 2025
+
+
+   *====================================================================*
+   |                                                                    |
+       Following part is appended at: Mon Mar 24 21:47:36 2025
+                 Using Doris version  4.0.8 (04-09-2014)
+		     build 	Fri Jun 30 15:38:15 2017          
+   |                                                                    |
+   *--------------------------------------------------------------------*
+
+
+
+*******************************************************************
+*_Start_interfero:
+*******************************************************************
+Data_output_file: 			cint.raw
+Data_output_format: 			complex_real4
+First_line (w.r.t. original_master): 	1
+Last_line (w.r.t. original_master): 	800
+First_pixel (w.r.t. original_master): 	1
+Last_pixel (w.r.t. original_master): 	300
+Multilookfactor_azimuth_direction: 	5
+Multilookfactor_range_direction: 	1
+Number of lines (multilooked): 		160
+Number of pixels (multilooked): 	300
+*******************************************************************
+* End_interfero:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:47:36 2025
+
+
+*******************************************************************
+*_Start_comp_refphase:
+*******************************************************************
+Degree_flat:	3
+Estimated_coefficients_flatearth:
+-5.67482250e+03 	0 0
+-1.84307440e+01 	1 0
+-2.13135747e+02 	0 1
+-7.80046234e-01 	2 0
+-1.09781241e+00 	1 1
+ 7.68031819e+00 	0 2
+-1.41482645e-01 	3 0
+-8.70234711e-03 	2 1
+ 7.53980844e-02 	1 2
+-2.14760432e+00 	0 3
+
+
+Degree_h2ph:	3
+Estimated_coefficients_h2ph:
+ 1.04630558e-04 	0 0
+ 5.99149246e-07 	1 0
+-1.25493462e-05 	0 1
+ 8.12914798e-09 	2 0
+-3.03478416e-08 	1 1
+-1.30776875e-07 	0 2
+ 5.05150591e-10 	3 0
+ 1.86096731e-09 	2 1
+ 7.84916845e-09 	1 2
+-5.49149825e-07 	0 3
+*******************************************************************
+* End_comp_refphase:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:47:36 2025
+
+
+*******************************************************************
+*_Start_subtr_refphase:
+*******************************************************************
+Method: 				polynomial
+Data_output_file: 			cint.srp.raw
+Data_output_format: 			complex_real4
+First_line (w.r.t. original_master): 	1
+Last_line (w.r.t. original_master): 	800
+First_pixel (w.r.t. original_master): 	1
+Last_pixel (w.r.t. original_master): 	300
+Multilookfactor_azimuth_direction: 	5
+Multilookfactor_range_direction: 	1
+Number of lines (multilooked): 		160
+Number of pixels (multilooked): 	300
+*******************************************************************
+* End_subtr_refphase:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:47:36 2025
+
+
+*******************************************************************
+*_Start_coherence:
+*******************************************************************
+Method: 				REFPHASE_ONLY
+Data_output_file: 			coh.raw
+Data_output_format: 			real4
+First_line (w.r.t. original_master): 	1
+Last_line (w.r.t. original_master): 	800
+First_pixel (w.r.t. original_master): 	1
+Last_pixel (w.r.t. original_master): 	300
+Multilookfactor_azimuth_direction: 	5
+Multilookfactor_range_direction: 	1
+Number of lines (multilooked): 		160
+Number of pixels (multilooked): 	300
+*******************************************************************
+* End_coherence:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:47:36 2025

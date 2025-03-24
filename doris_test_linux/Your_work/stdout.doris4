@@ -1,0 +1,1627 @@
+INFO    : @(#)Doris InSAR software, $Revision: 4.0.8 $, $Author: TUDelft $
+INFO    : input file: "doris4.in"
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+INFO    : SCREEN: 	verboseness: 			DEBUG
+DEBUG   : 19: Read keyword: MEMORY
+DEBUG   : Read argument: 50
+DEBUG   : 20: Read keyword: OVERWRITE
+DEBUG   : Read argument: OFF
+DEBUG   : 21: Read keyword: BATCH
+DEBUG   : Read argument: ON
+DEBUG   : 22: Read keyword: LISTINPUT
+DEBUG   : Read argument: ON
+DEBUG   : 23: Read keyword: C
+DEBUG   : 24: Read keyword: PROCESS
+DEBUG   : Read argument: interfero
+INFO    : PROCESS: 	I will process step: 		INTERFERO
+DEBUG   : 25: Read keyword: PROCESS
+DEBUG   : Read argument: comprefpha
+INFO    : PROCESS: 	I will process step: 		COMPREFPHA
+DEBUG   : 26: Read keyword: PROCESS
+DEBUG   : Read argument: subtrrefpha
+INFO    : PROCESS: 	I will process step: 		SUBTRREFPHA
+DEBUG   : 27: Read keyword: PROCESS
+DEBUG   : Read argument: coherence
+INFO    : PROCESS: 	I will process step: 		COHERENCE
+DEBUG   : 28: Read keyword: C
+DEBUG   : 29: Read keyword: C
+DEBUG   : 30: Read keyword: COMMENT
+DEBUG   : 31: Read keyword: C
+DEBUG   : 32: Read keyword: LOGFILE
+DEBUG   : Read argument: log.out
+DEBUG   : 33: Read keyword: M_RESFILE
+DEBUG   : Read argument: master.out
+DEBUG   : 34: Read keyword: S_RESFILE
+DEBUG   : Read argument: slave.out
+DEBUG   : 35: Read keyword: I_RESFILE
+DEBUG   : Read argument: interferogram.out
+DEBUG   : 36: Read keyword: C
+DEBUG   : 37: Read keyword: C
+DEBUG   : 38: Read keyword: COMMENT
+DEBUG   : 39: Read keyword: C
+DEBUG   : 40: Read keyword: INT_OUT_CINT
+DEBUG   : Read argument: cint.raw
+DEBUG   : 41: Read keyword: INT_MULTILOOK
+DEBUG   : Read argument: 5
+DEBUG   : Read argument: 1
+DEBUG   : 42: Read keyword: C
+DEBUG   : 43: Read keyword: C
+DEBUG   : 44: Read keyword: COMMENT
+DEBUG   : 45: Read keyword: C
+DEBUG   : 46: Read keyword: FE_METHOD
+DEBUG   : Read argument: porbits
+DEBUG   : 47: Read keyword: FE_DEGREE
+DEBUG   : Read argument: 3
+DEBUG   : 48: Read keyword: FE_NPOINTS
+DEBUG   : Read argument: 101
+DEBUG   : 49: Read keyword: C
+DEBUG   : 50: Read keyword: C
+DEBUG   : 51: Read keyword: COMMENT
+DEBUG   : 52: Read keyword: C
+DEBUG   : 53: Read keyword: SRP_OUT_CINT
+DEBUG   : Read argument: cint.srp.raw
+DEBUG   : 54: Read keyword: SRP_MULTILOOK
+DEBUG   : Read argument: 1
+DEBUG   : Read argument: 1
+DEBUG   : 55: Read keyword: C
+DEBUG   : 56: Read keyword: C
+DEBUG   : 57: Read keyword: COMMENT
+DEBUG   : 58: Read keyword: C
+DEBUG   : 59: Read keyword: C
+DEBUG   : 60: Read keyword: C
+DEBUG   : 61: Read keyword: COH_OUT_COH
+DEBUG   : Read argument: coh.raw
+DEBUG   : 62: Read keyword: COH_MULTILOOK
+DEBUG   : Read argument: 5
+DEBUG   : Read argument: 1
+DEBUG   : 63: Read keyword: COH_WINSIZE
+DEBUG   : Read argument: 15
+DEBUG   : Read argument: 15
+DEBUG   : 64: Read keyword: C
+DEBUG   : 65: Read keyword: C
+DEBUG   : 66: Read keyword: STOP
+INFO    : STOP:   	Encountered.
+DEBUG   : STOP card encountered at line 66
+
+INFO    : 
+	*** General input cards ***
+INFO    : MEMORY: 	Available to Doris [MB]: 	50
+INFO    : M_RESFILE: 	Resultfile for master: 		master.out
+INFO    : S_RESFILE: 	Resultfile for slave: 		slave.out
+INFO    : I_RESFILE: 	Resultfile for products: 	interferogram.out
+INFO    : LOGFILE: 	Out file for logging: 		log.out
+INFO    : ORB_INTERP: 	method selector value:		-12
+INFO    : ORB_PRM:   	orbit parameters selection value:		0
+INFO    : DUMPBASELINE: evaluation grid for baseline: 	0 lines x 0 pixels: 
+INFO    : HEIGHT: 	average terrain height:		0
+INFO    : TIEPOINT: 	lat/lon/hei: 0 0 0
+INFO    : LISTINPUT: 	Append input to logfile: 	1
+INFO    : ELLIPSOID: 	Ellipsoid used (orbit, output): WGS84.
+INFO    : ELLIPSOID: a   =         6378137
+INFO    : ELLIPSOID: b   =    6356752.3141
+INFO    : ELLIPSOID: e2  = 0.006694380035513
+INFO    : ELLIPSOID: e2' = 0.006739496788262
+INFO    : 
+	*** Input for step COMPREFPHA ***
+INFO    : FE_METHOD: method for flatearth correction: PORBITS
+INFO    : FE_NPOINTS: Using 101 (random like) distributed points for estimation of refpha polynomial.
+INFO    : FE_DEGREE: Using 3 order polynomial for flat Earth correction.
+INFO    : 
+	*** Input for step INTERFERO ***
+INFO    : INT_OUT_CINT: Outfile complex interferogram: 	cint.raw
+INFO    : INT_MULTILOOK: 	Factor (line pixel): 	5 1
+INFO    : 
+	*** Input for step SUBTRREFPHA ***
+INFO    : SRP_METHOD: 	polynomial: 	Polynomial from COMPREFPHA used.
+INFO    : SRP_OUT_CINT: 	outputfile complex interferogram: 	cint.srp.raw
+INFO    : SRP_MULTILOOK: 	Factors (line pixel): 	1 1
+INFO    : 
+	*** Input for step COHERENCE ***
+INFO    : COH_OUT_COH: 	Outputfile coherence image: coh.raw
+INFO    : COH_MULTILOOK: 	Factor (line pixel): 	5 1
+INFO    : COH_WINSIZE: 	 window size coh. estimation (l/p): 	15 15
+DEBUG   : Opened output file: readinput: scratchreadinput
+DEBUG   : Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+DEBUG   : "__DEBUG"                 not defined (extra verbose)
+DEBUG   : "__DEBUGMAT1"             not defined (range checking matrix class)
+DEBUG   : "__DEBUGMAT2"             not defined (verbose matrix class)
+DEBUG   : "__USE_FFTW_LIBRARY__"    defined (using fftw routines)
+DEBUG   : "__USE_VECLIB_LIBRARY__"  not defined (using internal routines)
+DEBUG   : "__USE_LAPACK_LIBRARY__"  defined (using library routines)
+DEBUG   : "__GplusplusCOMPILER__"   not defined (no GNU c++ compiler)
+DEBUG   : "__GNUC__":               9
+DEBUG   : "__GNUC_MINOR__":         3
+DEBUG   : Testing endianness.
+DEBUG   : "__X86PROCESSOR__"        defined (little Endian machine)
+INFO    : Little Endian machine defined and this is correct.
+DEBUG   : "__NO_STRPTIME"           not defined (using library routine)
+DEBUG   : Testing strptime function.
+INFO    : strptime function works fine.
+DEBUG   : test somewhere also memory,diskspace.
+DEBUG   : file: log.out does exist.
+DEBUG   : Opened output file: log.out
+DEBUG   : Writing (updating) of file (initwrite).
+DEBUG   : file: interferogram.out does exist.
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : Writing (updating) of file (initwrite).
+DEBUG   : Opened input file:  scratchreadinput
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG   : file: master.out does exist.
+DEBUG   : Opened input file:  master.out
+DEBUG   : read line:  TU DELFT - DEOS
+DEBUG   : read line: =====================================================
+DEBUG   : read line: MASTER RESULTFILE: 	master.out
+DEBUG   : read line: 
+DEBUG   : read line: InSAR Processor: 	Doris (Delft oo radar interferometric software)
+DEBUG   : read line: Version:           	Version 2.6 (debug)
+DEBUG   : read line: VECLIB library:    	not used
+DEBUG   : read line: LAPACK library:    	not used
+DEBUG   : read line: Compiled at:       	Aug 10 2000 15:10:01
+DEBUG   : read line: By GNU gcc:  		2.95.2
+DEBUG   : read line: 
+DEBUG   : read line: Creation of this file: 	Thu Aug 10 15:45:25 2000
+DEBUG   : read line: =====================================================
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: readfiles: 		1
+DEBUG   : read line: precise_orbits: 	1
+DEBUG   : read line: crop: 			1
+DEBUG   : read line: filt_azi: 		0
+DEBUG   : read line: filt_range: 		0
+DEBUG   : read line: NOT_USED: 		0
+DEBUG   : read line: End_process_control
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_readfiles:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Volume file: 					/cdrom/scene1/vdf_dat.001
+DEBUG   : read line: Volume_ID: 					1               
+DEBUG   : read line: Volume_identifier: 				0004094800014027
+DEBUG   : read line: Volume_set_identifier: 				19950727 9492574
+DEBUG   : read line: (Check)Number of records in ref. file: 		26556
+DEBUG   : read line: Product type specifier: 			PRODUCT:ERS-2.SAR.SLC                   
+DEBUG   : read line: Location and date/time of product creation: 	GENERATED AT I-PAF            24-JUL-1998 18:57:26.670      
+DEBUG   : read line: Scene identification: 				ORBIT 1393 DATE 27-JUL-1995  9:49:25    
+DEBUG   : read line: Scene location: 				FRAME 2781 LAT:     40.95 LON:     14.03
+DEBUG   : read line: Leader file:                                 	/cdrom/scene1/lea_01.001
+DEBUG   : read line: Scene_centre_latitude:                     	      40.9480000
+DEBUG   : read line: Scene_centre_longitude:                    	      14.0270000
+DEBUG   : read line: Radar_wavelength (m):                      	       0.0566660
+DEBUG   : read line: First_pixel_azimuth_time (UTC):            	27-JUL-1995 09:49:26.141
+DEBUG   : read line: Pulse_Repetition_Frequency (computed, Hz): 	1679.95192004
+DEBUG   : read line: Total_azimuth_band_width (Hz):             	    1378.0000000
+DEBUG   : read line: Xtrack_f_DC_constant (Hz, early edge):     	     117.3210000
+DEBUG   : read line: Xtrack_f_DC_linear (Hz/s, early edge):     	   72338.0000000
+DEBUG   : read line: Xtrack_f_DC_quadratic (Hz/s/s, early edge): 	-455000000.00000
+DEBUG   : read line: Range_time_to_first_pixel (2way) (ms):     	       5.5458330
+DEBUG   : read line: Range_sampling_rate (computed, MHz):       	18.9662980496
+DEBUG   : read line: Total_range_band_width (MHz):               	      15.5500000
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Datafile: 					/cdrom/scene1/dat_01.001
+DEBUG   : read line: Number_of_lines_original: 			26555
+DEBUG   : read line: Number_of_pixels_original: 			4900
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_readfiles:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_crop:			master step01
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Data_output_file: 				1393.raw.linux
+DEBUG   : read line: Data_output_format: 				complex_short
+DEBUG   : read line: First_line (w.r.t. original_image): 		1
+DEBUG   : read line: Last_line (w.r.t. original_image): 		800
+DEBUG   : read line: First_pixel (w.r.t. original_image): 		1
+DEBUG   : read line: Last_pixel (w.r.t. original_image): 		300
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_crop:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_precise_orbits:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 	t(s)	X(m)	Y(m)	Z(m)
+DEBUG   : read line: NUMBER_OF_DATAPOINTS: 			27
+DEBUG   : read line: 35361.000000	5152159.477	1646546.378	4689145.167
+DEBUG   : read line: 35362.000000	5157296.325	1646232.204	4683620.050
+DEBUG   : read line: 35363.000000	5162427.558	1645915.503	4678089.838
+DEBUG   : read line: 35364.000000	5167553.172	1645596.277	4672554.537
+DEBUG   : read line: 35365.000000	5172673.159	1645274.527	4667014.153
+DEBUG   : read line: 35366.000000	5177787.513	1644950.254	4661468.692
+DEBUG   : read line: 35367.000000	5182896.230	1644623.460	4655918.161
+DEBUG   : read line: 35368.000000	5187999.303	1644294.145	4650362.564
+DEBUG   : read line: 35369.000000	5193096.726	1643962.311	4644801.909
+DEBUG   : read line: 35370.000000	5198188.494	1643627.958	4639236.200
+DEBUG   : read line: 35371.000000	5203274.600	1643291.089	4633665.445
+DEBUG   : read line: 35372.000000	5208355.038	1642951.704	4628089.650
+DEBUG   : read line: 35373.000000	5213429.803	1642609.805	4622508.819
+DEBUG   : read line: 35374.000000	5218498.889	1642265.392	4616922.960
+DEBUG   : read line: 35375.000000	5223562.290	1641918.467	4611332.079
+DEBUG   : read line: 35376.000000	5228620.000	1641569.031	4605736.181
+DEBUG   : read line: 35377.000000	5233672.013	1641217.085	4600135.273
+DEBUG   : read line: 35378.000000	5238718.324	1640862.631	4594529.360
+DEBUG   : read line: 35379.000000	5243758.926	1640505.670	4588918.450
+DEBUG   : read line: 35380.000000	5248793.814	1640146.202	4583302.547
+DEBUG   : read line: 35381.000000	5253822.982	1639784.230	4577681.658
+DEBUG   : read line: 35382.000000	5258846.424	1639419.754	4572055.789
+DEBUG   : read line: 35383.000000	5263864.135	1639052.775	4566424.946
+DEBUG   : read line: 35384.000000	5268876.108	1638683.295	4560789.136
+DEBUG   : read line: 35385.000000	5273882.338	1638311.315	4555148.364
+DEBUG   : read line: 35386.000000	5278882.819	1637936.837	4549502.637
+DEBUG   : read line: 35387.000000	5283877.545	1637559.861	4543851.960
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_precise_orbits:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : file: slave.out does exist.
+DEBUG   : Opened input file:  slave.out
+DEBUG   : read line:  TU DELFT - DEOS
+DEBUG   : read line: =====================================================
+DEBUG   : read line: SLAVE RESULTFILE: 	slave.out
+DEBUG   : read line: 
+DEBUG   : read line: InSAR Processor: 	Doris (Delft oo radar interferometric software)
+DEBUG   : read line: Version:           	Version 2.6 (debug)
+DEBUG   : read line: VECLIB library:    	not used
+DEBUG   : read line: LAPACK library:    	not used
+DEBUG   : read line: Compiled at:       	Aug 10 2000 15:10:01
+DEBUG   : read line: By GNU gcc:  		2.95.2
+DEBUG   : read line: 
+DEBUG   : read line: Creation of this file: 	Thu Aug 10 15:45:25 2000
+DEBUG   : read line: =====================================================
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: readfiles:		1
+DEBUG   : read line: precise_orbits:		1
+DEBUG   : read line: crop:			1
+DEBUG   : read line: resample:		1
+DEBUG   : read line: filt_azi:		0
+DEBUG   : read line: filt_range:		0
+DEBUG   : read line: NOT_USED:		0
+DEBUG   : read line: End_process_control
+DEBUG   : read line: 
+DEBUG   : read line:    *====================================================================*
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:        Following part is appended at: Thu Aug 10 15:48:43 2000
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:    *--------------------------------------------------------------------*
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_readfiles:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Volume file: 					/cdrom/scene1/vdf_dat.001
+DEBUG   : read line: Volume_ID: 					1               
+DEBUG   : read line: Volume_identifier: 				0004094000014024
+DEBUG   : read line: Volume_set_identifier: 				19950726 9492285
+DEBUG   : read line: (Check)Number of records in ref. file: 		26519
+DEBUG   : read line: Product type specifier: 			PRODUCT:ERS-1.SAR.SLC                   
+DEBUG   : read line: Location and date/time of product creation: 	GENERATED AT I-PAF            24-JUL-1998 07:13:11.940      
+DEBUG   : read line: Scene identification: 				ORBIT 21066 DATE 26-JUL-1995  9:49:22   
+DEBUG   : read line: Scene location: 				FRAME 2781 LAT:     40.94 LON:     14.02
+DEBUG   : read line: Leader file:                                 	/cdrom/scene1/lea_01.001
+DEBUG   : read line: Scene_centre_latitude:                     	      40.9400000
+DEBUG   : read line: Scene_centre_longitude:                    	      14.0240000
+DEBUG   : read line: Radar_wavelength (m):                      	       0.0566660
+DEBUG   : read line: First_pixel_azimuth_time (UTC):            	26-JUL-1995 09:49:23.394
+DEBUG   : read line: Pulse_Repetition_Frequency (computed, Hz): 	1679.94931897
+DEBUG   : read line: Total_azimuth_band_width (Hz):             	    1378.0000000
+DEBUG   : read line: Xtrack_f_DC_constant (Hz, early edge):     	     424.9560000
+DEBUG   : read line: Xtrack_f_DC_linear (Hz/s, early edge):     	  -13140.0000000
+DEBUG   : read line: Xtrack_f_DC_quadratic (Hz/s/s, early edge): 	-518000000.00000
+DEBUG   : read line: Range_time_to_first_pixel (2way) (ms):     	       5.5458330
+DEBUG   : read line: Range_sampling_rate (computed, MHz):       	18.9662980496
+DEBUG   : read line: Total_range_band_width (MHz):               	      15.5500000
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Datafile: 					/cdrom/scene1/dat_01.001
+DEBUG   : read line: Number_of_lines_original: 			26518
+DEBUG   : read line: Number_of_pixels_original: 			4900
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_readfiles:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_crop:			slave step01
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Data_output_file: 				21066.raw.linux
+DEBUG   : read line: Data_output_format: 				complex_short
+DEBUG   : read line: First_line (w.r.t. original_image): 		1
+DEBUG   : read line: Last_line (w.r.t. original_image): 		800
+DEBUG   : read line: First_pixel (w.r.t. original_image): 		1
+DEBUG   : read line: Last_pixel (w.r.t. original_image): 		300
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_crop:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_precise_orbits:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 	t(s)	X(m)	Y(m)	Z(m)
+DEBUG   : read line: NUMBER_OF_DATAPOINTS: 			27
+DEBUG   : read line: 35358.000000	5151580.064	1646538.645	4689765.110
+DEBUG   : read line: 35359.000000	5156717.560	1646224.699	4684240.566
+DEBUG   : read line: 35360.000000	5161849.442	1645908.227	4678710.927
+DEBUG   : read line: 35361.000000	5166975.704	1645589.230	4673176.199
+DEBUG   : read line: 35362.000000	5172096.340	1645267.708	4667636.387
+DEBUG   : read line: 35363.000000	5177211.345	1644943.664	4662091.497
+DEBUG   : read line: 35364.000000	5182320.713	1644617.098	4656541.536
+DEBUG   : read line: 35365.000000	5187424.437	1644288.011	4650986.509
+DEBUG   : read line: 35366.000000	5192522.513	1643956.405	4645426.423
+DEBUG   : read line: 35367.000000	5197614.933	1643622.281	4639861.283
+DEBUG   : read line: 35368.000000	5202701.692	1643285.640	4634291.095
+DEBUG   : read line: 35369.000000	5207782.784	1642946.483	4628715.867
+DEBUG   : read line: 35370.000000	5212858.204	1642604.811	4623135.603
+DEBUG   : read line: 35371.000000	5217927.945	1642260.626	4617550.309
+DEBUG   : read line: 35372.000000	5222992.002	1641913.928	4611959.992
+DEBUG   : read line: 35373.000000	5228050.368	1641564.720	4606364.658
+DEBUG   : read line: 35374.000000	5233103.038	1641213.002	4600764.313
+DEBUG   : read line: 35375.000000	5238150.007	1640858.775	4595158.964
+DEBUG   : read line: 35376.000000	5243191.267	1640502.040	4589548.615
+DEBUG   : read line: 35377.000000	5248226.814	1640142.800	4583933.273
+DEBUG   : read line: 35378.000000	5253256.642	1639781.054	4578312.945
+DEBUG   : read line: 35379.000000	5258280.744	1639416.805	4572687.636
+DEBUG   : read line: 35380.000000	5263299.115	1639050.053	4567057.352
+DEBUG   : read line: 35381.000000	5268311.750	1638680.800	4561422.100
+DEBUG   : read line: 35382.000000	5273318.642	1638309.047	4555781.886
+DEBUG   : read line: 35383.000000	5278319.785	1637934.794	4550136.716
+DEBUG   : read line: 35384.000000	5283315.175	1637558.045	4544486.596
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_precise_orbits:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line:    *====================================================================*
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:        Following part is appended at: Mon Mar 24 21:46:07 2025
+DEBUG   : read line:                  Using Doris version  4.0.8 (04-09-2014)
+DEBUG   : read line: 		     build 	Fri Jun 30 15:38:15 2017          
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:    *--------------------------------------------------------------------*
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_resample:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Normalization_Lines:   	1 26518
+DEBUG   : read line: Normalization_Pixels:  	1 4900
+DEBUG   : read line: Shifted azimuth spectrum:             		1
+DEBUG   : read line: Data_output_file:                     		21066.resampled
+DEBUG   : read line: Data_output_format:                   		complex_real4
+DEBUG   : read line: Interpolation kernel:                 		6 point cubic convolution
+DEBUG   : read line: First_line (w.r.t. original_master):  		1
+DEBUG   : read line: Last_line (w.r.t. original_master):   		800
+DEBUG   : read line: First_pixel (w.r.t. original_master): 		1
+DEBUG   : read line: Last_pixel (w.r.t. original_master):  		300
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_resample:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line:    Current time: Mon Mar 24 21:46:07 2025
+DEBUG   : read line: 
+DEBUG   : file: interferogram.out does exist.
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read line: =====================================================
+DEBUG   : read line:  INTERFEROGRAM RESULTFILE: interferogram.out
+DEBUG   : read line: 
+DEBUG   : read line: Created by:             
+DEBUG   : read line: InSAR Processor:        Doris (Delft o-o Radar Interferometric Software)
+DEBUG   : read line: Version:                version  4.0.8 (04-09-2014)
+DEBUG   : read line: 		     build 	Fri Jun 30 15:38:15 2017 (optimal)
+DEBUG   : read line: FFTW library:           used
+DEBUG   : read line: VECLIB library:         not used
+DEBUG   : read line: LAPACK library:         used
+DEBUG   : read line: Compiled at:            Mar 24 2020 14:16:00
+DEBUG   : read line: By GNU gcc:             9.3.9
+DEBUG   : read line: File creation at:       Mon Mar 24 21:42:23 2025
+DEBUG   : read line: 
+DEBUG   : read line:  -------------------------------------------------------
+DEBUG   : read line: | Delft Institute of Earth Observation & Space Systems  |
+DEBUG   : read line: |          Delft University of Technology               |
+DEBUG   : read line: |              http://doris.tudelft.nl                  |
+DEBUG   : read line: |                                                       |
+DEBUG   : read line: | Author: (c) TUDelft - DEOS Radar Group                |
+DEBUG   : read line:  -------------------------------------------------------
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: coarse_orbits:		1
+DEBUG   : read line: coarse_correl:		1
+DEBUG   : read line: fine_coreg:		1
+DEBUG   : read line: timing_error:		0
+DEBUG   : read line: dem_assist:		0
+DEBUG   : read line: comp_coregpm:		1
+DEBUG   : read line: interfero:		0
+DEBUG   : read line: coherence:		0
+DEBUG   : read line: comp_refphase:		0
+DEBUG   : read line: subtr_refphase:		0
+DEBUG   : read line: comp_refdem:		0
+DEBUG   : read line: subtr_refdem:		0
+DEBUG   : read line: filtphase:		0
+DEBUG   : read line: unwrap:			0
+DEBUG   : read line: est_orbits:		0
+DEBUG   : read line: slant2h:		0
+DEBUG   : read line: geocoding:		0
+DEBUG   : read line: dinsar:			0
+DEBUG   : read line: NOT_USED2:		0
+DEBUG   : read line: End_process_control
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_coarse_orbits:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Some info for pixel: 400, 150 (not used):
+DEBUG   : read line:   Btemp:     [days]:          -1      	// Temporal baseline
+DEBUG   : read line:   Bperp      [m]:           36.3      	// Perpendicular baseline
+DEBUG   : read line:   Bpar       [m]:           23.5      	// Parallel baseline
+DEBUG   : read line:   Bh         [m]:           41.7      	// Horizontal baseline
+DEBUG   : read line:   Bv         [m]:          -11.5      	// Vertical baseline
+DEBUG   : read line:   B          [m]:           43.2      	// Baseline (distance between sensors)
+DEBUG   : read line:   alpha      [deg]:        -15.4      	// Baseline orientation
+DEBUG   : read line:   theta      [deg]:         17.4      	// look angle
+DEBUG   : read line:   inc_angle  [deg]:         19.6      	// incidence angle
+DEBUG   : read line:   orbitconv  [deg]:   0.000425042      	// angle between orbits
+DEBUG   : read line:   Height_amb [m]:         -217.7      	// height = h_amb*phase/2pi (approximately)
+DEBUG   : read line:   Control point master (line,pixel,hei) = (400, 150, 0)
+DEBUG   : read line:   Control point slave  (line,pixel,hei) = (163.92, 147.031, 0)
+DEBUG   : read line: Estimated translation slave w.r.t. master (slave-master):
+DEBUG   : read line:   Positive offsetL: slave image is to the bottom
+DEBUG   : read line:   Positive offsetP: slave image is to the right
+DEBUG   : read line: Coarse_orbits_translation_lines:  	-236
+DEBUG   : read line: Coarse_orbits_translation_pixels: 	-3
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_coarse_orbits:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line:    Current time: Mon Mar 24 21:42:23 2025
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_coarse_correl:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Estimated translation slave w.r.t. master:
+DEBUG   : read line: Coarse_correlation_translation_lines: 	-242
+DEBUG   : read line: Coarse_correlation_translation_pixels: 	-3
+DEBUG   : read line: Slope_CoarseCorr_lines: 		0
+DEBUG   : read line: Initial_Offset_CoarseCorr_lines: 	-242
+DEBUG   : read line: Slope_CoarseCorr_pixels: 		0
+DEBUG   : read line: Initial_Offset_CoarseCorr_pixels: 	-3
+DEBUG   : read line: Number of correlation windows: 		5 of 5
+DEBUG   : read line: 
+DEBUG   : read line: #     center(l,p)   coherence   offsetL   offsetP
+DEBUG   : read line: 0 	385 	88 	0.487409 	-242 	-3
+DEBUG   : read line: 1 	385 	184 	0.403238 	-242 	-3
+DEBUG   : read line: 2 	519 	152 	0.431987 	-242 	-3
+DEBUG   : read line: 3 	652 	120 	0.470043 	-242 	-3
+DEBUG   : read line: 4 	652 	216 	0.393623 	-241 	-3
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_coarse_correl:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line:    Current time: Mon Mar 24 21:42:23 2025
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_fine_coreg:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Initial offsets (l,p):             	-242, -3
+DEBUG   : read line: Window_size_L_for_correlation:     	32
+DEBUG   : read line: Window_size_P_for_correlation:     	32
+DEBUG   : read line: Max. offset that can be estimated: 	16
+DEBUG   : read line: Peak search ovs window (l,p):      	16 , 16
+DEBUG   : read line: Oversampling factor:               	16
+DEBUG   : read line: Number_of_correlation_windows:     	51
+DEBUG   : read line: Number 	posL 	posP 	offsetL offsetP	correlation
+DEBUG   : read line:    0   279    40  -241.06250    -3.12500    0.44768
+DEBUG   : read line:    1   279    85  -241.06250    -3.18750    0.39346
+DEBUG   : read line:    2   279   130  -241.25000    -3.12500    0.53015
+DEBUG   : read line:    3   279   175  -241.25000    -3.31250    0.51072
+DEBUG   : read line:    4   279   220  -241.18750    -3.25000    0.43291
+DEBUG   : read line:    5   333    40  -241.12500    -3.31250    0.37601
+DEBUG   : read line:    6   333    85  -241.12500    -3.25000    0.45887
+DEBUG   : read line:    7   333   130  -241.06250    -3.25000    0.52703
+DEBUG   : read line:    8   333   175  -241.12500    -3.18750    0.40906
+DEBUG   : read line:    9   333   220  -241.18750    -3.25000    0.47676
+DEBUG   : read line:   10   387    40  -241.18750    -3.31250    0.52936
+DEBUG   : read line:   11   387    85  -241.18750    -3.18750    0.53577
+DEBUG   : read line:   12   387   130  -241.06250    -3.18750    0.51740
+DEBUG   : read line:   13   387   175  -241.06250    -3.12500    0.50806
+DEBUG   : read line:   14   387   220  -241.06250    -3.31250    0.46553
+DEBUG   : read line:   15   441    40  -240.87500    -3.18750    0.41637
+DEBUG   : read line:   16   441    85  -241.12500    -3.18750    0.45630
+DEBUG   : read line:   17   441   130  -241.25000    -3.25000    0.58485
+DEBUG   : read line:   18   441   175  -241.12500    -3.25000    0.48924
+DEBUG   : read line:   19   441   220  -241.18750    -3.18750    0.48204
+DEBUG   : read line:   20   495    40  -241.06250    -3.25000    0.37008
+DEBUG   : read line:   21   495    85  -240.93750    -3.25000    0.39999
+DEBUG   : read line:   22   495   130  -241.18750    -3.25000    0.45332
+DEBUG   : read line:   23   495   175  -241.12500    -3.25000    0.53325
+DEBUG   : read line:   24   495   220  -241.00000    -3.18750    0.37834
+DEBUG   : read line:   25   495   264  -241.00000    -3.18750    0.51813
+DEBUG   : read line:   26   548    84  -241.06250    -3.18750    0.66579
+DEBUG   : read line:   27   548   129  -241.06250    -3.18750    0.54268
+DEBUG   : read line:   28   548   174  -241.06250    -3.18750    0.54778
+DEBUG   : read line:   29   548   219  -241.12500    -3.31250    0.46547
+DEBUG   : read line:   30   548   264  -241.00000    -3.25000    0.46833
+DEBUG   : read line:   31   602    84  -241.06250    -3.18750    0.67878
+DEBUG   : read line:   32   602   129  -241.12500    -3.18750    0.51209
+DEBUG   : read line:   33   602   174  -241.12500    -3.18750    0.58523
+DEBUG   : read line:   34   602   219  -241.12500    -3.18750    0.42595
+DEBUG   : read line:   35   602   264  -241.06250    -3.25000    0.44024
+DEBUG   : read line:   36   656    84  -241.12500    -3.18750    0.57421
+DEBUG   : read line:   37   656   129  -241.06250    -3.31250    0.53118
+DEBUG   : read line:   38   656   174  -241.18750    -3.25000    0.68237
+DEBUG   : read line:   39   656   219  -241.06250    -3.25000    0.50263
+DEBUG   : read line:   40   656   264  -241.06250    -3.31250    0.36966
+DEBUG   : read line:   41   710    84  -241.00000    -3.18750    0.45090
+DEBUG   : read line:   42   710   129  -240.93750    -3.18750    0.41276
+DEBUG   : read line:   43   710   174  -241.18750    -3.25000    0.58962
+DEBUG   : read line:   44   710   219  -241.18750    -3.25000    0.45630
+DEBUG   : read line:   45   710   264  -241.12500    -3.12500    0.48131
+DEBUG   : read line:   46   764    84  -241.12500    -3.31250    0.46911
+DEBUG   : read line:   47   764   129  -241.18750    -3.31250    0.32691
+DEBUG   : read line:   48   764   174  -241.00000    -3.31250    0.56819
+DEBUG   : read line:   49   764   219  -241.06250    -3.18750    0.43020
+DEBUG   : read line:   50   764   264  -241.25000    -3.31250    0.47097
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_fine_coreg:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line:    Current time: Mon Mar 24 21:42:23 2025
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line:    *====================================================================*
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:        Following part is appended at: Mon Mar 24 21:46:07 2025
+DEBUG   : read line:                  Using Doris version  4.0.8 (04-09-2014)
+DEBUG   : read line: 		     build 	Fri Jun 30 15:38:15 2017          
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:    *--------------------------------------------------------------------*
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_comp_coregpm:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Degree_cpm:	1
+DEBUG   : read line: Normalization_Lines:   	1.00000000e+00 2.65180000e+04
+DEBUG   : read line: Normalization_Pixels:  	1.00000000e+00 4.90000000e+03
+DEBUG   : read line: Estimated_coefficientsL:
+DEBUG   : read line: -2.37843066e+02 	0 0
+DEBUG   : read line:  1.33075703e+00 	1 0
+DEBUG   : read line:  3.80010210e-01 	0 1
+DEBUG   : read line: 
+DEBUG   : read line: Estimated_coefficientsP:
+DEBUG   : read line: -4.24725100e+00 	0 0
+DEBUG   : read line: -5.74959220e-01 	1 0
+DEBUG   : read line:  4.21534280e-02 	0 1
+DEBUG   : read line: 
+DEBUG   : read line: Deltaline_slave00_poly:                    	2.41215345e+02
+DEBUG   : read line: Deltapixel_slave00_poly:                   	3.20258133e+00
+DEBUG   : read line: Deltaline_slave0N_poly:                    	2.41122532e+02
+DEBUG   : read line: Deltapixel_slave0N_poly:                   	3.19191609e+00
+DEBUG   : read line: Deltaline_slaveN0_poly:                    	2.41055006e+02
+DEBUG   : read line: Deltapixel_slaveN0_poly:                   	3.27179663e+00
+DEBUG   : read line: Deltaline_slaveNN_poly:                    	2.40962193e+02
+DEBUG   : read line: Deltapixel_slaveNN_poly:                   	3.26113139e+00
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_comp_coregpm:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line:    Current time: Mon Mar 24 21:46:07 2025
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line:    *====================================================================*
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:        Following part is appended at: Mon Mar 24 21:47:36 2025
+DEBUG   : read line:                  Using Doris version  4.0.8 (04-09-2014)
+DEBUG   : read line: 		     build 	Fri Jun 30 15:38:15 2017          
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:    *--------------------------------------------------------------------*
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : Time spent for initialization:
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.000824 sec (total:    0 min 0.000824 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+DEBUG   : file: master.out does exist.
+INFO    : Reading parameters from: master.out
+DEBUG   : Opened input file:  master.out
+DEBUG   : [27]: string: "Product",                     (derived) value: PRODUCT:ERS-2.SAR.SLC
+DEBUG   : Substring "PRODUCT" (radarsat?) found in Product type specifier.
+DEBUG   : Substring "ERS" found in Product type specifier.
+DEBUG   : Product/sensor: 1
+DEBUG   : [31]: string: "Scene_centre_latitude:",      (derived) value: 40.94800000
+DEBUG   : [32]: string: "Scene_centre_longitude:",     (derived) value: 14.02700000
+DEBUG   : [33]: string: "Radar_wavelength",            (derived) value: 0.05666600
+DEBUG   : Extracted first azimuth time string: 09:49:26.141
+DEBUG   : [34]: string: "First_pixel_azimuth_time",    (derived) value: 35366.14100000
+DEBUG   : [35]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95192004
+DEBUG   : [36]: string: "Total_azimuth_band_width",    (derived) value: 1378.00000000
+DEBUG   : [37]: string: "Xtrack_f_DC_constant",        (derived) value: 117.32100000
+DEBUG   : [38]: string: "Xtrack_f_DC_linear",          (derived) value: 72338.00000000
+DEBUG   : [39]: string: "Xtrack_f_DC_quadratic",       (derived) value: -455000000.00000000
+DEBUG   : [40]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG   : [41]: string: "Range_sampling_rate",         (derived) value: 37932596.09920000
+DEBUG   : [42]: string: "Total_range_band_width",      (derived) value: 15550000.00000000
+DEBUG   : [46]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG   : [47]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: master.out
+WARNING : found_sarp==false
+DEBUG   : sensor id: 1
+DEBUG   : ERS 1 or 2 sensor detected.
+INFO    : Range to pixel 1 =    831299.453 m
+INFO    : Range to pixel 4900 = 870017.691 m
+DEBUG   : fDC(col) = +0x1.d548b43958106p+6+0x1.1a92p+16*(col-1)/+0x1.21671a0cb295ep+24-0x1.b1ebfcp+28*((col-1)/+0x1.21671a0cb295ep+24)^2
+DEBUG   : fDC(col) = +0x1.d548b43958106p+6+0x1.f3e98ec208a23p-9*(col-1)-0x1.538946ed2d95cp-20*(col-1)^2
+INFO    : Doppler centroid frequency: at pixel 1 (early edge): 		117.321 Hz
+INFO    : Doppler centroid frequency: at pixel 4900 (far edge): 	105.649 Hz
+INFO    : Doppler centroid frequency: at pixel 1507.675 (maximum):  	120.196 Hz
+INFO    : sensor: 1
+DEBUG   : 
+DEBUG   : Opened input file:  master.out
+INFO    : 27 datapoints (t,x,y,z) read from: "master.out"
+DEBUG   : value of interp_method: -12
+INFO    : Setting default orbit interpolation method.
+DEBUG   : value of interp_method: 5
+INFO    : Computing coefficients for orbit polyfit degree: 5
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000480092m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   5152159.477   5152159.47706104   -6.10388815402985e-05
+DEBUG   :            35362   5157296.325   5157296.3249055   9.44975763559341e-05
+DEBUG   :            35363   5162427.558   5162427.55837269   -0.000372694805264473
+DEBUG   :            35364   5167553.172   5167553.17154784   0.000452161766588688
+DEBUG   :            35365   5172673.159   5172673.15851991   0.000480092130601406
+DEBUG   :            35366   5177787.513   5177787.51338193   -0.000381927005946636
+DEBUG   :            35367   5182896.23   5182896.23023126   -0.000231258571147919
+DEBUG   :            35368   5187999.303   5187999.30316989   -0.000169885344803333
+DEBUG   :            35369   5193096.726   5193096.72630471   -0.000304705463349819
+DEBUG   :            35370   5198188.494   5198188.49374782   0.00025218166410923
+DEBUG   :            35371   5203274.6   5203274.59961681   0.000383186154067516
+DEBUG   :            35372   5208355.038   5208355.03803506   -3.50624322891235e-05
+DEBUG   :            35373   5213429.803   5213429.803132   -0.000132001005113125
+DEBUG   :            35374   5218498.889   5218498.88904342   -4.34238463640213e-05
+DEBUG   :            35375   5223562.29   5223562.28991177   8.82307067513466e-05
+DEBUG   :            35376   5228620   5228619.99988641   0.000113592483103275
+DEBUG   :            35377   5233672.013   5233672.01312394   -0.000123935751616955
+DEBUG   :            35378   5238718.324   5238718.32378846   0.000211542472243309
+DEBUG   :            35379   5243758.926   5243758.92605188   -5.18802553415298e-05
+DEBUG   :            35380   5248793.814   5248793.8140942   -9.41948965191841e-05
+DEBUG   :            35381   5253822.982   5253822.98210378   -0.000103776343166828
+DEBUG   :            35382   5258846.424   5258846.42427766   -0.000277657061815262
+DEBUG   :            35383   5263864.135   5263864.13482183   0.000178170390427113
+DEBUG   :            35384   5268876.108   5268876.10795152   4.84753400087357e-05
+DEBUG   :            35385   5273882.338   5273882.33789151   0.000108490698039532
+DEBUG   :            35386   5278882.819   5278882.81887637   0.00012363214045763
+DEBUG   :            35387   5283877.545   5283877.54515079   -0.000150794163346291
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000431698m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   1646546.378   1646546.3781053   -0.000105299986898899
+DEBUG   :            35362   1646232.204   1646232.20375833   0.000241674017161131
+DEBUG   :            35363   1645915.503   1645915.50301723   -1.72266736626625e-05
+DEBUG   :            35364   1645596.277   1645596.27706722   -6.72223977744579e-05
+DEBUG   :            35365   1645274.527   1645274.52709306   -9.30607784539461e-05
+DEBUG   :            35366   1644950.254   1644950.25427931   -0.000279312022030354
+DEBUG   :            35367   1644623.46   1644623.45981066   0.000189336715266109
+DEBUG   :            35368   1644294.145   1644294.14487221   0.000127786071971059
+DEBUG   :            35369   1643962.311   1643962.31064977   0.000350229442119598
+DEBUG   :            35370   1643627.958   1643627.95833014   -0.000330142443999648
+DEBUG   :            35371   1643291.089   1643291.08910143   -0.000101434765383601
+DEBUG   :            35372   1642951.704   1642951.70415334   -0.000153345055878162
+DEBUG   :            35373   1642609.805   1642609.80467746   0.000322543084621429
+DEBUG   :            35374   1642265.392   1642265.39186754   0.000132464105263352
+DEBUG   :            35375   1641918.467   1641918.46691982   8.01756978034973e-05
+DEBUG   :            35376   1641569.031   1641569.03103333   -3.33348289132118e-05
+DEBUG   :            35377   1641217.085   1641217.08541015   -0.000410147476941347
+DEBUG   :            35378   1640862.631   1640862.6312557   -0.000255701830610633
+DEBUG   :            35379   1640505.67   1640505.6697791   0.000220904825255275
+DEBUG   :            35380   1640146.202   1640146.20219337   -0.000193373998627067
+DEBUG   :            35381   1639784.23   1639784.22971583   0.000284167705103755
+DEBUG   :            35382   1639419.754   1639419.7535683   0.000431697815656662
+DEBUG   :            35383   1639052.775   1639052.77497745   2.25463882088661e-05
+DEBUG   :            35384   1638683.295   1638683.29517509   -0.000175085617229342
+DEBUG   :            35385   1638311.315   1638311.31539842   -0.000398423057049513
+DEBUG   :            35386   1637936.837   1637936.83689041   0.000109589425846934
+DEBUG   :            35387   1637559.861   1637559.86090001   9.99923795461655e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000509432m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   4689145.167   4689145.16693757   6.2430277466774e-05
+DEBUG   :            35362   4683620.05   4683620.04998522   1.47810205817223e-05
+DEBUG   :            35363   4678089.838   4678089.83802378   -2.37775966525078e-05
+DEBUG   :            35364   4672554.537   4672554.53707482   -7.48168677091599e-05
+DEBUG   :            35365   4667014.153   4667014.15316288   -0.000162882730364799
+DEBUG   :            35366   4661468.692   4661468.69231569   -0.000315692275762558
+DEBUG   :            35367   4655918.161   4655918.16056428   0.000435720197856426
+DEBUG   :            35368   4650362.564   4650362.56394317   5.68265095353127e-05
+DEBUG   :            35369   4644801.909   4644801.90849057   0.000509431585669518
+DEBUG   :            35370   4639236.2   4639236.20024848   -0.000248482450842857
+DEBUG   :            35371   4633665.445   4633665.44526294   -0.00026293471455574
+DEBUG   :            35372   4628089.65   4628089.64958411   0.00041588768362999
+DEBUG   :            35373   4622508.819   4622508.81926653   -0.00026653241366148
+DEBUG   :            35374   4616922.96   4616922.96036922   -0.000369222834706306
+DEBUG   :            35375   4611332.079   4611332.07895587   4.41288575530052e-05
+DEBUG   :            35376   4605736.181   4605736.18109501   -9.50098037719727e-05
+DEBUG   :            35377   4600135.273   4600135.27286018   0.000139819458127022
+DEBUG   :            35378   4594529.36   4594529.36033009   -0.000330094248056412
+DEBUG   :            35379   4588918.45   4588918.44958881   0.000411185435950756
+DEBUG   :            35380   4583302.547   4583302.54672591   0.000274091958999634
+DEBUG   :            35381   4577681.658   4577681.65783662   0.00016337726265192
+DEBUG   :            35382   4572055.789   4572055.78902206   -2.20602378249168e-05
+DEBUG   :            35383   4566424.946   4566424.94638933   -0.000389331020414829
+DEBUG   :            35384   4560789.136   4560789.13605174   -5.17396256327629e-05
+DEBUG   :            35385   4555148.364   4555148.36412893   -0.000128934159874916
+DEBUG   :            35386   4549502.637   4549502.63674708   0.000252915546298027
+DEBUG   :            35387   4543851.96   4543851.96003906   -3.90578061342239e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+PROGRESS: Orbit: interpolation coefficients computed.
+INFO    : 
+INFO    : master: latest known processing stage: crop
+DEBUG   : Opened input file:  master.out
+DEBUG   : updateslcimage: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG   : string: "Data_output_file:",        		value: 1393.raw.linux
+DEBUG   : string: "Data_output_format:",      		value: 11
+DEBUG   : string: "First_line",               		value: 1
+DEBUG   : string: "Last_line",                		value: 800
+DEBUG   : string: "First_pixel",              		value: 1
+DEBUG   : string: "Last_pixel",               		value: 300
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: 1393.raw.linux
+DEBUG   : current file:  1393.raw.linux
+DEBUG   : formatflag:    11
+DEBUG   : current win:   1 800 1 300
+DEBUG   : original win:  1 26555 1 4900
+DEBUG   : approxcentreoriginal: 4.68052e+06 1.16933e+06 4.15806e+06
+DEBUG   : utc1:            27-JUL-1995 09:49:26.141
+DEBUG   : sensor:          1
+DEBUG   : sar_processor:   11
+DEBUG   : prf:             1679.95
+DEBUG   : abw:             1378
+DEBUG   : rsr:             1.89663e+07
+DEBUG   : rbw:             1.555e+07
+DEBUG   : t_azi1:          35366.1
+DEBUG   : t_range1:        0.00277292
+DEBUG   : wavelength:      0.056666
+DEBUG   : f_DC_a0:         117.321
+DEBUG   : f_DC_a1:         72338
+DEBUG   : f_DC_a2:         -4.55e+08
+DEBUG   : coarseoffsetL:   0
+DEBUG   : coarseoffsetP:   0
+DEBUG   : coarseorbitoffsetL:   0
+DEBUG   : coarseorbitoffsetP:   0
+DEBUG   : ovs_rg:          1
+DEBUG   : ovs_az:          1
+DEBUG   : az_timing_error: 0
+DEBUG   : r_timing_error:  0
+DEBUG   : found_mlL==false (OK if not oversampled)
+DEBUG   : found_mlP==false (OK if not oversampled)
+DEBUG   : slave_master_offsets: 0 0 0 0 0 0 0 0Checking format/dimensions file=1393.raw.linux
+DEBUG   : SLC Fileformat and dimensions are checked and ok.
+DEBUG   : 
+DEBUG   : file: slave.out does exist.
+INFO    : Reading parameters from: slave.out
+DEBUG   : Opened input file:  slave.out
+DEBUG   : [33]: string: "Product",                     (derived) value: PRODUCT:ERS-1.SAR.SLC
+DEBUG   : Substring "PRODUCT" (radarsat?) found in Product type specifier.
+DEBUG   : Substring "ERS" found in Product type specifier.
+DEBUG   : Product/sensor: 1
+DEBUG   : [37]: string: "Scene_centre_latitude:",      (derived) value: 40.94000000
+DEBUG   : [38]: string: "Scene_centre_longitude:",     (derived) value: 14.02400000
+DEBUG   : [39]: string: "Radar_wavelength",            (derived) value: 0.05666600
+DEBUG   : Extracted first azimuth time string: 09:49:23.394
+DEBUG   : [40]: string: "First_pixel_azimuth_time",    (derived) value: 35363.39400000
+DEBUG   : [41]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.94931897
+DEBUG   : [42]: string: "Total_azimuth_band_width",    (derived) value: 1378.00000000
+DEBUG   : [43]: string: "Xtrack_f_DC_constant",        (derived) value: 424.95600000
+DEBUG   : [44]: string: "Xtrack_f_DC_linear",          (derived) value: -13140.00000000
+DEBUG   : [45]: string: "Xtrack_f_DC_quadratic",       (derived) value: -518000000.00000000
+DEBUG   : [46]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG   : [47]: string: "Range_sampling_rate",         (derived) value: 37932596.09920000
+DEBUG   : [48]: string: "Total_range_band_width",      (derived) value: 15550000.00000000
+DEBUG   : [52]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG   : [53]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: slave.out
+WARNING : found_sarp==false
+DEBUG   : sensor id: 1
+DEBUG   : ERS 1 or 2 sensor detected.
+INFO    : Range to pixel 1 =    831299.453 m
+INFO    : Range to pixel 4900 = 870017.691 m
+DEBUG   : fDC(col) = +0x1.a8f4bc6a7ef9ep+8-0x1.9aap+13*(col-1)/+0x1.21671a0cb295ep+24-0x1.ee00d8p+28*((col-1)/+0x1.21671a0cb295ep+24)^2
+DEBUG   : fDC(col) = +0x1.a8f4bc6a7ef9ep+8-0x1.6b3b1826533cep-11*(col-1)-0x1.828c87e2b1ed7p-20*(col-1)^2
+INFO    : Doppler centroid frequency: at pixel 1 (early edge): 		424.956 Hz
+INFO    : Doppler centroid frequency: at pixel 4900 (far edge): 	387.001 Hz
+INFO    : Doppler centroid frequency: at pixel -240.557 (maximum):  	425.039 Hz
+INFO    : sensor: 1
+DEBUG   : 
+DEBUG   : Opened input file:  slave.out
+INFO    : 27 datapoints (t,x,y,z) read from: "slave.out"
+DEBUG   : value of interp_method: -12
+INFO    : Setting default orbit interpolation method.
+DEBUG   : value of interp_method: 5
+INFO    : Computing coefficients for orbit polyfit degree: 5
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.00040999m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   5151580.064   5151580.06425011   -0.000250107608735561
+DEBUG   :            35359   5156717.56   5156717.55983418   0.000165819190442562
+DEBUG   :            35360   5161849.442   5161849.44164351   0.000356494449079037
+DEBUG   :            35361   5166975.704   5166975.70377058   0.000229420140385628
+DEBUG   :            35362   5172096.34   5172096.34031013   -0.00031012762337923
+DEBUG   :            35363   5177211.345   5177211.34535955   -0.000359546393156052
+DEBUG   :            35364   5182320.713   5182320.71301933   -1.93249434232712e-05
+DEBUG   :            35365   5187424.437   5187424.43739349   -0.000393486581742764
+DEBUG   :            35366   5192522.513   5192522.51259001   0.00040998961776495
+DEBUG   :            35367   5197614.933   5197614.93272127   0.000278727151453495
+DEBUG   :            35368   5202701.692   5202701.69190446   9.55360010266304e-05
+DEBUG   :            35369   5207782.784   5207782.78426204   -0.00026203878223896
+DEBUG   :            35370   5212858.204   5212858.20392213   7.78688117861748e-05
+DEBUG   :            35371   5217927.945   5217927.945019   -1.89980491995811e-05
+DEBUG   :            35372   5222992.002   5222992.00169344   0.000306558795273304
+DEBUG   :            35373   5228050.368   5228050.36809324   -9.32449474930763e-05
+DEBUG   :            35374   5233103.038   5233103.0383736   -0.000373601913452148
+DEBUG   :            35375   5238150.007   5238150.00669755   0.000302447006106377
+DEBUG   :            35376   5243191.267   5243191.26723641   -0.000236410647630692
+DEBUG   :            35377   5248226.814   5248226.81417019   -0.000170192681252956
+DEBUG   :            35378   5253256.642   5253256.64168806   0.000311942771077156
+DEBUG   :            35379   5258280.744   5258280.74398873   1.12727284431458e-05
+DEBUG   :            35380   5263299.115   5263299.11528093   -0.000280932523310184
+DEBUG   :            35381   5268311.75   5268311.74978383   0.000216174870729446
+DEBUG   :            35382   5273318.642   5273318.64172743   0.000272568315267563
+DEBUG   :            35383   5278319.785   5278319.78535306   -0.000353062525391579
+DEBUG   :            35384   5283315.175   5283315.17491376   8.62395390868187e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000527669m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   1646538.645   1646538.6449414   5.86020760238171e-05
+DEBUG   :            35359   1646224.699   1646224.69917048   -0.000170476036146283
+DEBUG   :            35360   1645908.227   1645908.22702416   -2.41580419242382e-05
+DEBUG   :            35361   1645589.23   1645589.2296576   0.000342397252097726
+DEBUG   :            35362   1645267.708   1645267.70823004   -0.000230043195188046
+DEBUG   :            35363   1644943.664   1644943.66390475   9.52505506575108e-05
+DEBUG   :            35364   1644617.098   1644617.09784899   0.000151007669046521
+DEBUG   :            35365   1644288.011   1644288.01123401   -0.000234006438404322
+DEBUG   :            35366   1643956.405   1643956.40523496   -0.000234957318753004
+DEBUG   :            35367   1643622.281   1643622.2810309   -3.09026800096035e-05
+DEBUG   :            35368   1643285.64   1643285.63980476   0.000195242697373033
+DEBUG   :            35369   1642946.483   1642946.48274326   0.00025674351491034
+DEBUG   :            35370   1642604.811   1642604.81103692   -3.69218178093433e-05
+DEBUG   :            35371   1642260.626   1642260.62588002   0.000119977397844195
+DEBUG   :            35372   1641913.928   1641913.92847054   -0.000470541883260012
+DEBUG   :            35373   1641564.72   1641564.72001014   -1.01402401924133e-05
+DEBUG   :            35374   1641213.002   1641213.00170412   0.000295882346108556
+DEBUG   :            35375   1640858.775   1640858.77476138   0.000238618813455105
+DEBUG   :            35376   1640502.04   1640502.04039441   -0.000394405098631978
+DEBUG   :            35377   1640142.8   1640142.7998192   0.000180801143869758
+DEBUG   :            35378   1639781.054   1639781.05425527   -0.000255266670137644
+DEBUG   :            35379   1639416.805   1639416.80492558   7.44243152439594e-05
+DEBUG   :            35380   1639050.053   1639050.05305652   -5.6516146287322e-05
+DEBUG   :            35381   1638680.8   1638680.79987787   0.000122129451483488
+DEBUG   :            35382   1638309.047   1638309.04662277   0.000377229182049632
+DEBUG   :            35383   1637934.794   1637934.79452767   -0.000527668744325638
+DEBUG   :            35384   1637558.045   1637558.0448323   0.000167704187333584
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000514476m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   4689765.11   4689765.10969819   0.000301813706755638
+DEBUG   :            35359   4684240.566   4684240.56628916   -0.000289159826934338
+DEBUG   :            35360   4678710.927   4678710.92735235   -0.000352351926267147
+DEBUG   :            35361   4673176.199   4673176.19885783   0.000142169184982777
+DEBUG   :            35362   4667636.387   4667636.38678681   0.000213186256587505
+DEBUG   :            35363   4662091.497   4662091.49713124   -0.000131243839859962
+DEBUG   :            35364   4656541.536   4656541.53589338   0.000106625258922577
+DEBUG   :            35365   4650986.509   4650986.50908534   -8.53445380926132e-05
+DEBUG   :            35366   4645426.423   4645426.42272876   0.000271237455308437
+DEBUG   :            35367   4639861.283   4639861.28285429   0.000145705416798592
+DEBUG   :            35368   4634291.095   4634291.09550123   -0.000501228496432304
+DEBUG   :            35369   4628715.867   4628715.86671707   0.000282930210232735
+DEBUG   :            35370   4623135.603   4623135.60255711   0.000442887656390667
+DEBUG   :            35371   4617550.309   4617550.30908403   -8.40276479721069e-05
+DEBUG   :            35372   4611959.992   4611959.99236744   -0.000367436558008194
+DEBUG   :            35373   4606364.658   4606364.6584835   -0.000483495183289051
+DEBUG   :            35374   4600764.313   4600764.31351448   -0.000514475628733635
+DEBUG   :            35375   4595158.964   4595158.96354834   0.000451657921075821
+DEBUG   :            35376   4589548.615   4589548.61467834   0.000321662984788418
+DEBUG   :            35377   4583933.273   4583933.27300256   -2.5629997253418e-06
+DEBUG   :            35378   4578312.945   4578312.94462355   0.000376448035240173
+DEBUG   :            35379   4572687.636   4572687.63564786   0.000352135859429836
+DEBUG   :            35380   4567057.352   4567057.35218565   -0.000185645185410976
+DEBUG   :            35381   4561422.1   4561422.10035023   -0.000350229442119598
+DEBUG   :            35382   4555781.886   4555781.88625771   -0.000257709994912148
+DEBUG   :            35383   4550136.716   4550136.71602652   -2.65175476670265e-05
+DEBUG   :            35384   4544486.596   4544486.59577701   0.000222994014620781
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+PROGRESS: Orbit: interpolation coefficients computed.
+DEBUG   : BASELINE: max(abs(N*inv(N)-I)) = 1.77636e-15
+DEBUG   : --------------------
+DEBUG   : Result of modeling: Bperp(l,p) = a000 + a100*l + a010*p + a001*h + 
+DEBUG   :  a110*l*p + a101*l*h + a011*p*h + a200*l^2 + a020*p^2 + a002*h^2
+DEBUG   : l,p,h in normalized coordinates [-2:2].
+DEBUG   : Bperp_a000 = 36.1232
+DEBUG   : Bperp_a100 = 0.00621558
+DEBUG   : Bperp_a010 = -0.0450133
+DEBUG   : Bperp_a001 = -0.101675
+DEBUG   : Bperp_a110 = -3.67006e-06
+DEBUG   : Bperp_a101 = -8.34034e-06
+DEBUG   : Bperp_a011 = 0.000401283
+DEBUG   : Bperp_a200 = 4.93056e-07
+DEBUG   : Bperp_a020 = 0.000108109
+DEBUG   : Bperp_a002 = 0.000357161
+INFO    : Max. error bperp modeling at 3D datapoints: 2.58382e-05m
+DEBUG   : 
+DEBUG   : --------------------
+DEBUG   : Range: r(p) = r0 + dr*p
+DEBUG   : l and p in unnormalized, absolute, coordinates (1:N).
+DEBUG   : range = 831292 + 7.90171*p
+DEBUG   : Computating integration constant based on tiepoint
+INFO    : No tiepoint given.
+INFO    : 
+INFO    : slave: latest known processing stage: crop
+DEBUG   : Opened input file:  slave.out
+DEBUG   : updateslcimage: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG   : string: "Data_output_file:",        		value: 21066.raw.linux
+DEBUG   : string: "Data_output_format:",      		value: 11
+DEBUG   : string: "First_line",               		value: 1
+DEBUG   : string: "Last_line",                		value: 800
+DEBUG   : string: "First_pixel",              		value: 1
+DEBUG   : string: "Last_pixel",               		value: 300
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: 21066.raw.linux
+DEBUG   : current file:  21066.raw.linux
+DEBUG   : formatflag:    11
+DEBUG   : current win:   1 800 1 300
+DEBUG   : original win:  1 26518 1 4900
+DEBUG   : approxcentreoriginal: 4.68115e+06 1.16922e+06 4.15739e+06
+DEBUG   : utc1:            26-JUL-1995 09:49:23.394
+DEBUG   : sensor:          1
+DEBUG   : sar_processor:   11
+DEBUG   : prf:             1679.95
+DEBUG   : abw:             1378
+DEBUG   : rsr:             1.89663e+07
+DEBUG   : rbw:             1.555e+07
+DEBUG   : t_azi1:          35363.4
+DEBUG   : t_range1:        0.00277292
+DEBUG   : wavelength:      0.056666
+DEBUG   : f_DC_a0:         424.956
+DEBUG   : f_DC_a1:         -13140
+DEBUG   : f_DC_a2:         -5.18e+08
+DEBUG   : coarseoffsetL:   0
+DEBUG   : coarseoffsetP:   0
+DEBUG   : coarseorbitoffsetL:   0
+DEBUG   : coarseorbitoffsetP:   0
+DEBUG   : ovs_rg:          1
+DEBUG   : ovs_az:          1
+DEBUG   : az_timing_error: 0
+DEBUG   : r_timing_error:  0
+DEBUG   : found_mlL==false (OK if not oversampled)
+DEBUG   : found_mlP==false (OK if not oversampled)
+DEBUG   : slave_master_offsets: 0 0 0 0 0 0 0 0Checking format/dimensions file=21066.raw.linux
+DEBUG   : SLC Fileformat and dimensions are checked and ok.
+DEBUG   : 
+INFO    : 
+INFO    : ifg: latest known processing stage: coarse (orbits)
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-236" as word 0 after "Coarse_orbits_translation_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Coarse_orbits_translation_pixels:"
+INFO    : 
+INFO    : ifg: latest known processing stage: coarse (corr)
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-242" as word 0 after "Coarse_correlation_translation_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Coarse_correlation_translation_pixels:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "0" as word 0 after "Slope_CoarseCorr_pixels:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "0" as word 0 after "Slope_CoarseCorr_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-242" as word 0 after "Initial_Offset_CoarseCorr_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Initial_Offset_CoarseCorr_pixels:"
+INFO    : 
+INFO    : ifg: latest known processing stage: fine
+INFO    : 
+INFO    : ifg: latest known processing stage: coregpm
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "1" as word 0 after "Degree_cpm:"
+DEBUG   : Opened input file:  interferogram.out
+INFO    : read: 3 coefficients after: "Estimated_coefficientsL:"
+DEBUG   : Opened input file:  interferogram.out
+INFO    : read: 3 coefficients after: "Estimated_coefficientsP:"
+INFO    : 
+INFO    : slave: latest known processing stage: resample
+DEBUG   : Opened input file:  slave.out
+DEBUG   : updateslcimage: found identifier: "*_Start_resample:" in file: "slave.out".
+DEBUG   : string: "Data_output_file:",        		value: 21066.resampled
+DEBUG   : string: "Data_output_format:",      		value: 12
+DEBUG   : string: "First_line",               		value: 1
+DEBUG   : string: "Last_line",                		value: 800
+DEBUG   : string: "First_pixel",              		value: 1
+DEBUG   : string: "Last_pixel",               		value: 300
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: 21066.resampled
+DEBUG   : current file:  21066.resampled
+DEBUG   : formatflag:    12
+DEBUG   : current win:   1 800 1 300
+DEBUG   : original win:  1 26518 1 4900
+DEBUG   : approxcentreoriginal: 4.68115e+06 1.16922e+06 4.15739e+06
+DEBUG   : utc1:            26-JUL-1995 09:49:23.394
+DEBUG   : sensor:          1
+DEBUG   : sar_processor:   11
+DEBUG   : prf:             1679.95
+DEBUG   : abw:             1378
+DEBUG   : rsr:             1.89663e+07
+DEBUG   : rbw:             1.555e+07
+DEBUG   : t_azi1:          35363.4
+DEBUG   : t_range1:        0.00277292
+DEBUG   : wavelength:      0.056666
+DEBUG   : f_DC_a0:         424.956
+DEBUG   : f_DC_a1:         -13140
+DEBUG   : f_DC_a2:         -5.18e+08
+DEBUG   : coarseoffsetL:   -242
+DEBUG   : coarseoffsetP:   -3
+DEBUG   : coarseorbitoffsetL:   -242
+DEBUG   : coarseorbitoffsetP:   -3
+DEBUG   : ovs_rg:          1
+DEBUG   : ovs_az:          1
+DEBUG   : az_timing_error: 0
+DEBUG   : r_timing_error:  0
+DEBUG   : found_mlL==false (OK if not oversampled)
+DEBUG   : found_mlP==false (OK if not oversampled)
+DEBUG   : slave_master_offsets: 0 0 0 0 0 0 0 0Checking format/dimensions file=21066.resampled
+DEBUG   : SLC Fileformat and dimensions are checked and ok.
+DEBUG   : 
+PROGRESS: Start INTERFERO.
+INFO    : INTERFERO: master input file: 1393.raw.linux
+INFO    : INTERFERO: slave input file:  21066.resampled
+INFO    : INTERFERO: interferogram (master coord.): 1:800; 1:300
+DEBUG   : Opening output file: cint.raw
+DEBUG   : file: cint.raw does not exist.
+DEBUG   : Opened output file: cint.raw
+DEBUG   : Number of lines per buffer: 6510
+PROGRESS: INTERFERO: 0%
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.resampled
+DEBUG   : Formatflag:       12
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Format complex float (pixel interleaved).
+DEBUG   : Opened output file: compinterfero: scratchloginterfero
+DEBUG   : Opened output file: compinterfero: scratchresinterfero
+PROGRESS: finished compinterfero.
+DEBUG   : Opened input file:  scratchloginterfero
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchloginterfero (removed.)
+DEBUG   : Opened input file:  scratchresinterfero
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchresinterfero (removed.)
+PROGRESS: Finished INTERFERO.
+DEBUG   : Time spent for computation of interferogram:
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.010851 sec (total:    0 min 0.011675 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: interfero
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : String: "Data_output_file:", 			value: cint.raw
+DEBUG   : String: "Data_output_format:", 		value: 12
+DEBUG   : String: "First_line:", 			value: 1
+DEBUG   : String: "Last_line:", 			value: 800
+DEBUG   : String: "First_pixel:", 			value: 1
+DEBUG   : String: "Last_pixel:", 			value: 300
+DEBUG   : String: "Multilookfactor_azimuth_direction:", value: 5
+DEBUG   : String: "Multilookfactor_range_direction:", 	value: 1
+DEBUG   : Checking format/dimensions file=cint.raw
+DEBUG   : Fileformat and dimensions are checked and ok.
+DEBUG   : 
+PROGRESS: calling preview for complex interferogram
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+PROGRESS: Start COMPREFPHA.
+INFO    : FLATEARTH: MAXITER: 10; CRITERPOS: 1e-06 m; CRITERTIM: 1e-10 s
+INFO    : flatearth: polynomial normalized by factors: 1 26555 1 4900 to [-2,2]
+DEBUG   : master wavelength = 0.056666
+DEBUG   : slave  wavelength = 0.056666
+DEBUG   : l=1 p=1 t1=0.00277292 t2=0.00277284 fe=-5170.7 [rad]
+DEBUG   : l=1 p=49 t1=0.00277418 t2=0.0027741 fe=-5181.13 [rad]
+DEBUG   : l=1 p=97 t1=0.00277545 t2=0.00277537 fe=-5191.49 [rad]
+DEBUG   : l=1 p=145 t1=0.00277671 t2=0.00277663 fe=-5201.8 [rad]
+DEBUG   : l=1 p=193 t1=0.00277798 t2=0.0027779 fe=-5212.04 [rad]
+DEBUG   : l=1 p=241 t1=0.00277924 t2=0.00277916 fe=-5222.23 [rad]
+DEBUG   : l=1 p=289 t1=0.00278051 t2=0.00278043 fe=-5232.35 [rad]
+DEBUG   : l=54 p=37 t1=0.00277387 t2=0.00277379 fe=-5178.64 [rad]
+DEBUG   : l=54 p=85 t1=0.00277513 t2=0.00277505 fe=-5189.03 [rad]
+DEBUG   : l=54 p=133 t1=0.0027764 t2=0.00277632 fe=-5199.35 [rad]
+DEBUG   : l=54 p=181 t1=0.00277766 t2=0.00277758 fe=-5209.61 [rad]
+DEBUG   : l=54 p=229 t1=0.00277893 t2=0.00277885 fe=-5219.8 [rad]
+DEBUG   : l=54 p=277 t1=0.00278019 t2=0.00278011 fe=-5229.95 [rad]
+DEBUG   : l=108 p=25 t1=0.00277355 t2=0.00277347 fe=-5176.16 [rad]
+DEBUG   : l=108 p=73 t1=0.00277481 t2=0.00277474 fe=-5186.56 [rad]
+DEBUG   : l=108 p=121 t1=0.00277608 t2=0.002776 fe=-5196.89 [rad]
+DEBUG   : l=108 p=169 t1=0.00277735 t2=0.00277727 fe=-5207.17 [rad]
+DEBUG   : l=108 p=217 t1=0.00277861 t2=0.00277853 fe=-5217.38 [rad]
+DEBUG   : l=108 p=265 t1=0.00277988 t2=0.0027798 fe=-5227.54 [rad]
+DEBUG   : l=161 p=13 t1=0.00277323 t2=0.00277316 fe=-5173.66 [rad]
+DEBUG   : l=161 p=61 t1=0.0027745 t2=0.00277442 fe=-5184.08 [rad]
+DEBUG   : l=161 p=109 t1=0.00277576 t2=0.00277569 fe=-5194.43 [rad]
+DEBUG   : l=161 p=157 t1=0.00277703 t2=0.00277695 fe=-5204.72 [rad]
+DEBUG   : l=161 p=205 t1=0.00277829 t2=0.00277822 fe=-5214.95 [rad]
+DEBUG   : l=161 p=253 t1=0.00277956 t2=0.00277948 fe=-5225.12 [rad]
+DEBUG   : l=214 p=1 t1=0.00277292 t2=0.00277284 fe=-5171.17 [rad]
+DEBUG   : l=214 p=49 t1=0.00277418 t2=0.0027741 fe=-5181.6 [rad]
+DEBUG   : l=214 p=97 t1=0.00277545 t2=0.00277537 fe=-5191.97 [rad]
+DEBUG   : l=214 p=145 t1=0.00277671 t2=0.00277663 fe=-5202.27 [rad]
+DEBUG   : l=214 p=193 t1=0.00277798 t2=0.0027779 fe=-5212.52 [rad]
+DEBUG   : l=214 p=241 t1=0.00277924 t2=0.00277916 fe=-5222.7 [rad]
+DEBUG   : l=214 p=289 t1=0.00278051 t2=0.00278043 fe=-5232.83 [rad]
+DEBUG   : l=267 p=37 t1=0.00277387 t2=0.00277379 fe=-5179.11 [rad]
+DEBUG   : l=267 p=85 t1=0.00277513 t2=0.00277505 fe=-5189.5 [rad]
+DEBUG   : l=267 p=133 t1=0.0027764 t2=0.00277632 fe=-5199.82 [rad]
+DEBUG   : l=267 p=181 t1=0.00277766 t2=0.00277758 fe=-5210.08 [rad]
+DEBUG   : l=267 p=229 t1=0.00277893 t2=0.00277885 fe=-5220.28 [rad]
+DEBUG   : l=267 p=277 t1=0.00278019 t2=0.00278011 fe=-5230.42 [rad]
+DEBUG   : l=321 p=25 t1=0.00277355 t2=0.00277347 fe=-5176.63 [rad]
+DEBUG   : l=321 p=73 t1=0.00277481 t2=0.00277474 fe=-5187.03 [rad]
+DEBUG   : l=321 p=121 t1=0.00277608 t2=0.002776 fe=-5197.36 [rad]
+DEBUG   : l=321 p=169 t1=0.00277735 t2=0.00277727 fe=-5207.64 [rad]
+DEBUG   : l=321 p=217 t1=0.00277861 t2=0.00277853 fe=-5217.86 [rad]
+DEBUG   : l=321 p=265 t1=0.00277988 t2=0.0027798 fe=-5228.01 [rad]
+DEBUG   : l=374 p=13 t1=0.00277323 t2=0.00277316 fe=-5174.13 [rad]
+DEBUG   : l=374 p=61 t1=0.0027745 t2=0.00277442 fe=-5184.55 [rad]
+DEBUG   : l=374 p=109 t1=0.00277576 t2=0.00277569 fe=-5194.9 [rad]
+DEBUG   : l=374 p=157 t1=0.00277703 t2=0.00277695 fe=-5205.19 [rad]
+DEBUG   : l=374 p=205 t1=0.00277829 t2=0.00277822 fe=-5215.43 [rad]
+DEBUG   : l=374 p=253 t1=0.00277956 t2=0.00277948 fe=-5225.6 [rad]
+DEBUG   : l=427 p=1 t1=0.00277292 t2=0.00277284 fe=-5171.64 [rad]
+DEBUG   : l=427 p=48 t1=0.00277416 t2=0.00277408 fe=-5181.85 [rad]
+DEBUG   : l=427 p=96 t1=0.00277542 t2=0.00277534 fe=-5192.22 [rad]
+DEBUG   : l=427 p=144 t1=0.00277669 t2=0.00277661 fe=-5202.53 [rad]
+DEBUG   : l=427 p=192 t1=0.00277795 t2=0.00277787 fe=-5212.78 [rad]
+DEBUG   : l=427 p=240 t1=0.00277922 t2=0.00277914 fe=-5222.97 [rad]
+DEBUG   : l=427 p=288 t1=0.00278048 t2=0.0027804 fe=-5233.1 [rad]
+DEBUG   : l=480 p=36 t1=0.00277384 t2=0.00277376 fe=-5179.36 [rad]
+DEBUG   : l=480 p=84 t1=0.0027751 t2=0.00277503 fe=-5189.75 [rad]
+DEBUG   : l=480 p=132 t1=0.00277637 t2=0.00277629 fe=-5200.08 [rad]
+DEBUG   : l=480 p=180 t1=0.00277764 t2=0.00277756 fe=-5210.34 [rad]
+DEBUG   : l=480 p=228 t1=0.0027789 t2=0.00277882 fe=-5220.54 [rad]
+DEBUG   : l=480 p=276 t1=0.00278017 t2=0.00278009 fe=-5230.69 [rad]
+DEBUG   : l=534 p=24 t1=0.00277352 t2=0.00277344 fe=-5176.88 [rad]
+DEBUG   : l=534 p=72 t1=0.00277479 t2=0.00277471 fe=-5187.28 [rad]
+DEBUG   : l=534 p=120 t1=0.00277605 t2=0.00277598 fe=-5197.62 [rad]
+DEBUG   : l=534 p=168 t1=0.00277732 t2=0.00277724 fe=-5207.9 [rad]
+DEBUG   : l=534 p=216 t1=0.00277858 t2=0.00277851 fe=-5218.12 [rad]
+DEBUG   : l=534 p=264 t1=0.00277985 t2=0.00277977 fe=-5228.28 [rad]
+DEBUG   : l=587 p=12 t1=0.00277321 t2=0.00277313 fe=-5174.38 [rad]
+DEBUG   : l=587 p=60 t1=0.00277447 t2=0.00277439 fe=-5184.8 [rad]
+DEBUG   : l=587 p=108 t1=0.00277574 t2=0.00277566 fe=-5195.16 [rad]
+DEBUG   : l=587 p=156 t1=0.002777 t2=0.00277692 fe=-5205.45 [rad]
+DEBUG   : l=587 p=204 t1=0.00277827 t2=0.00277819 fe=-5215.69 [rad]
+DEBUG   : l=587 p=252 t1=0.00277953 t2=0.00277945 fe=-5225.86 [rad]
+DEBUG   : l=587 p=300 t1=0.0027808 t2=0.00278072 fe=-5235.98 [rad]
+DEBUG   : l=640 p=48 t1=0.00277416 t2=0.00277408 fe=-5182.32 [rad]
+DEBUG   : l=640 p=96 t1=0.00277542 t2=0.00277534 fe=-5192.69 [rad]
+DEBUG   : l=640 p=144 t1=0.00277669 t2=0.00277661 fe=-5203 [rad]
+DEBUG   : l=640 p=192 t1=0.00277795 t2=0.00277787 fe=-5213.25 [rad]
+DEBUG   : l=640 p=240 t1=0.00277922 t2=0.00277914 fe=-5223.44 [rad]
+DEBUG   : l=640 p=288 t1=0.00278048 t2=0.0027804 fe=-5233.58 [rad]
+DEBUG   : l=693 p=36 t1=0.00277384 t2=0.00277376 fe=-5179.83 [rad]
+DEBUG   : l=693 p=84 t1=0.0027751 t2=0.00277503 fe=-5190.22 [rad]
+DEBUG   : l=693 p=132 t1=0.00277637 t2=0.00277629 fe=-5200.55 [rad]
+DEBUG   : l=693 p=180 t1=0.00277764 t2=0.00277756 fe=-5210.81 [rad]
+DEBUG   : l=693 p=228 t1=0.0027789 t2=0.00277882 fe=-5221.02 [rad]
+DEBUG   : l=693 p=276 t1=0.00278017 t2=0.00278009 fe=-5231.17 [rad]
+DEBUG   : l=747 p=24 t1=0.00277352 t2=0.00277344 fe=-5177.35 [rad]
+DEBUG   : l=747 p=72 t1=0.00277479 t2=0.00277471 fe=-5187.75 [rad]
+DEBUG   : l=747 p=120 t1=0.00277605 t2=0.00277598 fe=-5198.09 [rad]
+DEBUG   : l=747 p=168 t1=0.00277732 t2=0.00277724 fe=-5208.37 [rad]
+DEBUG   : l=747 p=216 t1=0.00277858 t2=0.00277851 fe=-5218.59 [rad]
+DEBUG   : l=747 p=264 t1=0.00277985 t2=0.00277977 fe=-5228.76 [rad]
+DEBUG   : l=800 p=12 t1=0.00277321 t2=0.00277313 fe=-5174.85 [rad]
+DEBUG   : l=800 p=60 t1=0.00277447 t2=0.00277439 fe=-5185.27 [rad]
+DEBUG   : l=800 p=108 t1=0.00277574 t2=0.00277566 fe=-5195.63 [rad]
+DEBUG   : l=800 p=156 t1=0.002777 t2=0.00277692 fe=-5205.93 [rad]
+DEBUG   : l=800 p=204 t1=0.00277827 t2=0.00277819 fe=-5216.16 [rad]
+DEBUG   : l=800 p=252 t1=0.00277953 t2=0.00277945 fe=-5226.34 [rad]
+DEBUG   : l=800 p=300 t1=0.0027808 t2=0.00278072 fe=-5236.46 [rad]
+INFO    : flatearth: max(abs(N*inv(N)-I)) = 0.000514805
+INFO    : Deviation is OK.
+DEBUG   : Opened output file: flatearth: scratchlogflat
+DEBUG   : Opened output file: flatearth: scratchresflat
+INFO    : Coordinates of corner interferogram: 1, 1 = 41.3117, 14.7824
+INFO    : 
+Coordinates of corner interferogram: 800, 1 = 41.2837, 14.7741
+INFO    : 
+Coordinates of corner interferogram: 1, 300 = 41.3252, 14.7004
+INFO    : 
+Coordinates of corner interferogram: 800, 300 = 41.2973, 14.6921
+DEBUG   : Opened input file:  scratchlogflat
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogflat (removed.)
+DEBUG   : Opened input file:  scratchresflat
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchresflat (removed.)
+PROGRESS: Finished COMPREFPHA.
+DEBUG   : Time spent for computation of reference interferogram 'flat earth':
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.000771 sec (total:    0 min 0.012446 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: comprefpha
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "3" as word 0 after "Degree_flat:"
+DEBUG   : Opened input file:  interferogram.out
+INFO    : read: 10 coefficients after: "Estimated_coefficients_flatearth:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "3" as word 0 after "Degree_h2ph:"
+DEBUG   : Opened input file:  interferogram.out
+INFO    : read: 10 coefficients after: "Estimated_coefficients_h2ph:"
+PROGRESS: Start SUBTRREFPHA.
+INFO    : subtrrefpha: polynomial ref.phase normalized by factors: 1 26555 1 4900 to [-2,2]
+DEBUG   : Opening output file: cint.srp.raw
+DEBUG   : file: cint.srp.raw does not exist.
+DEBUG   : Opened output file: cint.srp.raw
+INFO    : Opening input file: cint.raw
+DEBUG   : Opening input file: cint.raw
+DEBUG   : Opened input file:  cint.raw
+DEBUG   : bufferlines per buffer: 6945
+DEBUG   : restlines last buffer: 160; and: 0 buffers of #lines: 6945
+PROGRESS: SUBTRREFPHA: buffer: 1; line: 3 : 162
+DEBUG   : Opened output file: subtrrefpha: scratchlogsubtrrefpha
+DEBUG   : Opened output file: subtrrefpha: scratchressubtrrefpha
+DEBUG   : Opened input file:  scratchlogsubtrrefpha
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogsubtrrefpha (removed.)
+DEBUG   : Opened input file:  scratchressubtrrefpha
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchressubtrrefpha (removed.)
+PROGRESS: Finished SUBTRREFPHA.
+DEBUG   : Time spent for subtraction of reference phase:
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.001334 sec (total:    0 min 0.01378 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: subtrrefpha
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : String: "Data_output_file:", 			value: cint.srp.raw
+DEBUG   : String: "Data_output_format:", 		value: 12
+DEBUG   : String: "First_line:", 			value: 1
+DEBUG   : String: "Last_line:", 			value: 800
+DEBUG   : String: "First_pixel:", 			value: 1
+DEBUG   : String: "Last_pixel:", 			value: 300
+DEBUG   : String: "Multilookfactor_azimuth_direction:", value: 5
+DEBUG   : String: "Multilookfactor_range_direction:", 	value: 1
+DEBUG   : Checking format/dimensions file=cint.srp.raw
+DEBUG   : Fileformat and dimensions are checked and ok.
+DEBUG   : 
+PROGRESS: calling preview for refpha corrected image
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+PROGRESS: Start COHERENCE.
+INFO    : compcoherence: polynomial normalized by factors: 1 26555 1 4900 to [-2,2]
+DEBUG   : Opening output file: coh.raw
+DEBUG   : file: coh.raw does not exist.
+DEBUG   : Opened output file: coh.raw
+INFO    : coherence block: 0
+PROGRESS: COHERENCE: 0%
+INFO    : coherence winfile: [1:27, 1:300]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [1:27, 1:300]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.resampled
+DEBUG   : Formatflag:       12
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [1:27, 1:300]
+DEBUG   : Format complex float (pixel interleaved).
+INFO    : coherence: increase lines for first block: 7
+INFO    : block: 0; num output lines: 4
+INFO    : SLAVE number of lines this buffer block: 34
+INFO    : block: 0; size COHERENCE matrix: 20
+INFO    : coherence block: 1
+INFO    : coherence: extra zero lines last buffer: 7
+INFO    : coherence winfile: [14:800, 1:300]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [14:800, 1:300]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.resampled
+DEBUG   : Formatflag:       12
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [14:800, 1:300]
+DEBUG   : Format complex float (pixel interleaved).
+INFO    : coherence: increase lines for last block: 7
+INFO    : block: 1; num output lines: 156
+INFO    : SLAVE number of lines this buffer block: 794
+INFO    : block: 1; size COHERENCE matrix: 780
+INFO    : coherence block: 2
+DEBUG   : Opened output file: compcoherence: scratchlogcoherence
+DEBUG   : Opened output file: compcoherence: scratchrescoherence
+PROGRESS: finished compcoherence.
+DEBUG   : Opened input file:  scratchlogcoherence
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogcoherence (removed.)
+DEBUG   : Opened input file:  scratchrescoherence
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchrescoherence (removed.)
+PROGRESS: Finished COHERENCE.
+DEBUG   : Time spent for computation of coherence:
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.018603 sec (total:    0 min 0.032383 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: coherence
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : String: "Data_output_file:", 			value: coh.raw
+DEBUG   : String: "Data_output_format:", 		value: 13
+DEBUG   : String: "First_line:", 			value: 1
+DEBUG   : String: "Last_line:", 			value: 800
+DEBUG   : String: "First_pixel:", 			value: 1
+DEBUG   : String: "Last_pixel:", 			value: 300
+DEBUG   : String: "Multilookfactor_azimuth_direction:", value: 5
+DEBUG   : String: "Multilookfactor_range_direction:", 	value: 1
+DEBUG   : Checking format/dimensions file=coh.raw
+DEBUG   : Fileformat and dimensions are checked and ok.
+DEBUG   : 
+PROGRESS: calling preview for coherence
+DEBUG   : previewflag: 0
+DEBUG   : NO preview requested.
+DEBUG   : file: interferogram.out does exist.
+DEBUG   : Opened output file: updateprocesscontrol: scratchcopy
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : Opened input file:  updateprocesscontrols: scratchcopy
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : Time spent for tidying up:
+INFO    : Current time: Mon Mar 24 21:47:36 2025
+
+DEBUG   :  cputime used for process: 	0.000606 sec (total:    0 min 0.032989 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+
+
+Processing results are in parameter file:
+   interferogram.out
+
+ --- WARNING SUMMARY ---
+There were 2 messages:
+ 1: found_sarp==false
+ 2: found_sarp==false
+
+
+Normal termination.
+Thank you for using Doris.
+

@@ -1,0 +1,2031 @@
+INFO    : @(#)Doris InSAR software, $Revision: 4.0.8 $, $Author: TUDelft $
+INFO    : input file: "doris2.in"
+INFO    : Current time: Mon Mar 24 21:42:23 2025
+
+INFO    : SCREEN: 	verboseness: 			DEBUG
+DEBUG   : 19: Read keyword: MEMORY
+DEBUG   : Read argument: 50
+DEBUG   : 20: Read keyword: OVERWRITE
+DEBUG   : Read argument: OFF
+DEBUG   : 21: Read keyword: BATCH
+DEBUG   : Read argument: ON
+DEBUG   : 22: Read keyword: LISTINPUT
+DEBUG   : Read argument: ON
+DEBUG   : 23: Read keyword: C
+DEBUG   : 24: Read keyword: C
+DEBUG   : 25: Read keyword: PROCESS
+DEBUG   : Read argument: coarseorb
+INFO    : PROCESS: 	I will process step: 		COARSEORB
+DEBUG   : 26: Read keyword: PROCESS
+DEBUG   : Read argument: coarsecorr
+INFO    : PROCESS: 	I will process step: 		COARSECORR
+DEBUG   : 27: Read keyword: PROCESS
+DEBUG   : Read argument: fine
+INFO    : PROCESS: 	I will process step: 		FINE
+DEBUG   : 28: Read keyword: C
+DEBUG   : 29: Read keyword: C
+DEBUG   : 30: Read keyword: COMMENT
+DEBUG   : 31: Read keyword: C
+DEBUG   : 32: Read keyword: LOGFILE
+DEBUG   : Read argument: log.out
+DEBUG   : 33: Read keyword: M_RESFILE
+DEBUG   : Read argument: master.out
+DEBUG   : 34: Read keyword: S_RESFILE
+DEBUG   : Read argument: slave.out
+DEBUG   : 35: Read keyword: I_RESFILE
+DEBUG   : Read argument: interferogram.out
+DEBUG   : 36: Read keyword: C
+DEBUG   : 37: Read keyword: C
+DEBUG   : 38: Read keyword: COMMENT
+DEBUG   : 39: Read keyword: C
+DEBUG   : 40: Read keyword: CC_METHOD
+DEBUG   : Read argument: magfft
+DEBUG   : 41: Read keyword: CC_NWIN
+DEBUG   : Read argument: 5
+DEBUG   : 42: Read keyword: CC_WINSIZE
+DEBUG   : Read argument: 256
+DEBUG   : Read argument: 128
+DEBUG   : 43: Read keyword: CC_INITOFF
+DEBUG   : Read argument: orbit
+DEBUG   : Read argument: //
+INFO    : CC_INITOFF: 	Initial offsets from COARSEORB: interferogram.out
+DEBUG   : 44: Read keyword: C
+DEBUG   : 45: Read keyword: C
+DEBUG   : 46: Read keyword: COMMENT
+DEBUG   : 47: Read keyword: C
+DEBUG   : 48: Read keyword: FC_METHOD
+DEBUG   : Read argument: magfft
+DEBUG   : 49: Read keyword: FC_NWIN
+DEBUG   : Read argument: 51
+DEBUG   : 50: Read keyword: FC_WINSIZE
+DEBUG   : Read argument: 32
+DEBUG   : Read argument: 32
+DEBUG   : 51: Read keyword: FC_ACC
+DEBUG   : Read argument: 8
+DEBUG   : Read argument: 8
+DEBUG   : 52: Read keyword: FC_INITOFF
+DEBUG   : Read argument: coarsecorr
+DEBUG   : Read argument: //
+INFO    : FC_INITOFF: 	Initial offset from COARSECORR: interferogram.out
+DEBUG   : 53: Read keyword: FC_OSFACTOR
+DEBUG   : Read argument: 16
+DEBUG   : 54: Read keyword: C
+DEBUG   : 55: Read keyword: C
+DEBUG   : 56: Read keyword: STOP
+INFO    : STOP:   	Encountered.
+DEBUG   : STOP card encountered at line 56
+
+INFO    : 
+	*** General input cards ***
+INFO    : MEMORY: 	Available to Doris [MB]: 	50
+INFO    : M_RESFILE: 	Resultfile for master: 		master.out
+INFO    : S_RESFILE: 	Resultfile for slave: 		slave.out
+INFO    : I_RESFILE: 	Resultfile for products: 	interferogram.out
+INFO    : LOGFILE: 	Out file for logging: 		log.out
+INFO    : ORB_INTERP: 	method selector value:		-12
+INFO    : ORB_PRM:   	orbit parameters selection value:		0
+INFO    : DUMPBASELINE: evaluation grid for baseline: 	0 lines x 0 pixels: 
+INFO    : HEIGHT: 	average terrain height:		0
+INFO    : TIEPOINT: 	lat/lon/hei: 0 0 0
+INFO    : LISTINPUT: 	Append input to logfile: 	1
+INFO    : ELLIPSOID: 	Ellipsoid used (orbit, output): WGS84.
+INFO    : ELLIPSOID: a   =         6378137
+INFO    : ELLIPSOID: b   =    6356752.3141
+INFO    : ELLIPSOID: e2  = 0.006694380035513
+INFO    : ELLIPSOID: e2' = 0.006739496788262
+INFO    : 
+	*** Input for step COARSE_CORR ***
+INFO    : CC_METHOD: 	MAGFFT is used for coarse correlation.
+INFO    : CC_NWIN: 	Distributing 5 windows for coarse coregistration based on correlation.
+INFO    : 
+	*** Input for step FINE ***
+INFO    : 33
+INFO    : FC_METHOD: 	MAGFFT is used for fine correlation.
+INFO    : FC_NWIN: 	Distributing 51 windows for fine coregistration.
+WARNING : It is highly recommended to use FC_PLOT to plot the computed FINE offset vectors.
+INFO    : FC_WINSIZE for correlation: (l,p) = (32, 32).
+INFO    : Max. estimable offset is half the window size
+INFO    : If the offset varies a lot over the image, use larger winsize
+INFO    : FC_WINSIZE for oversampling (2*Acc): (l,p) = (16, 16).
+INFO    : FC_OSFACTOR: 16. Oversampling factor for fine coregistration.
+DEBUG   : Opened output file: readinput: scratchreadinput
+DEBUG   : Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+DEBUG   : "__DEBUG"                 not defined (extra verbose)
+DEBUG   : "__DEBUGMAT1"             not defined (range checking matrix class)
+DEBUG   : "__DEBUGMAT2"             not defined (verbose matrix class)
+DEBUG   : "__USE_FFTW_LIBRARY__"    defined (using fftw routines)
+DEBUG   : "__USE_VECLIB_LIBRARY__"  not defined (using internal routines)
+DEBUG   : "__USE_LAPACK_LIBRARY__"  defined (using library routines)
+DEBUG   : "__GplusplusCOMPILER__"   not defined (no GNU c++ compiler)
+DEBUG   : "__GNUC__":               9
+DEBUG   : "__GNUC_MINOR__":         3
+DEBUG   : Testing endianness.
+DEBUG   : "__X86PROCESSOR__"        defined (little Endian machine)
+INFO    : Little Endian machine defined and this is correct.
+DEBUG   : "__NO_STRPTIME"           not defined (using library routine)
+DEBUG   : Testing strptime function.
+INFO    : strptime function works fine.
+DEBUG   : test somewhere also memory,diskspace.
+DEBUG   : file: log.out does not exist.
+DEBUG   : Opened output file: log.out
+DEBUG   : Writing (updating) of file (initwrite).
+DEBUG   : file: interferogram.out does not exist.
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : Writing (updating) of file (initwrite).
+DEBUG   : Opened input file:  scratchreadinput
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG   : file: master.out does exist.
+DEBUG   : Opened input file:  master.out
+DEBUG   : read line:  TU DELFT - DEOS
+DEBUG   : read line: =====================================================
+DEBUG   : read line: MASTER RESULTFILE: 	master.out
+DEBUG   : read line: 
+DEBUG   : read line: InSAR Processor: 	Doris (Delft oo radar interferometric software)
+DEBUG   : read line: Version:           	Version 2.6 (debug)
+DEBUG   : read line: VECLIB library:    	not used
+DEBUG   : read line: LAPACK library:    	not used
+DEBUG   : read line: Compiled at:       	Aug 10 2000 15:10:01
+DEBUG   : read line: By GNU gcc:  		2.95.2
+DEBUG   : read line: 
+DEBUG   : read line: Creation of this file: 	Thu Aug 10 15:45:25 2000
+DEBUG   : read line: =====================================================
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: readfiles: 		1
+DEBUG   : read line: precise_orbits: 	1
+DEBUG   : read line: crop: 			1
+DEBUG   : read line: filt_azi: 		0
+DEBUG   : read line: filt_range: 		0
+DEBUG   : read line: NOT_USED: 		0
+DEBUG   : read line: End_process_control
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_readfiles:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Volume file: 					/cdrom/scene1/vdf_dat.001
+DEBUG   : read line: Volume_ID: 					1               
+DEBUG   : read line: Volume_identifier: 				0004094800014027
+DEBUG   : read line: Volume_set_identifier: 				19950727 9492574
+DEBUG   : read line: (Check)Number of records in ref. file: 		26556
+DEBUG   : read line: Product type specifier: 			PRODUCT:ERS-2.SAR.SLC                   
+DEBUG   : read line: Location and date/time of product creation: 	GENERATED AT I-PAF            24-JUL-1998 18:57:26.670      
+DEBUG   : read line: Scene identification: 				ORBIT 1393 DATE 27-JUL-1995  9:49:25    
+DEBUG   : read line: Scene location: 				FRAME 2781 LAT:     40.95 LON:     14.03
+DEBUG   : read line: Leader file:                                 	/cdrom/scene1/lea_01.001
+DEBUG   : read line: Scene_centre_latitude:                     	      40.9480000
+DEBUG   : read line: Scene_centre_longitude:                    	      14.0270000
+DEBUG   : read line: Radar_wavelength (m):                      	       0.0566660
+DEBUG   : read line: First_pixel_azimuth_time (UTC):            	27-JUL-1995 09:49:26.141
+DEBUG   : read line: Pulse_Repetition_Frequency (computed, Hz): 	1679.95192004
+DEBUG   : read line: Total_azimuth_band_width (Hz):             	    1378.0000000
+DEBUG   : read line: Xtrack_f_DC_constant (Hz, early edge):     	     117.3210000
+DEBUG   : read line: Xtrack_f_DC_linear (Hz/s, early edge):     	   72338.0000000
+DEBUG   : read line: Xtrack_f_DC_quadratic (Hz/s/s, early edge): 	-455000000.00000
+DEBUG   : read line: Range_time_to_first_pixel (2way) (ms):     	       5.5458330
+DEBUG   : read line: Range_sampling_rate (computed, MHz):       	18.9662980496
+DEBUG   : read line: Total_range_band_width (MHz):               	      15.5500000
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Datafile: 					/cdrom/scene1/dat_01.001
+DEBUG   : read line: Number_of_lines_original: 			26555
+DEBUG   : read line: Number_of_pixels_original: 			4900
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_readfiles:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_crop:			master step01
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Data_output_file: 				1393.raw.linux
+DEBUG   : read line: Data_output_format: 				complex_short
+DEBUG   : read line: First_line (w.r.t. original_image): 		1
+DEBUG   : read line: Last_line (w.r.t. original_image): 		800
+DEBUG   : read line: First_pixel (w.r.t. original_image): 		1
+DEBUG   : read line: Last_pixel (w.r.t. original_image): 		300
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_crop:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_precise_orbits:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 	t(s)	X(m)	Y(m)	Z(m)
+DEBUG   : read line: NUMBER_OF_DATAPOINTS: 			27
+DEBUG   : read line: 35361.000000	5152159.477	1646546.378	4689145.167
+DEBUG   : read line: 35362.000000	5157296.325	1646232.204	4683620.050
+DEBUG   : read line: 35363.000000	5162427.558	1645915.503	4678089.838
+DEBUG   : read line: 35364.000000	5167553.172	1645596.277	4672554.537
+DEBUG   : read line: 35365.000000	5172673.159	1645274.527	4667014.153
+DEBUG   : read line: 35366.000000	5177787.513	1644950.254	4661468.692
+DEBUG   : read line: 35367.000000	5182896.230	1644623.460	4655918.161
+DEBUG   : read line: 35368.000000	5187999.303	1644294.145	4650362.564
+DEBUG   : read line: 35369.000000	5193096.726	1643962.311	4644801.909
+DEBUG   : read line: 35370.000000	5198188.494	1643627.958	4639236.200
+DEBUG   : read line: 35371.000000	5203274.600	1643291.089	4633665.445
+DEBUG   : read line: 35372.000000	5208355.038	1642951.704	4628089.650
+DEBUG   : read line: 35373.000000	5213429.803	1642609.805	4622508.819
+DEBUG   : read line: 35374.000000	5218498.889	1642265.392	4616922.960
+DEBUG   : read line: 35375.000000	5223562.290	1641918.467	4611332.079
+DEBUG   : read line: 35376.000000	5228620.000	1641569.031	4605736.181
+DEBUG   : read line: 35377.000000	5233672.013	1641217.085	4600135.273
+DEBUG   : read line: 35378.000000	5238718.324	1640862.631	4594529.360
+DEBUG   : read line: 35379.000000	5243758.926	1640505.670	4588918.450
+DEBUG   : read line: 35380.000000	5248793.814	1640146.202	4583302.547
+DEBUG   : read line: 35381.000000	5253822.982	1639784.230	4577681.658
+DEBUG   : read line: 35382.000000	5258846.424	1639419.754	4572055.789
+DEBUG   : read line: 35383.000000	5263864.135	1639052.775	4566424.946
+DEBUG   : read line: 35384.000000	5268876.108	1638683.295	4560789.136
+DEBUG   : read line: 35385.000000	5273882.338	1638311.315	4555148.364
+DEBUG   : read line: 35386.000000	5278882.819	1637936.837	4549502.637
+DEBUG   : read line: 35387.000000	5283877.545	1637559.861	4543851.960
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_precise_orbits:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : file: slave.out does exist.
+DEBUG   : Opened input file:  slave.out
+DEBUG   : read line:  TU DELFT - DEOS
+DEBUG   : read line: =====================================================
+DEBUG   : read line: SLAVE RESULTFILE: 	slave.out
+DEBUG   : read line: 
+DEBUG   : read line: InSAR Processor: 	Doris (Delft oo radar interferometric software)
+DEBUG   : read line: Version:           	Version 2.6 (debug)
+DEBUG   : read line: VECLIB library:    	not used
+DEBUG   : read line: LAPACK library:    	not used
+DEBUG   : read line: Compiled at:       	Aug 10 2000 15:10:01
+DEBUG   : read line: By GNU gcc:  		2.95.2
+DEBUG   : read line: 
+DEBUG   : read line: Creation of this file: 	Thu Aug 10 15:45:25 2000
+DEBUG   : read line: =====================================================
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: readfiles:		1
+DEBUG   : read line: precise_orbits:		1
+DEBUG   : read line: crop:			1
+DEBUG   : read line: resample:		0
+DEBUG   : read line: filt_azi:		0
+DEBUG   : read line: filt_range:		0
+DEBUG   : read line: NOT_USED:		0
+DEBUG   : read line: End_process_control
+DEBUG   : read line: 
+DEBUG   : read line:    *====================================================================*
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:        Following part is appended at: Thu Aug 10 15:48:43 2000
+DEBUG   : read line:    |                                                                    |
+DEBUG   : read line:    *--------------------------------------------------------------------*
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_readfiles:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Volume file: 					/cdrom/scene1/vdf_dat.001
+DEBUG   : read line: Volume_ID: 					1               
+DEBUG   : read line: Volume_identifier: 				0004094000014024
+DEBUG   : read line: Volume_set_identifier: 				19950726 9492285
+DEBUG   : read line: (Check)Number of records in ref. file: 		26519
+DEBUG   : read line: Product type specifier: 			PRODUCT:ERS-1.SAR.SLC                   
+DEBUG   : read line: Location and date/time of product creation: 	GENERATED AT I-PAF            24-JUL-1998 07:13:11.940      
+DEBUG   : read line: Scene identification: 				ORBIT 21066 DATE 26-JUL-1995  9:49:22   
+DEBUG   : read line: Scene location: 				FRAME 2781 LAT:     40.94 LON:     14.02
+DEBUG   : read line: Leader file:                                 	/cdrom/scene1/lea_01.001
+DEBUG   : read line: Scene_centre_latitude:                     	      40.9400000
+DEBUG   : read line: Scene_centre_longitude:                    	      14.0240000
+DEBUG   : read line: Radar_wavelength (m):                      	       0.0566660
+DEBUG   : read line: First_pixel_azimuth_time (UTC):            	26-JUL-1995 09:49:23.394
+DEBUG   : read line: Pulse_Repetition_Frequency (computed, Hz): 	1679.94931897
+DEBUG   : read line: Total_azimuth_band_width (Hz):             	    1378.0000000
+DEBUG   : read line: Xtrack_f_DC_constant (Hz, early edge):     	     424.9560000
+DEBUG   : read line: Xtrack_f_DC_linear (Hz/s, early edge):     	  -13140.0000000
+DEBUG   : read line: Xtrack_f_DC_quadratic (Hz/s/s, early edge): 	-518000000.00000
+DEBUG   : read line: Range_time_to_first_pixel (2way) (ms):     	       5.5458330
+DEBUG   : read line: Range_sampling_rate (computed, MHz):       	18.9662980496
+DEBUG   : read line: Total_range_band_width (MHz):               	      15.5500000
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Datafile: 					/cdrom/scene1/dat_01.001
+DEBUG   : read line: Number_of_lines_original: 			26518
+DEBUG   : read line: Number_of_pixels_original: 			4900
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_readfiles:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_crop:			slave step01
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: Data_output_file: 				21066.raw.linux
+DEBUG   : read line: Data_output_format: 				complex_short
+DEBUG   : read line: First_line (w.r.t. original_image): 		1
+DEBUG   : read line: Last_line (w.r.t. original_image): 		800
+DEBUG   : read line: First_pixel (w.r.t. original_image): 		1
+DEBUG   : read line: Last_pixel (w.r.t. original_image): 		300
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_crop:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: *_Start_precise_orbits:
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 	t(s)	X(m)	Y(m)	Z(m)
+DEBUG   : read line: NUMBER_OF_DATAPOINTS: 			27
+DEBUG   : read line: 35358.000000	5151580.064	1646538.645	4689765.110
+DEBUG   : read line: 35359.000000	5156717.560	1646224.699	4684240.566
+DEBUG   : read line: 35360.000000	5161849.442	1645908.227	4678710.927
+DEBUG   : read line: 35361.000000	5166975.704	1645589.230	4673176.199
+DEBUG   : read line: 35362.000000	5172096.340	1645267.708	4667636.387
+DEBUG   : read line: 35363.000000	5177211.345	1644943.664	4662091.497
+DEBUG   : read line: 35364.000000	5182320.713	1644617.098	4656541.536
+DEBUG   : read line: 35365.000000	5187424.437	1644288.011	4650986.509
+DEBUG   : read line: 35366.000000	5192522.513	1643956.405	4645426.423
+DEBUG   : read line: 35367.000000	5197614.933	1643622.281	4639861.283
+DEBUG   : read line: 35368.000000	5202701.692	1643285.640	4634291.095
+DEBUG   : read line: 35369.000000	5207782.784	1642946.483	4628715.867
+DEBUG   : read line: 35370.000000	5212858.204	1642604.811	4623135.603
+DEBUG   : read line: 35371.000000	5217927.945	1642260.626	4617550.309
+DEBUG   : read line: 35372.000000	5222992.002	1641913.928	4611959.992
+DEBUG   : read line: 35373.000000	5228050.368	1641564.720	4606364.658
+DEBUG   : read line: 35374.000000	5233103.038	1641213.002	4600764.313
+DEBUG   : read line: 35375.000000	5238150.007	1640858.775	4595158.964
+DEBUG   : read line: 35376.000000	5243191.267	1640502.040	4589548.615
+DEBUG   : read line: 35377.000000	5248226.814	1640142.800	4583933.273
+DEBUG   : read line: 35378.000000	5253256.642	1639781.054	4578312.945
+DEBUG   : read line: 35379.000000	5258280.744	1639416.805	4572687.636
+DEBUG   : read line: 35380.000000	5263299.115	1639050.053	4567057.352
+DEBUG   : read line: 35381.000000	5268311.750	1638680.800	4561422.100
+DEBUG   : read line: 35382.000000	5273318.642	1638309.047	4555781.886
+DEBUG   : read line: 35383.000000	5278319.785	1637934.794	4550136.716
+DEBUG   : read line: 35384.000000	5283315.175	1637558.045	4544486.596
+DEBUG   : read line: 
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: * End_precise_orbits:_NORMAL
+DEBUG   : read line: *******************************************************************
+DEBUG   : read line: 
+DEBUG   : file: interferogram.out does exist.
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read line: =====================================================
+DEBUG   : read line:  INTERFEROGRAM RESULTFILE: interferogram.out
+DEBUG   : read line: 
+DEBUG   : read line: Created by:             
+DEBUG   : read line: InSAR Processor:        Doris (Delft o-o Radar Interferometric Software)
+DEBUG   : read line: Version:                version  4.0.8 (04-09-2014)
+DEBUG   : read line: 		     build 	Fri Jun 30 15:38:15 2017 (optimal)
+DEBUG   : read line: FFTW library:           used
+DEBUG   : read line: VECLIB library:         not used
+DEBUG   : read line: LAPACK library:         used
+DEBUG   : read line: Compiled at:            Mar 24 2020 14:16:00
+DEBUG   : read line: By GNU gcc:             9.3.9
+DEBUG   : read line: File creation at:       Mon Mar 24 21:42:23 2025
+DEBUG   : read line: 
+DEBUG   : read line:  -------------------------------------------------------
+DEBUG   : read line: | Delft Institute of Earth Observation & Space Systems  |
+DEBUG   : read line: |          Delft University of Technology               |
+DEBUG   : read line: |              http://doris.tudelft.nl                  |
+DEBUG   : read line: |                                                       |
+DEBUG   : read line: | Author: (c) TUDelft - DEOS Radar Group                |
+DEBUG   : read line:  -------------------------------------------------------
+DEBUG   : read line: 
+DEBUG   : read line: 
+DEBUG   : read line: Start_process_control
+DEBUG   : read line: coarse_orbits: 		0
+DEBUG   : read line: coarse_correl: 		0
+DEBUG   : read line: fine_coreg: 		0
+DEBUG   : read line: timing_error: 		0
+DEBUG   : read line: dem_assist: 		0
+DEBUG   : read line: comp_coregpm: 		0
+DEBUG   : read line: interfero: 		0
+DEBUG   : read line: coherence: 	0
+DEBUG   : read line: comp_refphase: 		0
+DEBUG   : read line: subtr_refphase: 		0
+DEBUG   : read line: comp_refdem: 		0
+DEBUG   : read line: subtr_refdem: 		0
+DEBUG   : read line: filtphase: 		0
+DEBUG   : read line: unwrap: 		0
+DEBUG   : read line: est_orbits: 		0
+DEBUG   : read line: slant2h: 		0
+DEBUG   : read line: geocoding: 		0
+DEBUG   : read line: dinsar: 			0
+DEBUG   : read line: NOT_USED2: 		0
+DEBUG   : read line: End_process_control
+DEBUG   : Time spent for initialization:
+INFO    : Current time: Mon Mar 24 21:42:23 2025
+
+DEBUG   :  cputime used for process: 	0.00062 sec (total:    0 min 0.00062 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+DEBUG   : file: master.out does exist.
+INFO    : Reading parameters from: master.out
+DEBUG   : Opened input file:  master.out
+DEBUG   : [27]: string: "Product",                     (derived) value: PRODUCT:ERS-2.SAR.SLC
+DEBUG   : Substring "PRODUCT" (radarsat?) found in Product type specifier.
+DEBUG   : Substring "ERS" found in Product type specifier.
+DEBUG   : Product/sensor: 1
+DEBUG   : [31]: string: "Scene_centre_latitude:",      (derived) value: 40.94800000
+DEBUG   : [32]: string: "Scene_centre_longitude:",     (derived) value: 14.02700000
+DEBUG   : [33]: string: "Radar_wavelength",            (derived) value: 0.05666600
+DEBUG   : Extracted first azimuth time string: 09:49:26.141
+DEBUG   : [34]: string: "First_pixel_azimuth_time",    (derived) value: 35366.14100000
+DEBUG   : [35]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95192004
+DEBUG   : [36]: string: "Total_azimuth_band_width",    (derived) value: 1378.00000000
+DEBUG   : [37]: string: "Xtrack_f_DC_constant",        (derived) value: 117.32100000
+DEBUG   : [38]: string: "Xtrack_f_DC_linear",          (derived) value: 72338.00000000
+DEBUG   : [39]: string: "Xtrack_f_DC_quadratic",       (derived) value: -455000000.00000000
+DEBUG   : [40]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG   : [41]: string: "Range_sampling_rate",         (derived) value: 37932596.09920000
+DEBUG   : [42]: string: "Total_range_band_width",      (derived) value: 15550000.00000000
+DEBUG   : [46]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG   : [47]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: master.out
+WARNING : found_sarp==false
+DEBUG   : sensor id: 1
+DEBUG   : ERS 1 or 2 sensor detected.
+INFO    : Range to pixel 1 =    831299.453 m
+INFO    : Range to pixel 4900 = 870017.691 m
+DEBUG   : fDC(col) = +0x1.d548b43958106p+6+0x1.1a92p+16*(col-1)/+0x1.21671a0cb295ep+24-0x1.b1ebfcp+28*((col-1)/+0x1.21671a0cb295ep+24)^2
+DEBUG   : fDC(col) = +0x1.d548b43958106p+6+0x1.f3e98ec208a23p-9*(col-1)-0x1.538946ed2d95cp-20*(col-1)^2
+INFO    : Doppler centroid frequency: at pixel 1 (early edge): 		117.321 Hz
+INFO    : Doppler centroid frequency: at pixel 4900 (far edge): 	105.649 Hz
+INFO    : Doppler centroid frequency: at pixel 1507.675 (maximum):  	120.196 Hz
+INFO    : sensor: 1
+DEBUG   : 
+DEBUG   : Opened input file:  master.out
+INFO    : 27 datapoints (t,x,y,z) read from: "master.out"
+DEBUG   : value of interp_method: -12
+INFO    : Setting default orbit interpolation method.
+DEBUG   : value of interp_method: 5
+INFO    : Computing coefficients for orbit polyfit degree: 5
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000480092m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   5152159.477   5152159.47706104   -6.10388815402985e-05
+DEBUG   :            35362   5157296.325   5157296.3249055   9.44975763559341e-05
+DEBUG   :            35363   5162427.558   5162427.55837269   -0.000372694805264473
+DEBUG   :            35364   5167553.172   5167553.17154784   0.000452161766588688
+DEBUG   :            35365   5172673.159   5172673.15851991   0.000480092130601406
+DEBUG   :            35366   5177787.513   5177787.51338193   -0.000381927005946636
+DEBUG   :            35367   5182896.23   5182896.23023126   -0.000231258571147919
+DEBUG   :            35368   5187999.303   5187999.30316989   -0.000169885344803333
+DEBUG   :            35369   5193096.726   5193096.72630471   -0.000304705463349819
+DEBUG   :            35370   5198188.494   5198188.49374782   0.00025218166410923
+DEBUG   :            35371   5203274.6   5203274.59961681   0.000383186154067516
+DEBUG   :            35372   5208355.038   5208355.03803506   -3.50624322891235e-05
+DEBUG   :            35373   5213429.803   5213429.803132   -0.000132001005113125
+DEBUG   :            35374   5218498.889   5218498.88904342   -4.34238463640213e-05
+DEBUG   :            35375   5223562.29   5223562.28991177   8.82307067513466e-05
+DEBUG   :            35376   5228620   5228619.99988641   0.000113592483103275
+DEBUG   :            35377   5233672.013   5233672.01312394   -0.000123935751616955
+DEBUG   :            35378   5238718.324   5238718.32378846   0.000211542472243309
+DEBUG   :            35379   5243758.926   5243758.92605188   -5.18802553415298e-05
+DEBUG   :            35380   5248793.814   5248793.8140942   -9.41948965191841e-05
+DEBUG   :            35381   5253822.982   5253822.98210378   -0.000103776343166828
+DEBUG   :            35382   5258846.424   5258846.42427766   -0.000277657061815262
+DEBUG   :            35383   5263864.135   5263864.13482183   0.000178170390427113
+DEBUG   :            35384   5268876.108   5268876.10795152   4.84753400087357e-05
+DEBUG   :            35385   5273882.338   5273882.33789151   0.000108490698039532
+DEBUG   :            35386   5278882.819   5278882.81887637   0.00012363214045763
+DEBUG   :            35387   5283877.545   5283877.54515079   -0.000150794163346291
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000431698m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   1646546.378   1646546.3781053   -0.000105299986898899
+DEBUG   :            35362   1646232.204   1646232.20375833   0.000241674017161131
+DEBUG   :            35363   1645915.503   1645915.50301723   -1.72266736626625e-05
+DEBUG   :            35364   1645596.277   1645596.27706722   -6.72223977744579e-05
+DEBUG   :            35365   1645274.527   1645274.52709306   -9.30607784539461e-05
+DEBUG   :            35366   1644950.254   1644950.25427931   -0.000279312022030354
+DEBUG   :            35367   1644623.46   1644623.45981066   0.000189336715266109
+DEBUG   :            35368   1644294.145   1644294.14487221   0.000127786071971059
+DEBUG   :            35369   1643962.311   1643962.31064977   0.000350229442119598
+DEBUG   :            35370   1643627.958   1643627.95833014   -0.000330142443999648
+DEBUG   :            35371   1643291.089   1643291.08910143   -0.000101434765383601
+DEBUG   :            35372   1642951.704   1642951.70415334   -0.000153345055878162
+DEBUG   :            35373   1642609.805   1642609.80467746   0.000322543084621429
+DEBUG   :            35374   1642265.392   1642265.39186754   0.000132464105263352
+DEBUG   :            35375   1641918.467   1641918.46691982   8.01756978034973e-05
+DEBUG   :            35376   1641569.031   1641569.03103333   -3.33348289132118e-05
+DEBUG   :            35377   1641217.085   1641217.08541015   -0.000410147476941347
+DEBUG   :            35378   1640862.631   1640862.6312557   -0.000255701830610633
+DEBUG   :            35379   1640505.67   1640505.6697791   0.000220904825255275
+DEBUG   :            35380   1640146.202   1640146.20219337   -0.000193373998627067
+DEBUG   :            35381   1639784.23   1639784.22971583   0.000284167705103755
+DEBUG   :            35382   1639419.754   1639419.7535683   0.000431697815656662
+DEBUG   :            35383   1639052.775   1639052.77497745   2.25463882088661e-05
+DEBUG   :            35384   1638683.295   1638683.29517509   -0.000175085617229342
+DEBUG   :            35385   1638311.315   1638311.31539842   -0.000398423057049513
+DEBUG   :            35386   1637936.837   1637936.83689041   0.000109589425846934
+DEBUG   :            35387   1637559.861   1637559.86090001   9.99923795461655e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000509432m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35361   4689145.167   4689145.16693757   6.2430277466774e-05
+DEBUG   :            35362   4683620.05   4683620.04998522   1.47810205817223e-05
+DEBUG   :            35363   4678089.838   4678089.83802378   -2.37775966525078e-05
+DEBUG   :            35364   4672554.537   4672554.53707482   -7.48168677091599e-05
+DEBUG   :            35365   4667014.153   4667014.15316288   -0.000162882730364799
+DEBUG   :            35366   4661468.692   4661468.69231569   -0.000315692275762558
+DEBUG   :            35367   4655918.161   4655918.16056428   0.000435720197856426
+DEBUG   :            35368   4650362.564   4650362.56394317   5.68265095353127e-05
+DEBUG   :            35369   4644801.909   4644801.90849057   0.000509431585669518
+DEBUG   :            35370   4639236.2   4639236.20024848   -0.000248482450842857
+DEBUG   :            35371   4633665.445   4633665.44526294   -0.00026293471455574
+DEBUG   :            35372   4628089.65   4628089.64958411   0.00041588768362999
+DEBUG   :            35373   4622508.819   4622508.81926653   -0.00026653241366148
+DEBUG   :            35374   4616922.96   4616922.96036922   -0.000369222834706306
+DEBUG   :            35375   4611332.079   4611332.07895587   4.41288575530052e-05
+DEBUG   :            35376   4605736.181   4605736.18109501   -9.50098037719727e-05
+DEBUG   :            35377   4600135.273   4600135.27286018   0.000139819458127022
+DEBUG   :            35378   4594529.36   4594529.36033009   -0.000330094248056412
+DEBUG   :            35379   4588918.45   4588918.44958881   0.000411185435950756
+DEBUG   :            35380   4583302.547   4583302.54672591   0.000274091958999634
+DEBUG   :            35381   4577681.658   4577681.65783662   0.00016337726265192
+DEBUG   :            35382   4572055.789   4572055.78902206   -2.20602378249168e-05
+DEBUG   :            35383   4566424.946   4566424.94638933   -0.000389331020414829
+DEBUG   :            35384   4560789.136   4560789.13605174   -5.17396256327629e-05
+DEBUG   :            35385   4555148.364   4555148.36412893   -0.000128934159874916
+DEBUG   :            35386   4549502.637   4549502.63674708   0.000252915546298027
+DEBUG   :            35387   4543851.96   4543851.96003906   -3.90578061342239e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+PROGRESS: Orbit: interpolation coefficients computed.
+INFO    : 
+INFO    : master: latest known processing stage: crop
+DEBUG   : Opened input file:  master.out
+DEBUG   : updateslcimage: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG   : string: "Data_output_file:",        		value: 1393.raw.linux
+DEBUG   : string: "Data_output_format:",      		value: 11
+DEBUG   : string: "First_line",               		value: 1
+DEBUG   : string: "Last_line",                		value: 800
+DEBUG   : string: "First_pixel",              		value: 1
+DEBUG   : string: "Last_pixel",               		value: 300
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: 1393.raw.linux
+DEBUG   : current file:  1393.raw.linux
+DEBUG   : formatflag:    11
+DEBUG   : current win:   1 800 1 300
+DEBUG   : original win:  1 26555 1 4900
+DEBUG   : approxcentreoriginal: 4.68052e+06 1.16933e+06 4.15806e+06
+DEBUG   : utc1:            27-JUL-1995 09:49:26.141
+DEBUG   : sensor:          1
+DEBUG   : sar_processor:   11
+DEBUG   : prf:             1679.95
+DEBUG   : abw:             1378
+DEBUG   : rsr:             1.89663e+07
+DEBUG   : rbw:             1.555e+07
+DEBUG   : t_azi1:          35366.1
+DEBUG   : t_range1:        0.00277292
+DEBUG   : wavelength:      0.056666
+DEBUG   : f_DC_a0:         117.321
+DEBUG   : f_DC_a1:         72338
+DEBUG   : f_DC_a2:         -4.55e+08
+DEBUG   : coarseoffsetL:   0
+DEBUG   : coarseoffsetP:   0
+DEBUG   : coarseorbitoffsetL:   0
+DEBUG   : coarseorbitoffsetP:   0
+DEBUG   : ovs_rg:          1
+DEBUG   : ovs_az:          1
+DEBUG   : az_timing_error: 0
+DEBUG   : r_timing_error:  0
+DEBUG   : found_mlL==false (OK if not oversampled)
+DEBUG   : found_mlP==false (OK if not oversampled)
+DEBUG   : slave_master_offsets: 0 0 0 0 0 0 0 0Checking format/dimensions file=1393.raw.linux
+DEBUG   : SLC Fileformat and dimensions are checked and ok.
+DEBUG   : 
+DEBUG   : file: slave.out does exist.
+INFO    : Reading parameters from: slave.out
+DEBUG   : Opened input file:  slave.out
+DEBUG   : [33]: string: "Product",                     (derived) value: PRODUCT:ERS-1.SAR.SLC
+DEBUG   : Substring "PRODUCT" (radarsat?) found in Product type specifier.
+DEBUG   : Substring "ERS" found in Product type specifier.
+DEBUG   : Product/sensor: 1
+DEBUG   : [37]: string: "Scene_centre_latitude:",      (derived) value: 40.94000000
+DEBUG   : [38]: string: "Scene_centre_longitude:",     (derived) value: 14.02400000
+DEBUG   : [39]: string: "Radar_wavelength",            (derived) value: 0.05666600
+DEBUG   : Extracted first azimuth time string: 09:49:23.394
+DEBUG   : [40]: string: "First_pixel_azimuth_time",    (derived) value: 35363.39400000
+DEBUG   : [41]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.94931897
+DEBUG   : [42]: string: "Total_azimuth_band_width",    (derived) value: 1378.00000000
+DEBUG   : [43]: string: "Xtrack_f_DC_constant",        (derived) value: 424.95600000
+DEBUG   : [44]: string: "Xtrack_f_DC_linear",          (derived) value: -13140.00000000
+DEBUG   : [45]: string: "Xtrack_f_DC_quadratic",       (derived) value: -518000000.00000000
+DEBUG   : [46]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG   : [47]: string: "Range_sampling_rate",         (derived) value: 37932596.09920000
+DEBUG   : [48]: string: "Total_range_band_width",      (derived) value: 15550000.00000000
+DEBUG   : [52]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG   : [53]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: slave.out
+WARNING : found_sarp==false
+DEBUG   : sensor id: 1
+DEBUG   : ERS 1 or 2 sensor detected.
+INFO    : Range to pixel 1 =    831299.453 m
+INFO    : Range to pixel 4900 = 870017.691 m
+DEBUG   : fDC(col) = +0x1.a8f4bc6a7ef9ep+8-0x1.9aap+13*(col-1)/+0x1.21671a0cb295ep+24-0x1.ee00d8p+28*((col-1)/+0x1.21671a0cb295ep+24)^2
+DEBUG   : fDC(col) = +0x1.a8f4bc6a7ef9ep+8-0x1.6b3b1826533cep-11*(col-1)-0x1.828c87e2b1ed7p-20*(col-1)^2
+INFO    : Doppler centroid frequency: at pixel 1 (early edge): 		424.956 Hz
+INFO    : Doppler centroid frequency: at pixel 4900 (far edge): 	387.001 Hz
+INFO    : Doppler centroid frequency: at pixel -240.557 (maximum):  	425.039 Hz
+INFO    : sensor: 1
+DEBUG   : 
+DEBUG   : Opened input file:  slave.out
+INFO    : 27 datapoints (t,x,y,z) read from: "slave.out"
+DEBUG   : value of interp_method: -12
+INFO    : Setting default orbit interpolation method.
+DEBUG   : value of interp_method: 5
+INFO    : Computing coefficients for orbit polyfit degree: 5
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.00040999m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   5151580.064   5151580.06425011   -0.000250107608735561
+DEBUG   :            35359   5156717.56   5156717.55983418   0.000165819190442562
+DEBUG   :            35360   5161849.442   5161849.44164351   0.000356494449079037
+DEBUG   :            35361   5166975.704   5166975.70377058   0.000229420140385628
+DEBUG   :            35362   5172096.34   5172096.34031013   -0.00031012762337923
+DEBUG   :            35363   5177211.345   5177211.34535955   -0.000359546393156052
+DEBUG   :            35364   5182320.713   5182320.71301933   -1.93249434232712e-05
+DEBUG   :            35365   5187424.437   5187424.43739349   -0.000393486581742764
+DEBUG   :            35366   5192522.513   5192522.51259001   0.00040998961776495
+DEBUG   :            35367   5197614.933   5197614.93272127   0.000278727151453495
+DEBUG   :            35368   5202701.692   5202701.69190446   9.55360010266304e-05
+DEBUG   :            35369   5207782.784   5207782.78426204   -0.00026203878223896
+DEBUG   :            35370   5212858.204   5212858.20392213   7.78688117861748e-05
+DEBUG   :            35371   5217927.945   5217927.945019   -1.89980491995811e-05
+DEBUG   :            35372   5222992.002   5222992.00169344   0.000306558795273304
+DEBUG   :            35373   5228050.368   5228050.36809324   -9.32449474930763e-05
+DEBUG   :            35374   5233103.038   5233103.0383736   -0.000373601913452148
+DEBUG   :            35375   5238150.007   5238150.00669755   0.000302447006106377
+DEBUG   :            35376   5243191.267   5243191.26723641   -0.000236410647630692
+DEBUG   :            35377   5248226.814   5248226.81417019   -0.000170192681252956
+DEBUG   :            35378   5253256.642   5253256.64168806   0.000311942771077156
+DEBUG   :            35379   5258280.744   5258280.74398873   1.12727284431458e-05
+DEBUG   :            35380   5263299.115   5263299.11528093   -0.000280932523310184
+DEBUG   :            35381   5268311.75   5268311.74978383   0.000216174870729446
+DEBUG   :            35382   5273318.642   5273318.64172743   0.000272568315267563
+DEBUG   :            35383   5278319.785   5278319.78535306   -0.000353062525391579
+DEBUG   :            35384   5283315.175   5283315.17491376   8.62395390868187e-05
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000527669m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   1646538.645   1646538.6449414   5.86020760238171e-05
+DEBUG   :            35359   1646224.699   1646224.69917048   -0.000170476036146283
+DEBUG   :            35360   1645908.227   1645908.22702416   -2.41580419242382e-05
+DEBUG   :            35361   1645589.23   1645589.2296576   0.000342397252097726
+DEBUG   :            35362   1645267.708   1645267.70823004   -0.000230043195188046
+DEBUG   :            35363   1644943.664   1644943.66390475   9.52505506575108e-05
+DEBUG   :            35364   1644617.098   1644617.09784899   0.000151007669046521
+DEBUG   :            35365   1644288.011   1644288.01123401   -0.000234006438404322
+DEBUG   :            35366   1643956.405   1643956.40523496   -0.000234957318753004
+DEBUG   :            35367   1643622.281   1643622.2810309   -3.09026800096035e-05
+DEBUG   :            35368   1643285.64   1643285.63980476   0.000195242697373033
+DEBUG   :            35369   1642946.483   1642946.48274326   0.00025674351491034
+DEBUG   :            35370   1642604.811   1642604.81103692   -3.69218178093433e-05
+DEBUG   :            35371   1642260.626   1642260.62588002   0.000119977397844195
+DEBUG   :            35372   1641913.928   1641913.92847054   -0.000470541883260012
+DEBUG   :            35373   1641564.72   1641564.72001014   -1.01402401924133e-05
+DEBUG   :            35374   1641213.002   1641213.00170412   0.000295882346108556
+DEBUG   :            35375   1640858.775   1640858.77476138   0.000238618813455105
+DEBUG   :            35376   1640502.04   1640502.04039441   -0.000394405098631978
+DEBUG   :            35377   1640142.8   1640142.7998192   0.000180801143869758
+DEBUG   :            35378   1639781.054   1639781.05425527   -0.000255266670137644
+DEBUG   :            35379   1639416.805   1639416.80492558   7.44243152439594e-05
+DEBUG   :            35380   1639050.053   1639050.05305652   -5.6516146287322e-05
+DEBUG   :            35381   1638680.8   1638680.79987787   0.000122129451483488
+DEBUG   :            35382   1638309.047   1638309.04662277   0.000377229182049632
+DEBUG   :            35383   1637934.794   1637934.79452767   -0.000527668744325638
+DEBUG   :            35384   1637558.045   1637558.0448323   0.000167704187333584
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+DEBUG   : Normalizing t axis for least squares fit
+DEBUG   : Degree of orbit interpolating polynomial: 5
+DEBUG   : Number of unknowns: 6
+DEBUG   : Number of data points (orbit): 27
+DEBUG   : Setting up lin. system of equations
+DEBUG   : Solving lin. system of equations with cholesky.
+DEBUG   : polyfit orbit: max(abs(N*inv(N)-I)) = 2.84217e-14
+INFO    : Max. approximation error at datapoints (x,y,or z?): 0.000514476m
+DEBUG   : REPORTING POLYFIT LEAST SQUARES ERRORS
+DEBUG   :       time              y                yhat               ehat
+DEBUG   :            35358   4689765.11   4689765.10969819   0.000301813706755638
+DEBUG   :            35359   4684240.566   4684240.56628916   -0.000289159826934338
+DEBUG   :            35360   4678710.927   4678710.92735235   -0.000352351926267147
+DEBUG   :            35361   4673176.199   4673176.19885783   0.000142169184982777
+DEBUG   :            35362   4667636.387   4667636.38678681   0.000213186256587505
+DEBUG   :            35363   4662091.497   4662091.49713124   -0.000131243839859962
+DEBUG   :            35364   4656541.536   4656541.53589338   0.000106625258922577
+DEBUG   :            35365   4650986.509   4650986.50908534   -8.53445380926132e-05
+DEBUG   :            35366   4645426.423   4645426.42272876   0.000271237455308437
+DEBUG   :            35367   4639861.283   4639861.28285429   0.000145705416798592
+DEBUG   :            35368   4634291.095   4634291.09550123   -0.000501228496432304
+DEBUG   :            35369   4628715.867   4628715.86671707   0.000282930210232735
+DEBUG   :            35370   4623135.603   4623135.60255711   0.000442887656390667
+DEBUG   :            35371   4617550.309   4617550.30908403   -8.40276479721069e-05
+DEBUG   :            35372   4611959.992   4611959.99236744   -0.000367436558008194
+DEBUG   :            35373   4606364.658   4606364.6584835   -0.000483495183289051
+DEBUG   :            35374   4600764.313   4600764.31351448   -0.000514475628733635
+DEBUG   :            35375   4595158.964   4595158.96354834   0.000451657921075821
+DEBUG   :            35376   4589548.615   4589548.61467834   0.000321662984788418
+DEBUG   :            35377   4583933.273   4583933.27300256   -2.5629997253418e-06
+DEBUG   :            35378   4578312.945   4578312.94462355   0.000376448035240173
+DEBUG   :            35379   4572687.636   4572687.63564786   0.000352135859429836
+DEBUG   :            35380   4567057.352   4567057.35218565   -0.000185645185410976
+DEBUG   :            35381   4561422.1   4561422.10035023   -0.000350229442119598
+DEBUG   :            35382   4555781.886   4555781.88625771   -0.000257709994912148
+DEBUG   :            35383   4550136.716   4550136.71602652   -2.65175476670265e-05
+DEBUG   :            35384   4544486.596   4544486.59577701   0.000222994014620781
+DEBUG   : dt between point 1 and 0= 1
+DEBUG   : dt between point 2 and 1= 1
+DEBUG   : dt between point 3 and 2= 1
+DEBUG   : dt between point 4 and 3= 1
+DEBUG   : dt between point 5 and 4= 1
+DEBUG   : dt between point 6 and 5= 1
+DEBUG   : dt between point 7 and 6= 1
+DEBUG   : dt between point 8 and 7= 1
+DEBUG   : dt between point 9 and 8= 1
+DEBUG   : dt between point 10 and 9= 1
+DEBUG   : dt between point 11 and 10= 1
+DEBUG   : dt between point 12 and 11= 1
+DEBUG   : dt between point 13 and 12= 1
+DEBUG   : dt between point 14 and 13= 1
+DEBUG   : dt between point 15 and 14= 1
+DEBUG   : dt between point 16 and 15= 1
+DEBUG   : dt between point 17 and 16= 1
+DEBUG   : dt between point 18 and 17= 1
+DEBUG   : dt between point 19 and 18= 1
+DEBUG   : dt between point 20 and 19= 1
+DEBUG   : dt between point 21 and 20= 1
+DEBUG   : dt between point 22 and 21= 1
+DEBUG   : dt between point 23 and 22= 1
+DEBUG   : dt between point 24 and 23= 1
+DEBUG   : dt between point 25 and 24= 1
+DEBUG   : dt between point 26 and 25= 1
+PROGRESS: Orbit: interpolation coefficients computed.
+DEBUG   : BASELINE: max(abs(N*inv(N)-I)) = 1.77636e-15
+DEBUG   : --------------------
+DEBUG   : Result of modeling: Bperp(l,p) = a000 + a100*l + a010*p + a001*h + 
+DEBUG   :  a110*l*p + a101*l*h + a011*p*h + a200*l^2 + a020*p^2 + a002*h^2
+DEBUG   : l,p,h in normalized coordinates [-2:2].
+DEBUG   : Bperp_a000 = 36.1232
+DEBUG   : Bperp_a100 = 0.00621558
+DEBUG   : Bperp_a010 = -0.0450133
+DEBUG   : Bperp_a001 = -0.101675
+DEBUG   : Bperp_a110 = -3.67006e-06
+DEBUG   : Bperp_a101 = -8.34034e-06
+DEBUG   : Bperp_a011 = 0.000401283
+DEBUG   : Bperp_a200 = 4.93056e-07
+DEBUG   : Bperp_a020 = 0.000108109
+DEBUG   : Bperp_a002 = 0.000357161
+INFO    : Max. error bperp modeling at 3D datapoints: 2.58382e-05m
+DEBUG   : 
+DEBUG   : --------------------
+DEBUG   : Range: r(p) = r0 + dr*p
+DEBUG   : l and p in unnormalized, absolute, coordinates (1:N).
+DEBUG   : range = 831292 + 7.90171*p
+DEBUG   : Computating integration constant based on tiepoint
+INFO    : No tiepoint given.
+INFO    : 
+INFO    : slave: latest known processing stage: crop
+DEBUG   : Opened input file:  slave.out
+DEBUG   : updateslcimage: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG   : string: "Data_output_file:",        		value: 21066.raw.linux
+DEBUG   : string: "Data_output_format:",      		value: 11
+DEBUG   : string: "First_line",               		value: 1
+DEBUG   : string: "Last_line",                		value: 800
+DEBUG   : string: "First_pixel",              		value: 1
+DEBUG   : string: "Last_pixel",               		value: 300
+DEBUG   : Section terminator found (string ":_NORMAL").
+INFO    : Checking file: 21066.raw.linux
+DEBUG   : current file:  21066.raw.linux
+DEBUG   : formatflag:    11
+DEBUG   : current win:   1 800 1 300
+DEBUG   : original win:  1 26518 1 4900
+DEBUG   : approxcentreoriginal: 4.68115e+06 1.16922e+06 4.15739e+06
+DEBUG   : utc1:            26-JUL-1995 09:49:23.394
+DEBUG   : sensor:          1
+DEBUG   : sar_processor:   11
+DEBUG   : prf:             1679.95
+DEBUG   : abw:             1378
+DEBUG   : rsr:             1.89663e+07
+DEBUG   : rbw:             1.555e+07
+DEBUG   : t_azi1:          35363.4
+DEBUG   : t_range1:        0.00277292
+DEBUG   : wavelength:      0.056666
+DEBUG   : f_DC_a0:         424.956
+DEBUG   : f_DC_a1:         -13140
+DEBUG   : f_DC_a2:         -5.18e+08
+DEBUG   : coarseoffsetL:   0
+DEBUG   : coarseoffsetP:   0
+DEBUG   : coarseorbitoffsetL:   0
+DEBUG   : coarseorbitoffsetP:   0
+DEBUG   : ovs_rg:          1
+DEBUG   : ovs_az:          1
+DEBUG   : az_timing_error: 0
+DEBUG   : r_timing_error:  0
+DEBUG   : found_mlL==false (OK if not oversampled)
+DEBUG   : found_mlP==false (OK if not oversampled)
+DEBUG   : slave_master_offsets: 0 0 0 0 0 0 0 0Checking format/dimensions file=21066.raw.linux
+DEBUG   : SLC Fileformat and dimensions are checked and ok.
+DEBUG   : 
+PROGRESS: Start COARSE_ORB.
+INFO    : Estimated translation (l,p): -236, -3
+DEBUG   : Opened output file: coarseporbit: scratchlogcoarse
+DEBUG   : Opened output file: coarseporbit: scratchrescoarse
+PROGRESS: Coarse precise orbits coregistration finished.
+DEBUG   : Opened input file:  scratchlogcoarse
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogcoarse (removed.)
+DEBUG   : Opened input file:  scratchrescoarse
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchrescoarse (removed.)
+PROGRESS: Finished COARSE_ORB.
+DEBUG   : Time spent for coarse coregistration with orbits:
+INFO    : Current time: Mon Mar 24 21:42:23 2025
+
+DEBUG   :  cputime used for process: 	0.004046 sec (total:    0 min 0.004666 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: coarse (orbits)
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-236" as word 0 after "Coarse_orbits_translation_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Coarse_orbits_translation_pixels:"
+PROGRESS: Start COARSE_CORR.
+PROGRESS: COARSE_CORR:   0%
+DEBUG   :  
+DEBUG   : Window: 0 [257, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [257:512, 24:151]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:276, 21:148]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : crosscorrelate:changing static block to size [512, 256]
+DEBUG   : Pixel level offset:     -6, 0 (corr=0.487409)
+DEBUG   : Offset between chips (l,p)    = -6, 0
+DEBUG   : Offset between images on disk = -242, -3 (corr=0.487409)
+DEBUG   :  
+DEBUG   : Window: 1 [257, 120]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [257:512, 120:247]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:276, 117:244]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     -6, 0 (corr=0.403238)
+DEBUG   : Offset between chips (l,p)    = -6, 0
+DEBUG   : Offset between images on disk = -242, -3 (corr=0.403238)
+DEBUG   :  
+DEBUG   : Window: 2 [391, 88]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [391:646, 88:215]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [155:410, 85:212]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     -6, 0 (corr=0.431987)
+DEBUG   : Offset between chips (l,p)    = -6, 0
+DEBUG   : Offset between images on disk = -242, -3 (corr=0.431987)
+DEBUG   :  
+DEBUG   : Window: 3 [524, 56]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [524:779, 56:183]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [288:543, 53:180]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     -6, 0 (corr=0.470043)
+DEBUG   : Offset between chips (l,p)    = -6, 0
+DEBUG   : Offset between images on disk = -242, -3 (corr=0.470043)
+DEBUG   :  
+DEBUG   : Window: 4 [524, 152]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [524:779, 152:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [288:543, 149:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     -5, 0 (corr=0.393623)
+DEBUG   : Offset between chips (l,p)    = -5, 0
+DEBUG   : Offset between images on disk = -241, -3 (corr=0.393623)
+DEBUG   : sorting on coherence.
+INFO    : Mean coherence at estimated positions: 0.43726
+INFO    : Standard deviation coherence:          0.0408631
+INFO    : Using as threshold:                    0.43726
+INFO    : Using following data to determine coarse image offset:
+INFO    : coherence    offset_L    offset_P
+INFO    : ------------------------------------------------------
+INFO    : 0.487409      -242        -3
+INFO    : 0.470043      -242        -3
+INFO    : Standard deviation offset L = 0
+INFO    : Standard deviation offset P = 0
+WARNING : getoffset: number of windows to estimate offset < 6
+WARNING : (please check bottom of LOGFILE to see if offset is OK)
+DEBUG   : Opened output file: coarsecorrelfft: scratchlogcoarse2
+DEBUG   : Opened output file: coarsecorrelfft: scratchrescoarse2
+INFO    : Individual estimated translations (#, l, p, corr, offl, offp):
+INFO    : 0 	385 	88 	0.487409 	-242 	-3 	
+INFO    : 1 	385 	184 	0.403238 	-242 	-3 	
+INFO    : 2 	519 	152 	0.431987 	-242 	-3 	
+INFO    : 3 	652 	120 	0.470043 	-242 	-3 	
+INFO    : 4 	652 	216 	0.393623 	-241 	-3 	
+INFO    : Estimated overall translation (l,p): -242, -3
+INFO    : Coherence -999 values are disregarded in the analysis.
+PROGRESS: Coarse coregistration based on correlation finished.
+DEBUG   : Opened input file:  scratchlogcoarse2
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogcoarse2 (removed.)
+DEBUG   : Opened input file:  scratchrescoarse2
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchrescoarse2 (removed.)
+PROGRESS: Finished COARSE_CORR.
+DEBUG   : Time spent for coarse coregistration with correlation:
+INFO    : Current time: Mon Mar 24 21:42:23 2025
+
+DEBUG   :  cputime used for process: 	0.052718 sec (total:    0 min 0.057384 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : 
+INFO    : ifg: latest known processing stage: coarse (corr)
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-242" as word 0 after "Coarse_correlation_translation_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Coarse_correlation_translation_pixels:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "0" as word 0 after "Slope_CoarseCorr_pixels:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "0" as word 0 after "Slope_CoarseCorr_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-242" as word 0 after "Initial_Offset_CoarseCorr_lines:"
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : read: "-3" as word 0 after "Initial_Offset_CoarseCorr_pixels:"
+PROGRESS: Start FINE.
+PROGRESS: FINE:   0%
+DEBUG   :  
+DEBUG   : Window: 0 [263, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [263:294, 24:55]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:52, 21:52]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : crosscorrelate:changing static block to size [64, 64]
+DEBUG   : Pixel level offset:     1, 0 (corr=0.43789)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.125 (corr=0.447681)
+INFO    : Fine offset between small patches:   -241.062, -3.125 (coh=0.447681)
+DEBUG   :  
+DEBUG   : Window: 1 [263, 69]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [263:294, 69:100]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:52, 66:97]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.373306)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.393459)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.393459)
+DEBUG   :  
+DEBUG   : Window: 2 [263, 114]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [263:294, 114:145]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:52, 111:142]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.511521)
+DEBUG   : Sub-pixel level offset: 0.75, -0.125 (corr=0.530148)
+INFO    : Fine offset between small patches:   -241.25, -3.125 (coh=0.530148)
+DEBUG   :  
+DEBUG   : Window: 3 [263, 159]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [263:294, 159:190]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:52, 156:187]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.46559)
+DEBUG   : Sub-pixel level offset: 0.75, -0.3125 (corr=0.510721)
+INFO    : Fine offset between small patches:   -241.25, -3.3125 (coh=0.510721)
+DEBUG   :  
+DEBUG   : Window: 4 [263, 204]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [263:294, 204:235]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [21:52, 201:232]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.399567)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.432911)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.432911)
+PROGRESS: FINE:  10%
+DEBUG   :  
+DEBUG   : Window: 5 [317, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [317:348, 24:55]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [75:106, 21:52]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.341496)
+DEBUG   : Sub-pixel level offset: 0.875, -0.3125 (corr=0.376013)
+INFO    : Fine offset between small patches:   -241.125, -3.3125 (coh=0.376013)
+DEBUG   :  
+DEBUG   : Window: 6 [317, 69]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [317:348, 69:100]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [75:106, 66:97]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.426957)
+DEBUG   : Sub-pixel level offset: 0.875, -0.25 (corr=0.458869)
+INFO    : Fine offset between small patches:   -241.125, -3.25 (coh=0.458869)
+DEBUG   :  
+DEBUG   : Window: 7 [317, 114]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [317:348, 114:145]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [75:106, 111:142]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.508068)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.25 (corr=0.52703)
+INFO    : Fine offset between small patches:   -241.062, -3.25 (coh=0.52703)
+DEBUG   :  
+DEBUG   : Window: 8 [317, 159]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [317:348, 159:190]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [75:106, 156:187]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.391956)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.409061)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.409061)
+DEBUG   :  
+DEBUG   : Window: 9 [317, 204]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [317:348, 204:235]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [75:106, 201:232]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.449005)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.476756)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.476756)
+PROGRESS: FINE:  20%
+DEBUG   :  
+DEBUG   : Window: 10 [371, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [371:402, 24:55]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [129:160, 21:52]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.485568)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.3125 (corr=0.529356)
+INFO    : Fine offset between small patches:   -241.188, -3.3125 (coh=0.529356)
+DEBUG   :  
+DEBUG   : Window: 11 [371, 69]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [371:402, 69:100]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [129:160, 66:97]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.515392)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.1875 (corr=0.535772)
+INFO    : Fine offset between small patches:   -241.188, -3.1875 (coh=0.535772)
+DEBUG   :  
+DEBUG   : Window: 12 [371, 114]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [371:402, 114:145]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [129:160, 111:142]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.501069)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.517402)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.517402)
+DEBUG   :  
+DEBUG   : Window: 13 [371, 159]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [371:402, 159:190]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [129:160, 156:187]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.496743)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.125 (corr=0.50806)
+INFO    : Fine offset between small patches:   -241.062, -3.125 (coh=0.50806)
+DEBUG   :  
+DEBUG   : Window: 14 [371, 204]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [371:402, 204:235]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [129:160, 201:232]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.43568)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.3125 (corr=0.465532)
+INFO    : Fine offset between small patches:   -241.062, -3.3125 (coh=0.465532)
+PROGRESS: FINE:  30%
+DEBUG   :  
+DEBUG   : Window: 15 [425, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [425:456, 24:55]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [183:214, 21:52]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.401797)
+DEBUG   : Sub-pixel level offset: 1.125, -0.1875 (corr=0.416371)
+INFO    : Fine offset between small patches:   -240.875, -3.1875 (coh=0.416371)
+DEBUG   :  
+DEBUG   : Window: 16 [425, 69]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [425:456, 69:100]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [183:214, 66:97]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.436476)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.456301)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.456301)
+DEBUG   :  
+DEBUG   : Window: 17 [425, 114]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [425:456, 114:145]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [183:214, 111:142]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.544312)
+DEBUG   : Sub-pixel level offset: 0.75, -0.25 (corr=0.584853)
+INFO    : Fine offset between small patches:   -241.25, -3.25 (coh=0.584853)
+DEBUG   :  
+DEBUG   : Window: 18 [425, 159]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [425:456, 159:190]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [183:214, 156:187]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.469974)
+DEBUG   : Sub-pixel level offset: 0.875, -0.25 (corr=0.489236)
+INFO    : Fine offset between small patches:   -241.125, -3.25 (coh=0.489236)
+DEBUG   :  
+DEBUG   : Window: 19 [425, 204]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [425:456, 204:235]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [183:214, 201:232]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.462925)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.1875 (corr=0.482035)
+INFO    : Fine offset between small patches:   -241.188, -3.1875 (coh=0.482035)
+PROGRESS: FINE:  40%
+DEBUG   :  
+DEBUG   : Window: 20 [479, 24]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 24:55]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 21:52]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.346353)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.25 (corr=0.370081)
+INFO    : Fine offset between small patches:   -241.062, -3.25 (coh=0.370081)
+DEBUG   :  
+DEBUG   : Window: 21 [479, 69]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 69:100]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 66:97]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.37596)
+DEBUG   : Sub-pixel level offset: 1.0625, -0.25 (corr=0.399988)
+INFO    : Fine offset between small patches:   -240.938, -3.25 (coh=0.399988)
+DEBUG   :  
+DEBUG   : Window: 22 [479, 114]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 114:145]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 111:142]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.419357)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.453317)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.453317)
+DEBUG   :  
+DEBUG   : Window: 23 [479, 159]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 159:190]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 156:187]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.50747)
+DEBUG   : Sub-pixel level offset: 0.875, -0.25 (corr=0.533247)
+INFO    : Fine offset between small patches:   -241.125, -3.25 (coh=0.533247)
+DEBUG   :  
+DEBUG   : Window: 24 [479, 204]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 204:235]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 201:232]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.369537)
+DEBUG   : Sub-pixel level offset: 1, -0.1875 (corr=0.378336)
+INFO    : Fine offset between small patches:   -241, -3.1875 (coh=0.378336)
+PROGRESS: FINE:  50%
+DEBUG   :  
+DEBUG   : Window: 25 [479, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [479:510, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [237:268, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.510633)
+DEBUG   : Sub-pixel level offset: 1, -0.1875 (corr=0.518133)
+INFO    : Fine offset between small patches:   -241, -3.1875 (coh=0.518133)
+DEBUG   :  
+DEBUG   : Window: 26 [532, 68]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [532:563, 68:99]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [290:321, 65:96]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.647084)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.665786)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.665786)
+DEBUG   :  
+DEBUG   : Window: 27 [532, 113]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [532:563, 113:144]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [290:321, 110:141]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.521796)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.542682)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.542682)
+DEBUG   :  
+DEBUG   : Window: 28 [532, 158]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [532:563, 158:189]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [290:321, 155:186]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.53315)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.547776)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.547776)
+DEBUG   :  
+DEBUG   : Window: 29 [532, 203]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [532:563, 203:234]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [290:321, 200:231]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.427087)
+DEBUG   : Sub-pixel level offset: 0.875, -0.3125 (corr=0.465465)
+INFO    : Fine offset between small patches:   -241.125, -3.3125 (coh=0.465465)
+PROGRESS: FINE:  60%
+DEBUG   :  
+DEBUG   : Window: 30 [532, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [532:563, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [290:321, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.447939)
+DEBUG   : Sub-pixel level offset: 1, -0.25 (corr=0.468326)
+INFO    : Fine offset between small patches:   -241, -3.25 (coh=0.468326)
+DEBUG   :  
+DEBUG   : Window: 31 [586, 68]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [586:617, 68:99]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [344:375, 65:96]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.666642)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.678785)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.678785)
+DEBUG   :  
+DEBUG   : Window: 32 [586, 113]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [586:617, 113:144]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [344:375, 110:141]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.492149)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.512094)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.512094)
+DEBUG   :  
+DEBUG   : Window: 33 [586, 158]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [586:617, 158:189]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [344:375, 155:186]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.56927)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.585226)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.585226)
+DEBUG   :  
+DEBUG   : Window: 34 [586, 203]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [586:617, 203:234]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [344:375, 200:231]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.408178)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.425954)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.425954)
+PROGRESS: FINE:  70%
+DEBUG   :  
+DEBUG   : Window: 35 [586, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [586:617, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [344:375, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.419079)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.25 (corr=0.440237)
+INFO    : Fine offset between small patches:   -241.062, -3.25 (coh=0.440237)
+DEBUG   :  
+DEBUG   : Window: 36 [640, 68]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [640:671, 68:99]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [398:429, 65:96]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.552534)
+DEBUG   : Sub-pixel level offset: 0.875, -0.1875 (corr=0.574211)
+INFO    : Fine offset between small patches:   -241.125, -3.1875 (coh=0.574211)
+DEBUG   :  
+DEBUG   : Window: 37 [640, 113]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [640:671, 113:144]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [398:429, 110:141]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.499283)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.3125 (corr=0.531182)
+INFO    : Fine offset between small patches:   -241.062, -3.3125 (coh=0.531182)
+DEBUG   :  
+DEBUG   : Window: 38 [640, 158]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [640:671, 158:189]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [398:429, 155:186]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.64406)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.682375)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.682375)
+DEBUG   :  
+DEBUG   : Window: 39 [640, 203]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [640:671, 203:234]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [398:429, 200:231]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.486049)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.25 (corr=0.502635)
+INFO    : Fine offset between small patches:   -241.062, -3.25 (coh=0.502635)
+PROGRESS: FINE:  80%
+DEBUG   :  
+DEBUG   : Window: 40 [640, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [640:671, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [398:429, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.342806)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.3125 (corr=0.369663)
+INFO    : Fine offset between small patches:   -241.062, -3.3125 (coh=0.369663)
+DEBUG   :  
+DEBUG   : Window: 41 [694, 68]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [694:725, 68:99]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [452:483, 65:96]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.436802)
+DEBUG   : Sub-pixel level offset: 1, -0.1875 (corr=0.450899)
+INFO    : Fine offset between small patches:   -241, -3.1875 (coh=0.450899)
+DEBUG   :  
+DEBUG   : Window: 42 [694, 113]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [694:725, 113:144]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [452:483, 110:141]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.401935)
+DEBUG   : Sub-pixel level offset: 1.0625, -0.1875 (corr=0.412761)
+INFO    : Fine offset between small patches:   -240.938, -3.1875 (coh=0.412761)
+DEBUG   :  
+DEBUG   : Window: 43 [694, 158]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [694:725, 158:189]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [452:483, 155:186]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.552741)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.589621)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.589621)
+DEBUG   :  
+DEBUG   : Window: 44 [694, 203]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [694:725, 203:234]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [452:483, 200:231]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.426616)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.25 (corr=0.456299)
+INFO    : Fine offset between small patches:   -241.188, -3.25 (coh=0.456299)
+PROGRESS: FINE:  90%
+DEBUG   :  
+DEBUG   : Window: 45 [694, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [694:725, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [452:483, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.472657)
+DEBUG   : Sub-pixel level offset: 0.875, -0.125 (corr=0.481308)
+INFO    : Fine offset between small patches:   -241.125, -3.125 (coh=0.481308)
+DEBUG   :  
+DEBUG   : Window: 46 [748, 68]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [748:779, 68:99]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [506:537, 65:96]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.447412)
+DEBUG   : Sub-pixel level offset: 0.875, -0.3125 (corr=0.469107)
+INFO    : Fine offset between small patches:   -241.125, -3.3125 (coh=0.469107)
+DEBUG   :  
+DEBUG   : Window: 47 [748, 113]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [748:779, 113:144]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [506:537, 110:141]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.293726)
+DEBUG   : Sub-pixel level offset: 0.8125, -0.3125 (corr=0.326915)
+INFO    : Fine offset between small patches:   -241.188, -3.3125 (coh=0.326915)
+DEBUG   :  
+DEBUG   : Window: 48 [748, 158]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [748:779, 158:189]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [506:537, 155:186]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.531083)
+DEBUG   : Sub-pixel level offset: 1, -0.3125 (corr=0.568192)
+INFO    : Fine offset between small patches:   -241, -3.3125 (coh=0.568192)
+DEBUG   :  
+DEBUG   : Window: 49 [748, 203]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [748:779, 203:234]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [506:537, 200:231]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.417995)
+DEBUG   : Sub-pixel level offset: 0.9375, -0.1875 (corr=0.430204)
+INFO    : Fine offset between small patches:   -241.062, -3.1875 (coh=0.430204)
+PROGRESS: FINE: 100%
+DEBUG   :  
+DEBUG   : Window: 50 [748, 248]
+DEBUG   : Reading file:     1393.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [748:779, 248:279]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Reading file:     21066.raw.linux
+DEBUG   : Formatflag:       11
+DEBUG   : Currentwindow:    window [l0:lN, p0:pN] = [1:800, 1:300]
+DEBUG   : Window from file: window [l0:lN, p0:pN] = [506:537, 245:276]
+DEBUG   : Format complex short integer (pixel interleaved).
+DEBUG   : Using de-meaned magnitude patches for incoherent cross-correlation
+DEBUG   : Pixel level offset:     1, 0 (corr=0.426935)
+DEBUG   : Sub-pixel level offset: 0.75, -0.3125 (corr=0.470974)
+INFO    : Fine offset between small patches:   -241.25, -3.3125 (coh=0.470974)
+DEBUG   : Opened output file: finecoreg: scratchlogfine
+DEBUG   : Opened output file: finecoreg: scratchresfine
+PROGRESS: Fine coregistration finished.
+DEBUG   : Opened input file:  scratchlogfine
+DEBUG   : Opened output file: log.out
+DEBUG   : File: log.out has been updated by file: scratchlogfine (removed.)
+DEBUG   : Opened input file:  scratchresfine
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : File: interferogram.out has been updated by file: scratchresfine (removed.)
+PROGRESS: Finished FINE.
+DEBUG   : Time spent for fine coregistration:
+INFO    : Current time: Mon Mar 24 21:42:23 2025
+
+DEBUG   :  cputime used for process: 	0.06178 sec (total:    0 min 0.119164 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO    : Following command plots the estimated offset vectors:
+INFO    : plotoffsets interferogram.out 1 800 1 300 0.3 &
+
+INFO    : 
+INFO    : ifg: latest known processing stage: fine
+DEBUG   : file: interferogram.out does exist.
+DEBUG   : Opened output file: updateprocesscontrol: scratchcopy
+DEBUG   : Opened input file:  interferogram.out
+DEBUG   : Opened input file:  updateprocesscontrols: scratchcopy
+DEBUG   : Opened output file: interferogram.out
+DEBUG   : Time spent for tidying up:
+INFO    : plotoffsets interferogram.out 1 800 1 300 0.3 &
+
+DEBUG   :  cputime used for process: 	0.000332 sec (total:    0 min 0.119496 sec)
+	   wallclock: 			     0 sec (total:    0 min   0 sec)
+
+
+Processing results are in parameter file:
+   interferogram.out
+
+ --- WARNING SUMMARY ---
+There were 5 messages:
+ 1: It is highly recommended to use FC_PLOT to plot the computed FINE offset vectors.
+ 2: found_sarp==false
+ 3: found_sarp==false
+ 4: getoffset: number of windows to estimate offset < 6
+ 5: (please check bottom of LOGFILE to see if offset is OK)
+
+
+Normal termination.
+Thank you for using Doris.
+

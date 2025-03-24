@@ -1,0 +1,150 @@
+ TU DELFT - DEOS
+=====================================================
+SLAVE RESULTFILE: 	slave.out
+
+InSAR Processor: 	Doris (Delft oo radar interferometric software)
+Version:           	Version 2.6 (debug)
+VECLIB library:    	not used
+LAPACK library:    	not used
+Compiled at:       	Aug 10 2000 15:10:01
+By GNU gcc:  		2.95.2
+
+Creation of this file: 	Thu Aug 10 15:45:25 2000
+=====================================================
+
+
+Start_process_control
+readfiles:		1
+precise_orbits:		1
+crop:			1
+resample:		1
+filt_azi:		0
+filt_range:		0
+NOT_USED:		0
+End_process_control
+
+
+   *====================================================================*
+   |                                                                    |
+       Following part is appended at: Thu Aug 10 15:48:43 2000
+   |                                                                    |
+   *--------------------------------------------------------------------*
+
+
+*******************************************************************
+*_Start_readfiles:
+*******************************************************************
+Volume file: 					/cdrom/scene1/vdf_dat.001
+Volume_ID: 					1               
+Volume_identifier: 				0004094000014024
+Volume_set_identifier: 				19950726 9492285
+(Check)Number of records in ref. file: 		26519
+Product type specifier: 			PRODUCT:ERS-1.SAR.SLC                   
+Location and date/time of product creation: 	GENERATED AT I-PAF            24-JUL-1998 07:13:11.940      
+Scene identification: 				ORBIT 21066 DATE 26-JUL-1995  9:49:22   
+Scene location: 				FRAME 2781 LAT:     40.94 LON:     14.02
+Leader file:                                 	/cdrom/scene1/lea_01.001
+Scene_centre_latitude:                     	      40.9400000
+Scene_centre_longitude:                    	      14.0240000
+Radar_wavelength (m):                      	       0.0566660
+First_pixel_azimuth_time (UTC):            	26-JUL-1995 09:49:23.394
+Pulse_Repetition_Frequency (computed, Hz): 	1679.94931897
+Total_azimuth_band_width (Hz):             	    1378.0000000
+Xtrack_f_DC_constant (Hz, early edge):     	     424.9560000
+Xtrack_f_DC_linear (Hz/s, early edge):     	  -13140.0000000
+Xtrack_f_DC_quadratic (Hz/s/s, early edge): 	-518000000.00000
+Range_time_to_first_pixel (2way) (ms):     	       5.5458330
+Range_sampling_rate (computed, MHz):       	18.9662980496
+Total_range_band_width (MHz):               	      15.5500000
+
+
+*******************************************************************
+*******************************************************************
+Datafile: 					/cdrom/scene1/dat_01.001
+Number_of_lines_original: 			26518
+Number_of_pixels_original: 			4900
+*******************************************************************
+* End_readfiles:_NORMAL
+*******************************************************************
+
+
+*******************************************************************
+*_Start_crop:			slave step01
+*******************************************************************
+Data_output_file: 				21066.raw.linux
+Data_output_format: 				complex_short
+First_line (w.r.t. original_image): 		1
+Last_line (w.r.t. original_image): 		800
+First_pixel (w.r.t. original_image): 		1
+Last_pixel (w.r.t. original_image): 		300
+*******************************************************************
+* End_crop:_NORMAL
+*******************************************************************
+
+
+*******************************************************************
+*_Start_precise_orbits:
+*******************************************************************
+	t(s)	X(m)	Y(m)	Z(m)
+NUMBER_OF_DATAPOINTS: 			27
+35358.000000	5151580.064	1646538.645	4689765.110
+35359.000000	5156717.560	1646224.699	4684240.566
+35360.000000	5161849.442	1645908.227	4678710.927
+35361.000000	5166975.704	1645589.230	4673176.199
+35362.000000	5172096.340	1645267.708	4667636.387
+35363.000000	5177211.345	1644943.664	4662091.497
+35364.000000	5182320.713	1644617.098	4656541.536
+35365.000000	5187424.437	1644288.011	4650986.509
+35366.000000	5192522.513	1643956.405	4645426.423
+35367.000000	5197614.933	1643622.281	4639861.283
+35368.000000	5202701.692	1643285.640	4634291.095
+35369.000000	5207782.784	1642946.483	4628715.867
+35370.000000	5212858.204	1642604.811	4623135.603
+35371.000000	5217927.945	1642260.626	4617550.309
+35372.000000	5222992.002	1641913.928	4611959.992
+35373.000000	5228050.368	1641564.720	4606364.658
+35374.000000	5233103.038	1641213.002	4600764.313
+35375.000000	5238150.007	1640858.775	4595158.964
+35376.000000	5243191.267	1640502.040	4589548.615
+35377.000000	5248226.814	1640142.800	4583933.273
+35378.000000	5253256.642	1639781.054	4578312.945
+35379.000000	5258280.744	1639416.805	4572687.636
+35380.000000	5263299.115	1639050.053	4567057.352
+35381.000000	5268311.750	1638680.800	4561422.100
+35382.000000	5273318.642	1638309.047	4555781.886
+35383.000000	5278319.785	1637934.794	4550136.716
+35384.000000	5283315.175	1637558.045	4544486.596
+
+*******************************************************************
+* End_precise_orbits:_NORMAL
+*******************************************************************
+
+
+   *====================================================================*
+   |                                                                    |
+       Following part is appended at: Mon Mar 24 21:46:07 2025
+                 Using Doris version  4.0.8 (04-09-2014)
+		     build 	Fri Jun 30 15:38:15 2017          
+   |                                                                    |
+   *--------------------------------------------------------------------*
+
+
+
+*******************************************************************
+*_Start_resample:
+*******************************************************************
+Normalization_Lines:   	1 26518
+Normalization_Pixels:  	1 4900
+Shifted azimuth spectrum:             		1
+Data_output_file:                     		21066.resampled
+Data_output_format:                   		complex_real4
+Interpolation kernel:                 		6 point cubic convolution
+First_line (w.r.t. original_master):  		1
+Last_line (w.r.t. original_master):   		800
+First_pixel (w.r.t. original_master): 		1
+Last_pixel (w.r.t. original_master):  		300
+*******************************************************************
+* End_resample:_NORMAL
+*******************************************************************
+
+   Current time: Mon Mar 24 21:46:07 2025

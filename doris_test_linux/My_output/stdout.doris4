@@ -1,0 +1,4382 @@
+DEBUG:    file: doris4.in does exist.
+INFO:     inputoptionsfile: "doris4.in"
+DEBUG:    ROUTINE: printcpu
+DEBUG:    ROUTINE: inittest
+DEBUG: file "ioroutines.c", line 128
+	# test somewhere also memory,diskspace.
+DEBUG:    ROUTINE: readinput
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: SCREEN
+DEBUG:    Read argument: debug
+INFO:     SCREEN: line 18: stdout:  error, warning, progress, info, debug.
+DEBUG:    Read keyword: MEMORY
+DEBUG:    Read argument: 50
+DEBUG:    Read keyword: OVERWRITE
+DEBUG:    Read argument: OFF
+DEBUG:    Read keyword: BATCH
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: LISTINPUT
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: interfero
+INFO:     PROCESS: 	I will process step: 		INTERFERO
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: comprefpha
+INFO:     PROCESS: 	I will process step: 		COMPREFPHA
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: subtrrefpha
+INFO:     PROCESS: 	I will process step: 		SUBTRREFPHA
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: coherence
+INFO:     PROCESS: 	I will process step: 		COHERENCE
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: LOGFILE
+DEBUG:    Read argument: log.out
+DEBUG:    Read keyword: M_RESFILE
+DEBUG:    Read argument: master.out
+DEBUG:    Read keyword: S_RESFILE
+DEBUG:    Read argument: slave.out
+DEBUG:    Read keyword: I_RESFILE
+DEBUG:    Read argument: interferogram.out
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: INT_OUT_CINT
+DEBUG:    Read argument: cint.raw
+DEBUG:    Read keyword: INT_MULTILOOK
+DEBUG:    Read argument: 5
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: FE_METHOD
+DEBUG:    Read argument: porbits
+DEBUG:    Read keyword: FE_DEGREE
+DEBUG:    Read argument: 3
+DEBUG:    Read keyword: FE_NPOINTS
+DEBUG:    Read argument: 101
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: SRP_OUT_CINT
+DEBUG:    Read argument: cint.srp.raw
+DEBUG:    Read keyword: SRP_MULTILOOK
+DEBUG:    Read argument: 1
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: COH_OUT_COH
+DEBUG:    Read argument: coh.raw
+DEBUG:    Read keyword: COH_MULTILOOK
+DEBUG:    Read argument: 5
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: COH_WINSIZE
+DEBUG:    Read argument: 15
+DEBUG:    Read argument: 15
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: STOP
+DEBUG:    STOP card encountered at line 66.
+
+DEBUG:    ROUTINE: checkgeneral
+INFO:     MEMORY: 	50 MB is available to Doris.
+INFO:     M_RESFILE: 	resultfile of master: 		master.out
+INFO:     S_RESFILE: 	resultfile of slave: 		slave.out
+INFO:     I_RESFILE: 	out file for interferogram: 	interferogram.out
+INFO:     LOGFILE: 	out file for logging: 		log.out
+INFO:     DUMPBASELINE: evaluation of baseline parameters at grid with: 0 lines, 0 pixels: 
+INFO:     LISTINPUT:    Input file appended to logfile.
+INFO:     ELLIPSOID: 	WGS84.
+DEBUG:    ROUTINE: checkcomprefpha
+INFO:     FE_METHOD: method for flatearth correction: PORBITS
+INFO:     FE_NPOINTS: Using 101 (random like) distributed points for estimation of refpha polynomial.
+INFO:     FE_DEGREE: Using 3 order polynomial for flat Earth correction.
+DEBUG:    ROUTINE: checksubtrrefpha
+INFO:     SRP_METHOD: 	polynomial: 	Polynomial from COMPREFPHA used.
+INFO:     SRP_OUT_CINT: outputfile complex interferogram: cint.srp.raw
+INFO:     SRP_MULTILOOK: l,p: 1 1
+DEBUG:    ROUTINE: checkinterfero
+INFO:     INT_OUT_CINT: data outputfile complex interferogram: 	cint.raw
+INFO:     INT_MULTILOOK factor (l/p): 	5 1
+DEBUG:    ROUTINE: checkcoherence
+INFO:     COH_OUT_COH: data outputfile coherence image: coh.raw
+INFO:     COH_MULTILOOK factor (l/p): 	5 1
+INFO:     COH_WINSIZE window size for coherence estimation (l/p): 	15 15
+DEBUG:    Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: log.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG:    ROUTINE: checkprocessing
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    Time spent for initialization:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.02 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: master.out
+DEBUG:    [32]: string: "Scene_centre_latitude:",      (derived) value: 40.948
+DEBUG:    [33]: string: "Scene_centre_longitude:",     (derived) value: 14.027
+DEBUG:    [34]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [35]: string: "First_pixel_azimuth_time",    (derived) value: 35366.1
+DEBUG:    [36]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [37]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [38]: string: "Xtrack_f_DC_constant",        (derived) value: 117.321
+DEBUG:    [39]: string: "Xtrack_f_DC_linear",          (derived) value: 72338
+DEBUG:    [40]: string: "Xtrack_f_DC_quadratic",       (derived) value: -4.55e+08
+DEBUG:    [41]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [42]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [43]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [47]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG:    [48]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26555 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG:    string: "Data_output_file:",        value: 1393.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	1393.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40007bb8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40007d10
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40007e68
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40007fc0
+matDEBUG: allocated: 216B; total allocated: 0MB
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x40005ba8
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005cf8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005e50
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005cf8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x40005ba8
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005bb0
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005e50
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x40005d00
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005e50
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005fa8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005e50
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x40005d00
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005d08
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005fa8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x40005e58
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005fa8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006100
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005fa8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x40005e58
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005e60
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006100
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: slave.out
+DEBUG:    [38]: string: "Scene_centre_latitude:",      (derived) value: 40.94
+DEBUG:    [39]: string: "Scene_centre_longitude:",     (derived) value: 14.024
+DEBUG:    [40]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [41]: string: "First_pixel_azimuth_time",    (derived) value: 35363.4
+DEBUG:    [42]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [43]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [44]: string: "Xtrack_f_DC_constant",        (derived) value: 424.956
+DEBUG:    [45]: string: "Xtrack_f_DC_linear",          (derived) value: -13140
+DEBUG:    [46]: string: "Xtrack_f_DC_quadratic",       (derived) value: -5.18e+08
+DEBUG:    [47]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [48]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [49]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [53]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG:    [54]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26518 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40005fb8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006110
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006268
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x400063c0
+matDEBUG: allocated: 216B; total allocated: 0MB
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x40006510
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006660
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x400067b8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006660
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x40006510
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006518
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x400067b8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x40006668
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x400067b8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006910
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x400067b8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x40006668
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006670
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006910
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: splineinterpol
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 26, 1, 0x400067c0
+matDEBUG: allocated: 208B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006910
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x40006a68
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006910
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 26, 1, 0x400067c0
+matDEBUG: deallocated: 208B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 1, 0x400067c8
+matDEBUG: allocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006a68
+matDEBUG: deallocated: 216B; total allocated: 0MB
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    orbit::compbaseline
+INFO:     Exiting compbaseline, no output requested with DUMPBASELINE card.
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -236
+Coarse_orbits_trans as word 0 after "Coarse_orbits_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_orbits_translation_pixels:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -241
+Coarse_correlation_ as word 0 after "Coarse_correlation_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_correlation_translation_pixels:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 16
+t as word 1 after "Oversampling" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 1
+Estimate as word 0 after "Degree_cpm:" in file "interferogram.out".
+DEBUG:    ROUTINE: readcoeff
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x400068c0
+matDEBUG: allocated: 24B; total allocated: 0MB
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsL:"; file: interferogram.out.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x400068c0
+matDEBUG: deallocated: 24B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x400068c0
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: deallocated: 24B; total allocated: 0MB
+DEBUG:    ROUTINE: readcoeff
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: allocated: 24B; total allocated: 0MB
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsP:"; file: interferogram.out.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x40006930
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: deallocated: 24B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x40006930
+matDEBUG: deallocated: 24B; total allocated: 0MB
+DEBUG:    ROUTINE: fillinterinfo
+INFO:     fillinterinfo: polynomial normalized by factors: 1 26555 1 4900
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    ROUTINE: polyval
+DEBUG:    Finished fillinterinfo
+DEBUG:    content of struct:
+
+current file: 	
+formatflag:   	0
+multilook:    	0 0
+window:       	243 800 5 300
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_resample:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.resampled
+DEBUG:    string: "Data_output_format:",      value: 12
+DEBUG:    string: "First_line",               value: 245
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 7
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.resampled
+	formatflag:   	12
+	current win:  	245 800 7 300
+PROGRESS: Start INTERFERO.
+
+DEBUG:    ROUTINE: compinterfero
+INFO:     compinterfero: polynomial normalized by factors: 1 26555 1 4900
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 7085, 294, 0x4000ef60
+matDEBUG: allocated: 16663920B; total allocated: 17MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 7085, 294, 0x40ffa398
+matDEBUG: allocated: 16663920B; total allocated: 33MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 294, 1, 0x40006db8
+matDEBUG: allocated: 1176B; total allocated: 33MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+PROGRESS: INTERFERO: 0%
+
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 7085, 294, 0x4000ef60
+matDEBUG: deallocated: 16663920B; total allocated: 17MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 555, 294, 0x400080a0
+matDEBUG: allocated: 1305360B; total allocated: 18MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 7085, 294, 0x40ffa398
+matDEBUG: deallocated: 16663920B; total allocated: 1MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 555, 294, 0x40147470
+matDEBUG: allocated: 1305360B; total allocated: 3MB
+matDEBUG: ROUTINE: fileci2tomatcr4.
+matDEBUG: readfile (window).
+matDEBUG: conj: repair stupid conj not known with gcc ?? 2.95.2
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 555, 294, 0x40286840
+matDEBUG: allocated: 1305360B; total allocated: 4MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 555, 294, 0x403c5c10
+matDEBUG: allocated: 1305360B; total allocated: 5MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 555, 294, 0x40286840
+matDEBUG: deallocated: 1305360B; total allocated: 4MB
+matDEBUG: *=
+matDEBUG: deallocated matrix #lines, #pixels, #address: 555, 294, 0x403c5c10
+matDEBUG: deallocated: 1305360B; total allocated: 3MB
+matDEBUG: multilook.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x40286150
+matDEBUG: allocated: 261072B; total allocated: 3MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x402c5ef0
+matDEBUG: allocated: 261072B; total allocated: 3MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x40286150
+matDEBUG: deallocated: 261072B; total allocated: 3MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x402c5ef0
+matDEBUG: deallocated: 261072B; total allocated: 3MB
+PROGRESS: finished compinterfero.
+
+matDEBUG: deallocated matrix #lines, #pixels, #address: 294, 1, 0x40006db8
+matDEBUG: deallocated: 1176B; total allocated: 3MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 555, 294, 0x40147470
+matDEBUG: deallocated: 1305360B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 555, 294, 0x400080a0
+matDEBUG: deallocated: 1305360B; total allocated: 0MB
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchloginterfero (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchresinterfero (removed.)
+PROGRESS: Finished INTERFERO.
+
+DEBUG:    Time spent for computation of interferogram:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.94 sec (total:    0 min 0.96 sec)
+	Wallclock: 			     1 sec (total:    0 min   1 sec)
+DEBUG:    ROUTINE: updateinterinfo
+DEBUG:    String: "Data_output_file:" found.
+DEBUG:    String: "Data_output_format:" found.
+DEBUG:    String: "First_line:" found.
+DEBUG:    String: "Last_line:" found.
+DEBUG:    String: "First_pixel:" found.
+DEBUG:    String: "Last_pixel:" found.
+DEBUG:    String: "Multilookfactor_azimuth_direction:" found.
+DEBUG:    String: "Multilookfactor_range_direction:" found.
+DEBUG:    finished updateinterinfo
+DEBUG:    content of struct:
+
+current file: 	cint.raw
+formatflag:   	12
+multilook:    	5 1
+window:       	245 800 7 300
+PROGRESS: Start COMPREFPHA.
+
+DEBUG:    ROUTINE: flatearth
+INFO:     FLATERATH: MAXITER: 10; CRITERPOS: 1e-06 m; CRITERTIM: 1e-10 s
+INFO:     flatearth: polynomial normalized by factors: 1 26555 1 4900
+DEBUG:    ROUTINE: distributepoints
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 3, 0x40006ab8
+matDEBUG: allocated: 1212B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 3, 0x40007120
+matDEBUG: allocated: 1212B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 3, 0x40006ab8
+matDEBUG: deallocated: 1212B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 3, 0x40006ab8
+matDEBUG: allocated: 1212B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 3, 0x40007120
+matDEBUG: deallocated: 1212B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x40007120
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 10, 0x400080a0
+matDEBUG: allocated: 8080B; total allocated: 0MB
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x40007608
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 1, 0x40007640
+matDEBUG: allocated: 24B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 3, 3, 0x40007678
+matDEBUG: allocated: 72B; total allocated: 0MB
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2t
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 10, 0x400076f8
+matDEBUG: allocated: 800B; total allocated: 0MB
+matDEBUG: matTxmat
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 10, 0x4000a038
+matDEBUG: allocated: 800B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 10, 0x400076f8
+matDEBUG: deallocated: 800B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 1, 0x400076f8
+matDEBUG: allocated: 80B; total allocated: 0MB
+matDEBUG: matTxmat
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 1, 0x40007780
+matDEBUG: allocated: 80B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 1, 0x400076f8
+matDEBUG: deallocated: 80B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 10, 0x4000a360
+matDEBUG: allocated: 800B; total allocated: 0MB
+matDEBUG: choles: internal
+matDEBUG: solvechol::INTERNAL
+matDEBUG: matrices *
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 10, 0x4000a688
+matDEBUG: allocated: 800B; total allocated: 0MB
+matDEBUG: no veclib.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 10, 0x4000a9b0
+matDEBUG: allocated: 800B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 10, 0x4000a688
+matDEBUG: deallocated: 800B; total allocated: 0MB
+WARNING:  flatearth: maximum deviation N*inv(N) from unity = 0.00390995. Quite large. Decrease degree or number of points?
+matDEBUG: matrices *
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: no veclib.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000b008
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: -
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: -= mat
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000b4d8
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: abs
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 101, 1, 0x4000d9b0
+matDEBUG: allocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000acd8
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: max
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000d9b0
+matDEBUG: deallocated: 808B; total allocated: 0MB
+DEBUG:    ROUTINE: lp2ell
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2ell
+INFO:     Coordinates of corner interferogram: 245, 7 = 41.3034, 14.7782
+DEBUG:    ROUTINE: lp2ell
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2ell
+INFO:     Coordinates of corner interferogram: 800, 7 = 41.284, 14.7724
+DEBUG:    ROUTINE: lp2ell
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2ell
+INFO:     Coordinates of corner interferogram: 245, 300 = 41.3167, 14.6979
+DEBUG:    ROUTINE: lp2ell
+DEBUG:    ROUTINE: lp2xyz
+DEBUG:    orbit::getxyz
+DEBUG:    orbit::getinterval
+DEBUG:    orbit::getxyzddot
+DEBUG:    orbit::getinterval
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: solve33
+DEBUG:    ROUTINE: xyz2ell
+INFO:     Coordinates of corner interferogram: 800, 300 = 41.2973, 14.6921
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000b4d8
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x4000b008
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 10, 0x4000a9b0
+matDEBUG: deallocated: 800B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 10, 0x4000a360
+matDEBUG: deallocated: 800B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 1, 0x40007780
+matDEBUG: deallocated: 80B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 10, 0x4000a038
+matDEBUG: deallocated: 800B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 10, 0x400080a0
+matDEBUG: deallocated: 8080B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 1, 0x40007120
+matDEBUG: deallocated: 808B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 101, 3, 0x40006ab8
+matDEBUG: deallocated: 1212B; total allocated: 0MB
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogflat (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchresflat (removed.)
+PROGRESS: Finished COMPREFPHA.
+
+DEBUG:    Time spent for computation of reference interferogram 'flat earth':
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.07 sec (total:    0 min 1.03 sec)
+	Wallclock: 			     0 sec (total:    0 min   1 sec)
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 3
+Estimate as word 0 after "Degree_flat:" in file "interferogram.out".
+DEBUG:    ROUTINE: readcoeff
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 1, 0x40006948
+matDEBUG: allocated: 80B; total allocated: 0MB
+DEBUG:    read 10 coefficients after: "Estimated_coefficients_flatearth:"; file: interferogram.out.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 1, 0x400069d0
+matDEBUG: allocated: 80B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 1, 0x40006948
+matDEBUG: deallocated: 80B; total allocated: 0MB
+matDEBUG: operator =
+matDEBUG: allocated matrix #lines, #pixels, #address: 10, 1, 0x40006948
+matDEBUG: allocated: 80B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 1, 0x400069d0
+matDEBUG: deallocated: 80B; total allocated: 0MB
+PROGRESS: Start SUBTRREFPHA.
+
+DEBUG:    ROUTINE: subtrrefpha (polynomial)
+INFO:     subtrrefpha: polynomial ref.phase normalized by factors: 1 26555 1 4900
+DEBUG:    bufferlines per buffer: 10629
+DEBUG:    restlines last buffer: 111; and: 0 buffers of #lines: 10629
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 294, 1, 0x40006e40
+matDEBUG: allocated: 1176B; total allocated: 0MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+PROGRESS: SUBTRREFPHA: buffer: 1; line: 247 : 357
+
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 1, 0x400076c8
+matDEBUG: allocated: 444B; total allocated: 0MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+DEBUG:    ROUTINE: polyval
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x400080a0
+matDEBUG: allocated: 130536B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x40028058
+matDEBUG: allocated: 130536B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x400080a0
+matDEBUG: deallocated: 130536B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x40047e48
+matDEBUG: allocated: 261072B; total allocated: 0MB
+matDEBUG: dotmultconjphase.
+matDEBUG: multilook.
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x40087a20
+matDEBUG: allocated: 261072B; total allocated: 1MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 111, 294, 0x400c75f8
+matDEBUG: allocated: 261072B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x40087a20
+matDEBUG: deallocated: 261072B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x400c75f8
+matDEBUG: deallocated: 261072B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x40047e48
+matDEBUG: deallocated: 261072B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 294, 0x40028058
+matDEBUG: deallocated: 130536B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 111, 1, 0x400076c8
+matDEBUG: deallocated: 444B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 294, 1, 0x40006e40
+matDEBUG: deallocated: 1176B; total allocated: 0MB
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogsubtrrefpha (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchressubtrrefpha (removed.)
+PROGRESS: Finished SUBTRREFPHA.
+
+DEBUG:    Time spent for subtraction of reference phase:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.12 sec (total:    0 min 1.15 sec)
+	Wallclock: 			     1 sec (total:    0 min   2 sec)
+DEBUG:    ROUTINE: updateinterinfo
+DEBUG:    String: "Data_output_file:" found.
+DEBUG:    String: "Data_output_format:" found.
+DEBUG:    String: "First_line:" found.
+DEBUG:    String: "Last_line:" found.
+DEBUG:    String: "First_pixel:" found.
+DEBUG:    String: "Last_pixel:" found.
+DEBUG:    String: "Multilookfactor_azimuth_direction:" found.
+DEBUG:    String: "Multilookfactor_range_direction:" found.
+DEBUG:    finished updateinterinfo
+DEBUG:    content of struct:
+
+current file: 	cint.srp.raw
+formatflag:   	12
+multilook:    	5 1
+window:       	245 799 7 300
+PROGRESS: Start COHERENCE.
+
+DEBUG:    ROUTINE: compcoherence
+INFO:     compcoherence: polynomial normalized by factors: 1 26555 1 4900
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 1, 294, 0x400069b0
+matDEBUG: allocated: 1176B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 1, 294, 0x400069b0
+matDEBUG: deallocated: 1176B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 294, 0x4000a0a8
+matDEBUG: allocated: 63504B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 294, 0x400198c0
+matDEBUG: allocated: 63504B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 294, 1, 0x40006f30
+matDEBUG: allocated: 1176B; total allocated: 0MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+PROGRESS: COHERENCE: 0%
+
+matDEBUG: ROUTINE: fileci2tomatcr4.
+matDEBUG: readfile (window).
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 294, 0x400290d8
+matDEBUG: allocated: 63504B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 294, 0x400198c0
+matDEBUG: deallocated: 63504B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 34, 294, 0x400388f0
+matDEBUG: allocated: 79968B; total allocated: 0MB
+matDEBUG: setdata (win,A,win)
+matDEBUG: operator =
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 294, 0x400290d8
+matDEBUG: deallocated: 63504B; total allocated: 0MB
+matDEBUG: allocated matrix #lines, #pixels, #address: 27, 294, 0x400198c0
+matDEBUG: allocated: 63504B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 294, 0x4000a0a8
+matDEBUG: deallocated: 63504B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 34, 294, 0x4004c158
+matDEBUG: allocated: 79968B; total allocated: 0MB
+matDEBUG: setdata (win,A,win)
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 294, 0x400198c0
+matDEBUG: deallocated: 63504B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 34, 1, 0x400076c8
+matDEBUG: allocated: 136B; total allocated: 0MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+DEBUG:    ROUTINE: polyval
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 34, 294, 0x4000a0a8
+matDEBUG: allocated: 39984B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 34, 294, 0x40013ce0
+matDEBUG: allocated: 39984B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 34, 294, 0x4000a0a8
+matDEBUG: deallocated: 39984B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 34, 294, 0x40013ce0
+matDEBUG: deallocated: 39984B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 34, 1, 0x400076c8
+matDEBUG: deallocated: 136B; total allocated: 0MB
+matDEBUG: coherence2
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 20, 294, 0x4000a0a8
+matDEBUG: allocated: 23520B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 20, 294, 0x4000fc90
+matDEBUG: allocated: 23520B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 20, 294, 0x4000a0a8
+matDEBUG: deallocated: 23520B; total allocated: 0MB
+matDEBUG: multilook.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 4, 294, 0x4000a0a8
+matDEBUG: allocated: 4704B; total allocated: 0MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 4, 294, 0x4000b310
+matDEBUG: allocated: 4704B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 4, 294, 0x4000a0a8
+matDEBUG: deallocated: 4704B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 4, 294, 0x4000b310
+matDEBUG: deallocated: 4704B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 20, 294, 0x4000fc90
+matDEBUG: deallocated: 23520B; total allocated: 0MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 34, 294, 0x4004c158
+matDEBUG: deallocated: 79968B; total allocated: 0MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 7099, 294, 0x4004c158
+matDEBUG: allocated: 16696848B; total allocated: 17MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 34, 294, 0x400388f0
+matDEBUG: deallocated: 79968B; total allocated: 17MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 7099, 294, 0x41038770
+matDEBUG: allocated: 16696848B; total allocated: 33MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 7099, 294, 0x4004c158
+matDEBUG: deallocated: 16696848B; total allocated: 17MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 542, 294, 0x40017e98
+matDEBUG: allocated: 1274784B; total allocated: 18MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 7099, 294, 0x41038770
+matDEBUG: deallocated: 16696848B; total allocated: 1MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 542, 294, 0x4014f240
+matDEBUG: allocated: 1274784B; total allocated: 2MB
+matDEBUG: ROUTINE: fileci2tomatcr4.
+matDEBUG: readfile (window).
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 542, 294, 0x402865e8
+matDEBUG: allocated: 1274784B; total allocated: 4MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 542, 294, 0x4014f240
+matDEBUG: deallocated: 1274784B; total allocated: 2MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 549, 294, 0x403bd990
+matDEBUG: allocated: 1291248B; total allocated: 4MB
+matDEBUG: setdata (win,A,win)
+matDEBUG: operator =
+matDEBUG: deallocated matrix #lines, #pixels, #address: 542, 294, 0x402865e8
+matDEBUG: deallocated: 1274784B; total allocated: 2MB
+matDEBUG: allocated matrix #lines, #pixels, #address: 542, 294, 0x4014f240
+matDEBUG: allocated: 1274784B; total allocated: 4MB
+matDEBUG: resize.
+matDEBUG: deallocated matrix #lines, #pixels, #address: 542, 294, 0x40017e98
+matDEBUG: deallocated: 1274784B; total allocated: 2MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 549, 294, 0x4000cb68
+matDEBUG: allocated: 1291248B; total allocated: 4MB
+matDEBUG: setdata (win,A,win)
+matDEBUG: deallocated matrix #lines, #pixels, #address: 542, 294, 0x4014f240
+matDEBUG: deallocated: 1274784B; total allocated: 2MB
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 549, 1, 0x4000a948
+matDEBUG: allocated: 2196B; total allocated: 2MB
+DEBUG:    ROUTINE: normalize
+matDEBUG: -= scalar
+matDEBUG: /= scalar
+DEBUG:    ROUTINE: polyval
+DEBUG:    x larger than y, while optimized for y larger x
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 549, 294, 0x40148800
+matDEBUG: allocated: 645624B; total allocated: 1MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 549, 294, 0x401e6aa0
+matDEBUG: allocated: 645624B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 549, 294, 0x40148800
+matDEBUG: deallocated: 645624B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 549, 294, 0x401e6aa0
+matDEBUG: deallocated: 645624B; total allocated: 2MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 549, 1, 0x4000a948
+matDEBUG: deallocated: 2196B; total allocated: 2MB
+matDEBUG: coherence2
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 535, 294, 0x40147f60
+matDEBUG: allocated: 629160B; total allocated: 1MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 535, 294, 0x401e1910
+matDEBUG: allocated: 629160B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 535, 294, 0x40147f60
+matDEBUG: deallocated: 629160B; total allocated: 1MB
+matDEBUG: multilook.
+matDEBUG: initialization matrix.
+matDEBUG: allocated matrix #lines, #pixels, #address: 107, 294, 0x40147f60
+matDEBUG: allocated: 125832B; total allocated: 2MB
+matDEBUG: copy constructor.
+matDEBUG: allocated matrix #lines, #pixels, #address: 107, 294, 0x40166af0
+matDEBUG: allocated: 125832B; total allocated: 2MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 107, 294, 0x40147f60
+matDEBUG: deallocated: 125832B; total allocated: 2MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 107, 294, 0x40166af0
+matDEBUG: deallocated: 125832B; total allocated: 2MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 535, 294, 0x401e1910
+matDEBUG: deallocated: 629160B; total allocated: 1MB
+PROGRESS: finished compcoherence.
+
+matDEBUG: deallocated matrix #lines, #pixels, #address: 294, 1, 0x40006f30
+matDEBUG: deallocated: 1176B; total allocated: 1MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 549, 294, 0x403bd990
+matDEBUG: deallocated: 1291248B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 549, 294, 0x4000cb68
+matDEBUG: deallocated: 1291248B; total allocated: 0MB
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogcoherence (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchrescoherence (removed.)
+PROGRESS: Finished COHERENCE.
+
+DEBUG:    Time spent for computation of coherence:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	   6.9 sec (total:    0 min 8.05 sec)
+	Wallclock: 			     7 sec (total:    0 min   9 sec)
+DEBUG:    ROUTINE: updateinterinfo
+DEBUG:    String: "Data_output_file:" found.
+DEBUG:    String: "Data_output_format:" found.
+DEBUG:    String: "First_line:" found.
+DEBUG:    String: "Last_line:" found.
+DEBUG:    String: "First_pixel:" found.
+DEBUG:    String: "Last_pixel:" found.
+DEBUG:    String: "Multilookfactor_azimuth_direction:" found.
+DEBUG:    String: "Multilookfactor_range_direction:" found.
+DEBUG:    finished updateinterinfo
+DEBUG:    content of struct:
+
+current file: 	coh.raw
+formatflag:   	13
+multilook:    	5 1
+window:       	245 799 7 300
+DEBUG:    ROUTINE: updateprocesscontrol
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    Time spent for tidying up:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.01 sec (total:    0 min 8.06 sec)
+	Wallclock: 			     0 sec (total:    0 min   9 sec)
+
+
+Results are in file(s):
+   interferogram.out
+
+There were 1 WARNING(S).
+
+
+Normal termination.
+Thank you for using Doris.
+
+matDEBUG: deallocated matrix #lines, #pixels, #address: 10, 1, 0x40006948
+matDEBUG: deallocated: 80B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x400068f8
+matDEBUG: deallocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x400068c0
+matDEBUG: deallocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x400067c8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006670
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006518
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x400063c0
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006268
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40006110
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005fb8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005e60
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005d08
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40005bb0
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40007fc0
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40007e68
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40007d10
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 27, 1, 0x40007bb8
+matDEBUG: deallocated: 216B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 3, 0x40007678
+matDEBUG: deallocated: 72B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x40007640
+matDEBUG: deallocated: 24B; total allocated: 0MB
+matDEBUG: deallocated matrix #lines, #pixels, #address: 3, 1, 0x40007608
+matDEBUG: deallocated: 24B; total allocated: 0MB

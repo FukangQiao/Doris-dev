@@ -1,0 +1,992 @@
+Please set environment variable PAGER.  For example in csh:
+  setenv PAGER more
+
+
+"helpdoris"  −  find out options for processor software; print it
+out. Version: 3.6++  ‐ TUDelft
+
+Usage: helpdoris [ [4mword[24m / ‐p ]
+processor ‐h [4m[word][0m
+
+
+[4mword[24m     start helpdoris with searching for [4mword.[0m
+‐p       print this helpfile to printer: d5simx4de.
+
+
+press h for help on  pager  (search,  mark,  forward,  backwards,
+etc.)
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mGeneral[24m [4mcards[0m
+
+c               0                                       opt
+C
+comment
+COMMENT
+#
+//
+Any text after these keys is ignored.
+
+
+BEEP            1                               WARNING
+Controls level of beeping. Options are:
+[4mERROR[24m    only beeps on error.
+[4mWARNING[24m  beeps on errors and warnings.
+[4mPROGRESS[24m beeps on errors, warnings and progress.
+[4mON[24m Enables beeping, level is highest (PROGRESS).
+[4mOFF[24m disables beeping.
+
+PREVIEW         1                               OFF
+Controls  generation  of  SUNraster preview files (uses cpxfiddle
+system call).
+[4mON[24m Enables preview generation.  SUNraster files are created after
+most  steps  where  it is appropriate.  This is done by writing a
+small shell script in the current directory, which then  is  exe‐
+cuted.  This script can later be executed by the user again.
+[4mXV[24m  Same as ON, but additionally calls the program xv to view the
+results.
+[4mOFF[24m disables preview generation.
+
+SCREEN          1                               debug
+Controls level of output to standard out.
+[4mERROR[24m    only error are written to stout.
+[4mWARNING[24m  errors and warnings.
+[4mPROGRESS[24m errors, warnings and progress.
+[4mINFO[24m     errors, warnings, progress and info.
+[4mDEBUG[24m    errors, warnings, progress, info, debug.
+[4mTRACE[24m    errors, warnings, progress, info, debug, trace.  tracing
+shows all visited functions.  If you compile a debug  version  of
+doris, a lot more is traced, also in the matrix class.
+
+
+
+BATCH           0        or        1                          off
+Specifies non‐interactive processing.
+If [4mONLYPROCESS[24m mode then always in batch.
+If (only 1) [4mPROCESS[24m card then this card is signifiant.
+[4mON[24m       do non‐interactive processing, except when problems  are
+signalled.
+[4mOFF[24m      do interactive processing.
+
+
+LISTINPUT               0     or    1                          on
+copying inputoptionsfile to logfile.
+[4mON[24m       do copy the input file to the logfile.
+[4mOFF[24m      do not copy the input file to the logfile.
+
+
+OVERWRITE               0    or    1                          off
+Overwrite existing data output files if they exist.
+[4mON[24m       overwrite.
+[4mOFF[24m      do not overwrite.
+
+
+ELLIPSOID                 1  or  2                          wgs84
+Change ellipsoid.  NOT OK in version 3.6++
+[4mWGS84[24m    use wgs84.
+[4mGRS80[24m    use grs80.
+[4mBESSEL[24m   use bessel.
+[4ma[24m [4mb[24m      use specified semi major/minor.
+
+
+MEMORY                                1                       250
+Specify available memory (integer MB).
+
+
+ORB_INTERP              2                       POLYFIT  deg
+Interpolation method for orbits.  Default polynomial fit of maxi‐
+mum  degree (interpolation).  If there are more than 6 datapoints
+the degree is 5 by default.  Optionally with the second  argument
+the degree can be given.  Alternatively SPLINE can be used (natu‐
+ral cubic splines).
+
+
+DUMPBASELINE            2                       0               0
+Dump the baseline parameters as INFO variables to stdout evaluat‐
+ed on a grid of x lines and y pixels (dimensions of current  mas‐
+ter).  Also write a 2d model of degree 1 to stdout for perpendic‐
+ular baseline.  This is only  done  if  the  precise  orbits  are
+available.
+
+
+LOGFILE                           1                       log.out
+Name of log output file.
+
+
+M_RESFILE               1                       master_result.out
+Name of result master output file.
+
+
+S_RESFILE               1                       slave_result.out
+Name of result slave output file.
+
+
+I_RESFILE               1                       interferogram.out
+Name of result interferogram output file.
+
+
+ONLYPROCESS             1                       opt/man
+Only process a specified step.
+A ONLYPROCESS or PROCESS card is mandatory.
+
+[4mM_READFILES[24m      Read parameters from volume, leader,  data  file
+(null file) for Master.
+[4mS_READFILES[24m       Read  parameters  from  volume, leader and data
+file (null) for Slave
+[4mM_CROP[24m   Read in slc data file, write data to  pixel  interleaved
+internal format (raster).
+[4mS_CROP[24m    Read  in slc data file, write data to pixel interleaved
+internal format (raster).
+[4mM_PORBITS[24m        Compute precise orbits with getorb for Master.
+[4mS_PORBITS[24m        Compute precise orbits with getorb for Slave.
+[4mM_FILTAZI[24m        Filter master image in azimuth direction.
+[4mS_FILTAZI[24m        Filter slave image in azimuth direction.
+[4mCOARSEORB[24m        Coarse coregistration based on precise orbits.
+[4mCOARSECORR[24m       Coarse coregistration based on correlation.
+[4mFINE[24m             Fine coregistration.
+[4mCOREGPM[24m          Compute coregistration parameters.
+[4mRESAMPLE[24m         Interpolate slave image to master grid.
+[4mFILTRANGE[24m        Adaptive range filter master/slave (after resam‐
+pling).
+[4mINTERFERO[24m         Compute  complex interferogram; Subtract refer‐
+ence phase here or later.  Optionally use oversampling.
+[4mCOMPREFPHA[24m       Compute reference  interferogram  of  mathematic
+body (ellipsoid), model this with a 2d polynoial.
+[4mCOHERENCE[24m         Compute complex coherence image.  Subtract ref‐
+erence phase here or later.  Possible use complex interferogram.
+[4mSUBTRREFPHA[24m      Subtract reference phase computed in  step  COM‐
+PREFPHA from complex intereferogram.
+[4mCOMPREFDEM[24m       Compute reference interferogram of DEM.  for now
+gtopo30 only.
+[4mSUBTRREFDEM[24m      Subtract reference interferogram  of  DEM  (step
+COMPREFDEM) from complex interferogram.
+[4mFILTPHASE[24m        Filter interferogram.
+[4mUNWRAP[24m            Unwrap  interferogram  .   For now use external
+routines, e.g., Ghiglia/Pritt , Snaphu
+[4mDINSAR[24m   Differential interferometry (3 or 4 pass).
+[4mSLANT2H[24m          Convert to height system.
+[4mGEOCODE[24m  Put in xyz system.
+
+
+PROCESS         1                               opt/man
+Process the specified step, see ONLYPROCESS.
+(more  than one PROCESS card may be specified).  (cards are over‐
+written by ONLYPROCESS).
+
+
+STOP                    0                               man
+End interpretation inputoptionsfile.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mreading[24m [4mfiles[0m
+   Mandatory for *_READFILES
+
+M_IN_METHOD             1                               ERS
+identifyer what is to be read ASAR, Radarsat 1/2, ERS1/2, Envisat
+ASAR, JERS, ALOS, Terrasar‐X and Cosmoskymed.  JERS and ALOS uses
+ERS programs.
+
+M_IN_VOL                1                               man
+Filename of volumefile master (not used for ASAR).
+
+M_IN_LEA                1                               man
+Filename of leaderfile master (not used for ASAR).
+
+M_IN_NULL               1                               man
+Filename of nullfile master (not used for ASAR).
+(may be dummy name, not actually used).
+
+M_IN_DAT                1                               man
+Filename of datafile master.
+
+
+S_IN_VOL                1
+see [4mM_IN_VOL[0m
+
+S_IN_LEA                1
+see [4mM_IN_LEA[0m
+
+S_IN_NULL               1
+see [4mM_IN_NULL[0m
+
+S_IN_DAT                1
+see [4mM_IN_DAT[0m
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mconversion[24m [4mSLC[24m [4mformat[24m [4mto[24m [4minternal[24m [4mformat[24m [4mon[24m [4mdisk[0m
+   Mandatory for *_CROP
+
+M_CROP_ID               1                               step01
+Identification of this step.  This card does nothing.
+
+
+M_CROP_IN               1                               man
+Filename of input data in slc format.
+
+
+M_CROP_OUT              1                               man
+Filename of output in raw format.
+
+
+M_DBOW          4                               total image (Mas‐
+ter database output window)
+min line, max line, min pix, max pix.
+line=1: first line.
+
+
+S_CROP_ID               1 see [4mM_CROP_ID[0m
+
+S_CROP_IN               1 see [4mM_CROP_IN[0m
+
+
+S_CROP_OUT              1 see [4mM_CROP_OUT[0m
+
+
+S_DBOW          4 see [4mM_DBOW[0m
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mPrecise[24m [4mOrbits[24m [4m(Uses[24m [4mgetorb[24m [4mDEOS).[0m
+   Mandatory for proces *_PORBITS
+
+M_ORBDIR                1                               man
+Name of directory for ODR precise orbit files (getorb).
+
+M_ORB_INTERVAL  1                               1  Time  interval
+between ephemerides in seconds.
+
+M_ORB_EXTRATIME 1                               3 Time in seconds
+before  first  and  after  last line to get ephemerides.  Natural
+splines are used to interpolate the orbits, therefor some  points
+before and after are required for good interpolation.
+
+M_ORB_DUMP              1                               0.1  Dump
+interpolated ephemerides to file "masterorbit.dat" with specified
+delta t in seconds.
+
+S_ORBDIR                1                               man
+see [4mM_ORBDIR[0m
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mazimuth[24m [4mfiltering[0m
+   mandatory for proces: M_FILTAZI and S_FILTAZI
+
+AF_BLOCKSIZE            1                               1024
+fftlength per buffer. (power of 2, the larger the better).
+
+AF_HAMMING              1                               0.75  De‐
+weight and re‐weight spectrum at new Doppler centroid freq.
+
+AF_OVERLAP              1                               BLOCK/8
+Overlap in azimuth direction between buffers.
+
+AF_OUT_MASTER   1                               "master.afil‐
+tered" Output data file name (mph complex r4) for master.
+
+AF_OUT_SLAVE            1                               "slave.afil‐
+tered" Output data file name (mph complex r4) for slave.
+
+AF_OUT_FORMAT   1                               cr4 Output format
+either cr4 or ci2.  ci2 introduces an error (?) but reduces  size
+of file by factor 2.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mcoarse[24m [4mcoregistration[24m [4mbased[24m [4mon[24m [4mprecise[24m [4morbits.[0m
+   Mandatory for proces COARSEORB
+
+No Options for this step
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mcoarse[24m [4mcorrelation[24m [4m(coregistration)[0m
+   Mandatory for proces COARSECORR
+
+CC_METHOD               1                               MAGFFT
+.ul 1 MAGFFT   correlation in spectral domain based on fft’s.
+[4mMAGSPACE[24m         correlation in space domain.
+
+
+CC_NWIN         1                               10 Number of win‐
+dows for correlation
+
+CC_IN_POS               1                               opt File‐
+name with positions of windows for  computation  (line,pixel)  at
+each line.  If this card is specified, CC_NWIN is ignored.
+
+
+CC_WINSIZE      2                                       64     64
+Number of lines pixels of correlation windows
+NOT TRUE: for MAGFFT: defaults to 1024, 1024
+
+
+CC_ACC  2                                       40 10 Search  ac‐
+curacy lines pixels.
+for MAGFFT: automatically .5*WINSIZE           ‐L/2,L/2
+
+CC_INITOFF              2                               0  0 Ini‐
+tial offset lines pixels.
+[4mORBIT[24m [4mor[24m [4morbit[24m requests to read initial offset from file  (placed
+there by coarseorb).
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mfine[24m [4mcoregistration[0m
+   Mandatory for proces FINE
+
+FC_METHOD               1                               MAGFFT
+[4mMAGFFT[24m   coherence in spectral domain with fft’s of magnitude im‐
+ages.  [4mMAGSPACE[24m         coherence in space domain.
+
+
+FC_NWIN         1                               101   Number   of
+windows for correlation.
+
+FC_IN_POS               1                               opt File‐
+name  with  positions  of windows for computation (line,pixel) at
+each line.  If this card is specified, FC_NWIN is ignored.
+
+
+FC_WINSIZE              2                               32     32
+Number of lines pixels of correlation windows.
+
+FC_ACC          2                               4  4 Search accu‐
+racy lines pixels.
+for ???FFT: automatically ‐L/2,L/2
+
+FC_INITOFF              2                               0 0  Ini‐
+tial offset lines pixels.
+[4mCOARSECORR[24m  requests  to  read  initial  offset from file (placed
+there by coarsecorr).
+
+
+FC_OSFACTOR             2                               16  Over‐
+sampling factor for interpolation of correlation.
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mcomputation[24m [4mof[24m [4mcoregistration[24m [4mparameters.[0m
+   mandatory for proces: COREGPM
+
+
+CPM_THRESHOLD           1                               0.3
+Threshold correlation for selection windows.
+
+
+CPM_DEGREE                      1                               1
+Degree of model.
+
+
+CPM_WEIGHT                      1                               none
+Select a priori covariance matrix.
+[4mNONE[24m        [4mno[24m [4mweighting[24m [4mis[24m [4mapplied.[0m
+[4mLINEAR[24m      [4mcorrelation[24m [4mis[24m [4mused[24m [4mfor[24m [4mweighting.[0m
+
+
+CPM_MAX‐
+ITER                     1                               10 Maxi‐
+mum number of windows to remove automatically with outlier tests.
+
+
+CPM_NOPLOT              0                               false  If
+present no plots are made.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m  [4mcomputation[24m  [4mof[24m [4mreference[24m [4minterferogram[24m [4m(flat[24m [4mearth[24m [4mcor‐[0m
+[4mrection)[0m
+   mandatory for proces: COMPREFPHA (f.k.a. FLATEARTH)
+
+
+FE_METHOD               1                               porbits
+Method selector for computations.
+[4mPORBITS[24m     [4muse[24m [4mprecise[24m [4morbits[0m
+[4mMETHOD2[24m     [4muse[24m [4m???[0m
+
+
+FE_DEGREE               1                               5  Degree
+of 2D‐polynomial.
+
+
+FE_NPOINTS              1                               501  Num‐
+ber of points for estimation of polynomial
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep:[24m [4mresampling[24m [4mof[24m [4mslave[24m [4mto[24m [4mmaster[24m [4mgrid[0m
+   mandatory for proces: RESAMPLE
+
+
+RS_METHOD               1                               cc4p
+Method selector for computations.
+[4mRECT[0m
+[4mTRI[0m
+[4mCC4P[0m
+[4mCC6P[0m
+[4mTS6P[0m
+[4mTS8P[0m
+[4mTS16P[0m
+
+
+RS_OUT_FILE     1                                       s_resam‐
+pled.raw Name of output file resampled slave.
+
+
+RS_OUT_FORMAT   1                               cr4 Output format
+either cr4 or ci2.  ci2 introduces an error but reduces  size  of
+file by factor 2.
+
+
+RS_DBOW         4                       entire  overlap  Database
+output window.
+arguments: min.line  max.line  min.pixel  max.pixel  in  original
+master  system.   If  specified window is outside overlap master,
+zeros are written in the slave.
+
+
+RS_SHIFTAZI             1                               ON Switch
+to  shift  the azimuth spectrum of the data to zero freq.  before
+resampling, and back to its Doppler Centroid frequency after  re‐
+sampling.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mrange[24m [4mfiltering[24m [4mof[24m [4m(complex)[24m [4mmaster[24m [4mand[24m [4mslave[24m [4m(resampled)[0m
+   mandatory for proces: FILTRANGE
+
+
+RF_METH‐
+OD               1                                       adaptive
+Method selector for rangefiltering.  either adaptive or porbits.
+
+
+RF_SLOPE                1                                       0.0
+Mean terrain slope for method porbits.
+
+
+RF_FFTLENGTH            1                                       64
+Length  of  adaptive  block  with  constant slope.  Resolution in
+range is for ERS approximately 20 meters.  Default for method or‐
+bit is 1024.
+
+
+RF_NLMEAN               1
+(odd)                                 15 Number of lines for tak‐
+ing  mean  powerspectrum of complex interferogram to reduce noise
+for better peak estimation.  Only for method adaptive.
+
+
+RF_HAM‐
+MING              1                                       0.75
+Alpha of hamming function for weighting.  An alpha of 1.0  yields
+a  rectangular filter, an alpha of 0. gives more power to the low
+frequencies.
+
+
+RF_THRESH‐
+OLD            1                                       5.0
+Threshold for range filtering on SNR of peak estimation.  SNR  is
+defined  as  fftlength*power  of peak divided by the power of the
+other frequencies.  Only for method adaptive.
+
+
+RF_OVERSAMPLE           0 or 1                  ON Perform  over‐
+sampling of master and slave before computing interferogram.  On‐
+ly for method adaptive.
+[4mON[24m       do oversampling.
+[4mOFF[24m      do not do oversampling.
+
+
+RF_WEIGHTCORR           0 or  1                          OFF  Op‐
+tionally weight the powerspectrum of complex interferogram to ac‐
+count for decreasing number of overlapping frequencies for higher
+frequencies.  The (Hamming) shape of the spectrum is not acounted
+for.  The effect of this card may be neglible.  Only  for  method
+adaptive.
+[4mON[24m       do weight.
+[4mOFF[24m      do not weight.
+
+
+RF_OUT_MASTER   80char                          master.rfilter
+Data output file name for filtered slave.
+
+
+RF_OUT_SLAVE            80char                          slave.rfil‐
+ter Data output file name for filtered slave.
+
+
+RF_OUT_FORMAT   80char                          cr4  |  ci2  Data
+output format either complex real4 values or casted to short  in‐
+tegers.  (for both output files)
+
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mcomputation[24m [4mof[24m [4m(complex)[24m [4minterferogram[0m
+   mandatory for proces: INTERFERO
+
+
+INT_METH‐
+OD              1                                       man Meth‐
+od  selector:  old  or oversample.  The latter is not implemented
+yet.
+
+INT_OUT_CINT            1                                       opt
+Filename of complex data output file complex interferogram.
+(This file can be viewed with dismph).
+
+
+INT_OUT_FE              1                                       opt
+Filename of real data output file interferogram (phase) of
+  correction/ reference phase (flatearth correction).
+ This is the unwrapped fase,
+  evaluated at the points of the multilooked grid.
+If this card is present it flags to save this file.
+
+
+INT_OUT_INT             1                                       opt
+Filename of real data output file containing the
+ (wrapped) phase of complex interferogram.
+If this card is present it flags to save this file.
+
+
+INT_MULTILOOK   2                                       5  1 Mul‐
+tilooking factors in azimuth (line) and range (pixel) direction.
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4msubtraction[24m [4mof[24m [4mreference[24m [4minterferogram[24m [4m(flat[24m  [4mearth[24m  [4mcor‐[0m
+[4mrection)[0m
+   mandatory for proces: SUBTRREFPHA
+
+SRP_METHOD              1                               polynomi‐
+al Method selector for subtraction.  Either  compute  ref.  phase
+here or evaluate polynomail from step COMPREFPHA.
+
+SRP_OUT_CINT            1                               cint.min‐
+refpha.raw Output file name for complex interferogram.
+
+SRP_MULTILOOK   1  or  2                          1  1  Multilook
+factors  in  azimuth  and range direction.  Default is equal fac‐
+tors.
+
+SRP_OUT_CINT            1                               cint.min‐
+refpha.raw Output file name for complex interferogram.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mphase[24m [4mfiltering[24m [4mof[24m [4mcomplex[24m [4minterferogram[0m
+   mandatory for proces: FILTPHASE
+
+PF_METHOD               1                               goldstein
+Method selector for phase filtering (goldstein or spatialconv  or
+spectral),
+
+
+PF_BLOCKSIZE            1                               32   Size
+per block.  For goldstein method.
+
+
+PF_ALPHA                1                               0.2
+Weighting   factor   for  spectrum  [0,1]  <‐>  [no,max].   Sf  =
+S*(A/max(A)).^PF_ALPHA Where Sf is the complex filtered spectrum,
+S is the complex spectrum of the interferogram, and A is the real
+smoothed amplitude of S.  The result is the ifft2d  of  Sf.   For
+goldstein method.
+
+
+PF_OVERLAP              1                               3     Use
+2*PF_OVERLAP the same data for consecutive  blocks/buffers.   For
+goldstein method.
+
+
+PF_KERNEL               var.                            3  1  1 1
+KERNEL function for  goldstein  and  spatialconv  method.   First
+specify  the number of arguments, then the values.  Kernel is al‐
+ways normalized by Doris.  Default kernel for goldstein is [1 2 3
+2  1],  and  default for spatialconv is [1 1 1].  For goldstein’s
+method this kernel is used to smooth the amplitude of  the  spec‐
+trum,  by  which  the original spectrum is weighted (by smootham‐
+plspectrum.^alpha, see PF_ALPHA).  To avoid weighting, use kernel
+[1].
+
+
+PF_IN_KERNEL2D          1                               filename
+File name for ascii file with 2D KERNEL function.   For  spatial‐
+conv  and spectral method.  A header line should precede the ker‐
+nel, containing: height width scale, e.g., 3 3 0.1111111
+
+1 1 1
+
+1 1 1
+
+1 1 1
+
+
+PF_OUT_FILE             1                               cint.gf.al‐
+pha  output  file  name.   For  method  spatialconv,  default  is
+cint.filtered.
+
+
+PF_IN_FILE              2                               filename
+numlines Perform filtering on this file (complex float, mph) that
+has N lines.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mcomputation[24m [4mof[24m [4mreference[24m [4mDEM[24m [4m(phase)[0m
+   mandatory for proces: COMPREFDEM
+   Most information can be found in de .HDR file of  the  gtopo30
+DEM.
+
+CRD_METHOD       1                       gtopo30 Method selector.
+not used in version 3.6++.
+
+CRD_IN_DEM              1                               man  File
+name of input DEM (gtopo30 only).
+
+CRD_IN_FORMAT    1                       i16 Format specifier for
+DEM used.  Either i16, r4, or r8 for shorts, floats or doubles.
+
+CRD_IN_SIZE             2                         6000 4800  Num‐
+ber of rows/cols of input DEM.
+
+CRD_IN_DELTA     1  or  2                  0.00833333333333333333
+Grid spacing of input DEM in decimal degrees.
+
+CRD_IN_UL                2                     89.995833333333333
+‐19.995833333333333333333  WGS84 coordinates of leftupper corner.
+In decimal degrees, latitude longitude.
+
+CRD_IN_NODATA           1                        ‐9999 Identifier
+which number to regard as Not a Number in input DEM.
+
+CRD_INCLUDE_FE                   1                       OFF Card
+to switch on to include ’flat earth’ in this step.
+
+CRD_DENSE               1                               4  Factor
+for extra dense oversampling of DEM.
+
+CRD_OUT_DEM       1                                       opt  If
+specified, a short file is dumped containing  cut  out  of  input
+DEM.
+
+CRD_OUT_DEMI      1                                       opt  If
+specified, a float file is dumped containing bicubic interpolated
+dem.
+
+CRD_OUT_FILE     1                               refdem.raw File‐
+name of output file containing reference DEM.
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4msubtraction[24m [4mof[24m [4mreference[24m [4mDEM[24m [4m(phase)[0m
+   mandatory for proces: SUBTRREFDEM
+
+SRD_OUT_CINT    1                                               cint.min‐
+refdem.raw Output file name for complex interferogram.
+
+
+
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mcomputation[24m [4mof[24m [4m(complex)[24m [4mcoherence[24m [4mimage[0m
+   mandatory for proces: COHERENCE
+
+
+COH_METH‐
+OD      1                                                       man
+Method selector: old or new.  The latter is not implemented yet.
+
+COH_OUT_CCOH    1                                                       opt
+Filename of complex data output file coherence.
+If this card is present it flags to save this file.
+
+
+COH_OUT_COH     1                                                       opt
+Filename of real data output file coherence image.
+If this card is present it flags to save this file.
+
+
+COH_MULTI‐
+LOOK   2                                               10 2  Mul‐
+tilooking factors in azimuth (line) and range (pixel) direction.
+
+
+COH_WIN‐
+SIZE     2                                               coh_mul‐
+tilook Windowsize for coherence computation.
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4munwrap[0m
+   mandatory for proces: UNWRAP
+
+
+UW_METHOD     1                                                ??
+Method selector: not implemented in doris v1.2
+
+UW_???  ???
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mdifferential[24m [4minterferometry[0m
+   Mandatory for DINSAR
+
+DI_OUT_FILE             1                               differen‐
+tialinterf.raw  File name of output with differential phase (com‐
+plex)
+
+DI_IN_TOPOSLAVE 1                               man
+
+DI_IN_TOPOINT   1                               man
+
+DI_IN_TOPOMASTER        1                               same   as
+defo
+
+DI_OUT_SCALED   1                               opt
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mslant[24m [4mto[24m [4mheight[24m [4mconversion[0m
+   mandatory for proces: SLANT2H
+
+
+S2H_METHOD    1                                               am‐
+biguity Method selector: ambiguity, schwabisch or rodriguez
+
+
+S2H_NPOINTS  1                                                200
+schwabisch  method: Number of points to be used for estimation of
+2d polynomial.
+
+
+S2H_DEGREE1D         1                                          2
+schwabisch method: Degree of 1d polynomial.
+
+
+S2H_NHEIGHTS   1                                          s2h_de‐
+gree1d+1 schwabisch method: number of heights to evaluate  refer‐
+ence phase on.
+Overdetermined problem if Nheights > degree1d+1.
+
+
+S2H_DEGREE2D         1                                          5
+schwabisch method: Degree of 2d polynomial for  the  coefficients
+of 1d polynomial.
+
+
+
+S2H_OUT_HEI    1                                          hei.raw
+File name of data output file with heights.
+
+S2H_OUT_PHI    1                                          phi.raw
+ambiguity method: File name of data output file with heights.
+
+S2H_OUT_LAM                                                     1
+lam.raw ambiguity method: File name  of  data  output  file  with
+heights.
+
+
+
+
+
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+ keyword        #arg                                      default
+(man/opt)
++‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐+‐‐‐‐‐‐‐‐‐‐
+   [4mstep[24m [4mgeocoding[24m [4m(interpolation[24m [4mto[24m [4mregular[24m [4mgrid?)[0m
+   mandatory for proces: GEOCODE
+
+
+GEO_OUT_LAM                                                     1
+lambda.raw Filename of outputfile longitude.
+
+GEO_OUT_PHI                                                     1
+phi.raw Filename of outputfile latitude.
+
+
+
+
+
+
+?
+
+rm_err_??.c
+plotscript
+expand()
+run
+checklist.tex
+less
+?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

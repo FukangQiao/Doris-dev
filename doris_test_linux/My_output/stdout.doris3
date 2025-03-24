@@ -1,0 +1,491 @@
+DEBUG:    file: doris3.in does exist.
+INFO:     inputoptionsfile: "doris3.in"
+DEBUG:    ROUTINE: printcpu
+DEBUG:    ROUTINE: inittest
+DEBUG: file "ioroutines.c", line 128
+	# test somewhere also memory,diskspace.
+DEBUG:    ROUTINE: readinput
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: SCREEN
+DEBUG:    Read argument: debug
+INFO:     SCREEN: line 18: stdout:  error, warning, progress, info, debug.
+DEBUG:    Read keyword: MEMORY
+DEBUG:    Read argument: 50
+DEBUG:    Read keyword: OVERWRITE
+DEBUG:    Read argument: OFF
+DEBUG:    Read keyword: BATCH
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: LISTINPUT
+DEBUG:    Read argument: ON
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: coregpm
+INFO:     PROCESS: 	I will process step: 		COREGPM
+DEBUG:    Read keyword: PROCESS
+DEBUG:    Read argument: resample
+INFO:     PROCESS: 	I will process step: 		RESAMPLE
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: LOGFILE
+DEBUG:    Read argument: log.out
+DEBUG:    Read keyword: M_RESFILE
+DEBUG:    Read argument: master.out
+DEBUG:    Read keyword: S_RESFILE
+DEBUG:    Read argument: slave.out
+DEBUG:    Read keyword: I_RESFILE
+DEBUG:    Read argument: interferogram.out
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: CPM_THRESHOLD
+DEBUG:    Read argument: 0.5
+DEBUG:    Read keyword: CPM_DEGREE
+DEBUG:    Read argument: 1
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: comment
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: RS_METHOD
+DEBUG:    Read argument: cc6p
+DEBUG:    Read keyword: RS_OUT_FILE
+DEBUG:    Read argument: 21066.resampled
+DEBUG:    Read keyword: RS_OUT_FORMAT
+DEBUG:    Read argument: cr4
+DEBUG:    Read keyword: c
+DEBUG:    Read keyword: STOP
+DEBUG:    STOP card encountered at line 51.
+
+DEBUG:    ROUTINE: checkgeneral
+INFO:     MEMORY: 	50 MB is available to Doris.
+INFO:     M_RESFILE: 	resultfile of master: 		master.out
+INFO:     S_RESFILE: 	resultfile of slave: 		slave.out
+INFO:     I_RESFILE: 	out file for interferogram: 	interferogram.out
+INFO:     LOGFILE: 	out file for logging: 		log.out
+INFO:     DUMPBASELINE: evaluation of baseline parameters at grid with: 0 lines, 0 pixels: 
+INFO:     LISTINPUT:    Input file appended to logfile.
+INFO:     ELLIPSOID: 	WGS84.
+DEBUG:    ROUTINE: checkcoregpm
+INFO:     CPM_THRESHOLD: threshold for correlation used in least squares: 0.5
+INFO:     CPM_DEGREE: degree of polynomial for coregistration parameters: 1
+INFO:     CPM_WEIGHT: data weighting option: 0 (0 none, 1 linear) is used in least squares.
+DEBUG:    ROUTINE: checkresample
+INFO:     RS_OUT_FILE: output filename: 21066.resampled.
+INFO:     RS_OUT_FORMAT: output format: complex_real4.
+DEBUG:    Finished writing to scratchreadinput.
+PROGRESS: Interpretation inputoptionsfile finished.
+
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: log.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: doinitwrite
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: slave.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: initwrite
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    Writing (updating) of file (initwrite).
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchreadinput (removed.)
+DEBUG:    ROUTINE: checkprocessing
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillprocessed
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: checkrequest
+WARNING:  code 306: Requested step: 11 (resample:) seems impossible, because step 16 (comp_coregpm:) is not in resultfile.
+DEBUG:    ROUTINE: checkrequest
+DEBUG:    Time spent for initialization:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.02 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+PROGRESS: Finished initialization
+
+DEBUG:    file: master.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: master.out
+DEBUG:    [32]: string: "Scene_centre_latitude:",      (derived) value: 40.948
+DEBUG:    [33]: string: "Scene_centre_longitude:",     (derived) value: 14.027
+DEBUG:    [34]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [35]: string: "First_pixel_azimuth_time",    (derived) value: 35366.1
+DEBUG:    [36]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [37]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [38]: string: "Xtrack_f_DC_constant",        (derived) value: 117.321
+DEBUG:    [39]: string: "Xtrack_f_DC_linear",          (derived) value: 72338
+DEBUG:    [40]: string: "Xtrack_f_DC_quadratic",       (derived) value: -4.55e+08
+DEBUG:    [41]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [42]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [43]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [47]: string: "Number_of_lines_original:",   (derived) value: 26555
+DEBUG:    [48]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26555 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "master.out".
+DEBUG:    string: "Data_output_file:",        value: 1393.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	1393.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillimageinfo: reading parameters from: slave.out
+DEBUG:    [38]: string: "Scene_centre_latitude:",      (derived) value: 40.94
+DEBUG:    [39]: string: "Scene_centre_longitude:",     (derived) value: 14.024
+DEBUG:    [40]: string: "Radar_wavelength",            (derived) value: 0.056666
+DEBUG:    [41]: string: "First_pixel_azimuth_time",    (derived) value: 35363.4
+DEBUG:    [42]: string: "Pulse_Repetition_Frequency",  (derived) value: 1679.95
+DEBUG:    [43]: string: "Total_azimuth_band_width",    (derived) value: 1378
+DEBUG:    [44]: string: "Xtrack_f_DC_constant",        (derived) value: 424.956
+DEBUG:    [45]: string: "Xtrack_f_DC_linear",          (derived) value: -13140
+DEBUG:    [46]: string: "Xtrack_f_DC_quadratic",       (derived) value: -5.18e+08
+DEBUG:    [47]: string: "Range_time_to_first_pixel",   (derived) value: 0.00277292
+DEBUG:    [48]: string: "Range_sampling_rate",         (derived) value: 3.79326e+07
+DEBUG:    [49]: string: "Total_range_band_width",      (derived) value: 1.555e+07
+DEBUG:    [53]: string: "Number_of_lines_original:",   (derived) value: 26518
+DEBUG:    [54]: string: "Number_of_pixels_original:",  (derived) value: 4900
+DEBUG:    ROUTINE: pol2xyz
+DEBUG:    Finished fillimageinfo
+DEBUG:    content of struct:
+	current file: 	
+	formatflag:   	0
+	current win:  	1 26518 1 4900
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_crop:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.raw
+DEBUG:    string: "Data_output_format:",      value: 11
+DEBUG:    string: "First_line",               value: 1
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 1
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.raw
+	formatflag:   	11
+	current win:  	1 800 1 300
+DEBUG:    orbit::ROUTINE: getdata
+DEBUG:    orbit::computecoefficients
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: splineinterpol
+DEBUG:    ROUTINE: dumporbit
+DEBUG:    orbit::compbaseline
+INFO:     Exiting compbaseline, no output requested with DUMPBASELINE card.
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -236
+Coarse_orbits_trans as word 0 after "Coarse_orbits_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_orbits_translation_pixels:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -241
+Coarse_correlation_ as word 0 after "Coarse_correlation_translation_lines:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: -3
+********************* as word 0 after "Coarse_correlation_translation_pixels:" in file "interferogram.out".
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 16
+t as word 1 after "Oversampling" in file "interferogram.out".
+PROGRESS: Start COREGPM.
+
+DEBUG:    ROUTINE: coregpm
+DEBUG:    ROUTINE: getofffile
+INFO:     coregpm: polynomial normalized by factors: 1 26555 1 4900
+INFO:     coregpm: maximum deviation N*inv(N) from unity = 0.000183105. This is ok.
+WARNING:  coregpm: overallmodeltest Lines = 6.94168 is larger than 2.
+(Suggest model or a priori sigma not correct.)
+WARNING:  coregpm: overallmodeltest Pixels = 2.56535 is larger than 2.
+(suggests a priori sigma not correct.)
+INFO:     maximum wtest statistic = 201.617 for window number: 14
+DEBUG:    ROUTINE: readcoeff
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsL:"; file: scratchrescpm.
+DEBUG:    ROUTINE: readcoeff
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsP:"; file: scratchrescpm.
+DEBUG:    ROUTINE: normalize
+DEBUG:    ROUTINE: normalize
+INFO:     Evaluated model at the corners of original window:
+INFO:     l,p: 1 1; offsets: -241.217 -3.21341
+INFO:     l,p: 26555 1; offsets: -234.794 -4.06797
+INFO:     l,p: 1 4900; offsets: -242.045 -3.09383
+INFO:     l,p: 26555 4900; offsets: -235.621 -3.94839
+PROGRESS: finished computation of coregistration parameters.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogcpm (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: interferogram.out has been updated by file: scratchrescpm (removed.)
+PROGRESS: Finished COREGPM.
+
+DEBUG:    Time spent for computation of coregistration parameters:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    0 min 0.04 sec)
+	Wallclock: 			     0 sec (total:    0 min   0 sec)
+INFO:     Next command will plot solution:
+INFO:     plotcpm CPM_Data 1 800 1 300 &
+DEBUG:    ROUTINE: readres
+DEBUG:    read: 1
+Estimate as word 0 after "Degree_cpm:" in file "interferogram.out".
+DEBUG:    ROUTINE: readcoeff
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsL:"; file: interferogram.out.
+DEBUG:    ROUTINE: readcoeff
+DEBUG:    read 3 coefficients after: "Estimated_coefficientsP:"; file: interferogram.out.
+DEBUG:    ROUTINE: fillinterinfo
+INFO:     fillinterinfo: polynomial normalized by factors: 1 26555 1 4900
+DEBUG:    Finished fillinterinfo
+DEBUG:    content of struct:
+
+current file: 	
+formatflag:   	0
+multilook:    	0 0
+window:       	243 800 5 300
+PROGRESS: Start RESAMPLE.
+
+DEBUG:    ROUTINE: resample
+INFO:     resample: polynomial normalized by factors: 1 26555 1 4900
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+DEBUG:    ROUTINE: cc6
+PROGRESS: Resample: created lookup table for interpolation.
+
+PROGRESS: RESAMPLE: 0%
+
+DEBUG:    Writing last part of buffer to disk.
+PROGRESS: Finished resample.
+
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: log.out has been updated by file: scratchlogresample (removed.)
+DEBUG:    ROUTINE: updatefile
+DEBUG:    File: slave.out has been updated by file: scratchresresample (removed.)
+PROGRESS: Finished RESAMPLE.
+
+DEBUG:    Time spent for resampling of slave image:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	 97.31 sec (total:    1 min 37.35 sec)
+	Wallclock: 			   113 sec (total:    1 min  53 sec)
+DEBUG:    ROUTINE: updateimageinfo
+DEBUG:    updateimaginfo: found identifier: "*_Start_resample:" in file: "slave.out".
+DEBUG:    string: "Data_output_file:",        value: 21066.resampled
+DEBUG:    string: "Data_output_format:",      value: 12
+DEBUG:    string: "First_line",               value: 245
+DEBUG:    string: "Last_line",                value: 800
+DEBUG:    string: "First_pixel",              value: 7
+DEBUG:    string: "Last_pixel",               value: 300
+DEBUG:    Finished updateimageinfo
+DEBUG:    content of struct:
+	current file: 	21066.resampled
+	formatflag:   	12
+	current win:  	245 800 7 300
+DEBUG:    ROUTINE: updateprocesscontrol
+DEBUG:    file: slave.out does exist.
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: updateprocesscontrol
+DEBUG:    file: interferogram.out does exist.
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    ROUTINE: fillcheckprocess
+DEBUG:    Time spent for tidying up:
+DEBUG:    ROUTINE: printcpu
+DEBUG:     cputime used for process: 	  0.02 sec (total:    1 min 37.37 sec)
+	Wallclock: 			     1 sec (total:    1 min  54 sec)
+
+
+Results are in file(s):
+   slave.out
+   interferogram.out
+
+There were 3 WARNING(S).
+
+
+Normal termination.
+Thank you for using Doris.
+

@@ -62,13 +62,13 @@ CPM_K_ALPHA     5.00                    // automated removal crit. value
 ###
 ###
 RS_METHOD       tri                     // linear interpolation
-RS_OUT_FILE     Outdata/slave.resampled_QL
+RS_OUT_FILE     Outdata/01393.resampled_QL
 RS_OUT_FORMAT   ci2                     //
 RS_SHIFTAZI     off                     // doppler
 ###
 ###
 INT_METHOD      old                     // 
-INT_OUT_CINT    Outdata/master_slave.cint_QL // optional complex int.
+INT_OUT_CINT    Outdata/21066_01393.cint_QL // optional complex int.
 INT_MULTILOOK   10 2                    // 20 x 20 m
 ###
 ###
@@ -77,12 +77,12 @@ FE_DEGREE       5                       //
 FE_NPOINTS      301                     //
 ###
 ###
-SRP_OUT_CINT    Outdata/master_slave.srp_QL  //
+SRP_OUT_CINT    Outdata/21066_01393.srp_QL  //
 SRP_MULTILOOK   3 3                     // total 60x60 m
 ###
 ###
 COH_METHOD      refphase_only                   // options: refphase_only or include_refdem
-COH_OUT_COH     Outdata/master_slave.coh_QL  // optional real
+COH_OUT_COH     Outdata/21066_01393.coh_QL  // optional real
 COH_MULTILOOK   30 6                            //
 COH_WINSIZE     30 6                            //
 ###

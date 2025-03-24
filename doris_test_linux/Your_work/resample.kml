@@ -1,0 +1,17 @@
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+<GroundOverlay>
+        <visibility>1</visibility>
+        <LatLonBox>
+                <north>41.3185</north>
+                <south>41.2905</south>
+                <east>14.6963</east>
+                <west>14.7782</west>
+                <rotation>-16.6074</rotation>
+        </LatLonBox>
+        <Icon>
+                <href>resample.kml.png</href>
+        </Icon>
+</GroundOverlay>
+</Document>
+</kml>
